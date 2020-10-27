@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Collections.Generic;
 
 [System.Serializable]
 public struct BinaryPlayerData
@@ -13,7 +14,7 @@ public struct BinaryPlayerData
 [System.Serializable]
 public struct BinarySaveableData
 {
-    public int[] saveableHash;
+    public int[] saveableIndices;
     public bool[] saveableState;
 }
 
@@ -22,6 +23,20 @@ public class BinarySaveData
 {
     public BinaryPlayerData playerDataBinary;
     public BinarySaveableData binarySaveableDatas;
+
+    public BinarySaveData(PlayerSaveable playerSaveable, PlayerData playerData, List<SaveablesData> saveableDatas)
+    {
+        binarySaveableDatas.saveableIndices = new int[saveableDatas.Count];
+        binarySaveableDatas.saveableState = new bool[saveableDatas.Count];
+
+        playerDataBinary = playerSaveable.GetBinaryData(playerData);
+
+        for (int i = 0; i < saveableDatas.Count; i++)
+        {
+            binarySaveableDatas.saveableIndices[i] = i;
+            binarySaveableDatas.saveableState[i] = saveableDatas[i].state;
+        }
+    }
 }
 
 public static class BinaryFormatterSaveSystem

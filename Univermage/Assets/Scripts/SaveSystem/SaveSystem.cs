@@ -22,34 +22,23 @@ public struct SaveData
 
     public BinarySaveData ToBinarySave(PlayerSaveable player)
     {
-        var binarySave = new BinarySaveData();
-
-        binarySave.playerDataBinary = player.GetBinaryData(playerData);
-
-        binarySave.binarySaveableDatas.saveableHash = new int[saveableDatas.Count];
-        binarySave.binarySaveableDatas.saveableState = new bool[saveableDatas.Count];
-
-        for (int i = 0; i < saveableDatas.Count; i++)
-        {
-            binarySave.binarySaveableDatas.saveableHash[i] = saveableDatas[i].saveable.GetHashCode();
-            binarySave.binarySaveableDatas.saveableState[i] = saveableDatas[i].state;
-        }
+        var binarySave = new BinarySaveData(player, playerData, saveableDatas);
 
         return binarySave;
     }
 
-    public static SaveData FromBinarySave(BinarySaveData binarySave, PlayerSaveable player, Dictionary<int, ISaveable> saveableHasMap)
+    public static SaveData FromBinarySave(BinarySaveData binarySave, PlayerSaveable player, ISaveable[] _saveables)
     {
         var save = new SaveData();
 
         save.playerData = player.GetPlayerDataFormBinary(binarySave.playerDataBinary);
-        save.saveableDatas = new List<SaveablesData>(binarySave.binarySaveableDatas.saveableHash.Length);
+        save.saveableDatas = new List<SaveablesData>(binarySave.binarySaveableDatas.saveableIndices.Length);
 
-        for (int i = 0; i < binarySave.binarySaveableDatas.saveableHash.Length; i++)
+        for (int i = 0; i < binarySave.binarySaveableDatas.saveableIndices.Length; i++)
         {
             var saveableData = new SaveablesData
             {
-                saveable = saveableHasMap[binarySave.binarySaveableDatas.saveableHash[i]],
+                saveable = _saveables[binarySave.binarySaveableDatas.saveableIndices[i]],
                 state = binarySave.binarySaveableDatas.saveableState[i]
             };
 
@@ -77,8 +66,6 @@ public class SaveSystem
 
     private ISaveable[] saveables;
 
-    private Dictionary<int, ISaveable> saveableHashMap = new Dictionary<int, ISaveable>();
-
     private SaveData LastSave;
 
     public void Init(PlayerSaveable _player, ISaveable[] _saveables)
@@ -86,12 +73,6 @@ public class SaveSystem
         player = _player;
 
         saveables = _saveables;
-
-        saveableHashMap.Clear();
-        foreach (var item in saveables)
-        {
-            saveableHashMap.Add(item.GetHashCode(), item);
-        }
     }
 
     public SaveData Save()
@@ -129,7 +110,7 @@ public class SaveSystem
     public void LoadFromFile()
     {
         var binarySave = BinaryFormatterSaveSystem.GetSaveDataFromFile();
-        var save = SaveData.FromBinarySave(binarySave, player, saveableHashMap);
+        var save = SaveData.FromBinarySave(binarySave, player, saveables);
 
         Load(save);
     }

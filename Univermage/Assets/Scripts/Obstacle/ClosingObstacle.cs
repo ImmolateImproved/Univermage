@@ -3,35 +3,62 @@ using UnityEngine;
 [RequireComponent(typeof(Saveable))]
 public class ClosingObstacle : MonoBehaviour, ISaveable
 {
-    [SerializeField] Collider2D obstacle;
-    [SerializeField] SpriteRenderer sr;
+    [SerializeField]
+    private Collider2D obstacle;
 
-    static Color startColor, changedColor;
+    [SerializeField]
+    private LineRenderer line;
 
-    void Awake()
+    [SerializeField]
+    private GameObject sprite;
+
+    private Vector2 positionOnEnter;
+
+    private static int myLayer;
+
+    private static int playerLayer;
+
+    private void Awake()
     {
-        startColor = sr.color;
-        changedColor = Color.white;
+        myLayer = 1 << gameObject.layer;
+        playerLayer = LayerMask.NameToLayer("Player");
     }
 
     void ISaveable.Load(bool state)
     {
-        obstacle.enabled = state;
-        sr.color = state ? changedColor : startColor;
+        obstacle.isTrigger = state;
+
+        line.enabled = state;
+        sprite.SetActive(!state);
     }
 
     SaveablesData ISaveable.Save()
     {
-        var data = new SaveablesData { saveable = this, state = obstacle.enabled };
+        var data = new SaveablesData { saveable = this, state = obstacle.isTrigger };
         return data;
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.layer == playerLayer)
         {
-            obstacle.enabled = true;
-            sr.color = changedColor;
+            positionOnEnter = collision.transform.position;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == playerLayer)
+        {
+            var hit = Physics2D.Linecast(collision.transform.position, positionOnEnter, myLayer);
+
+            if (hit)
+            {
+                obstacle.isTrigger = false;
+
+                line.enabled = false;
+                sprite.SetActive(true);
+            }
         }
     }
 }

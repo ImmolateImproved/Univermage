@@ -1,5 +1,4 @@
 using UnityEngine;
-using System;
 using System.Collections.Generic;
 
 public class SpellController : MonoBehaviour
@@ -19,6 +18,10 @@ public class SpellController : MonoBehaviour
         for (int i = 0; i < spells.Length; i++)
         {
             spells[i].Init(this);
+        }
+
+        for (int i = 0; i < spellViews.Length; i++)
+        {
             spellViews[i].Init();
 
             spellToViewMap.Add(spells[i], spellViews[i]);
@@ -27,7 +30,10 @@ public class SpellController : MonoBehaviour
 
     public void OnSpellUse(Spell spell, int actionIndex)
     {
-        spellToViewMap[spell].Invoke(actionIndex);
+        if (spellToViewMap.TryGetValue(spell, out var spellView))
+        {
+            spellView.Invoke(actionIndex);
+        }
     }
 
     public Spell GetSpellFromIndex(int index)
@@ -52,9 +58,14 @@ public class SpellController : MonoBehaviour
     public void ResetSpells()
     {
         MEC.Timing.KillCoroutines();
+
         for (int i = 0; i < spells.Length; i++)
         {
             spells[i].ResetSpell();
+        }
+
+        for (int i = 0; i < spellViews.Length; i++)
+        {
             spellViews[i].ResetSpellView();
         }
     }

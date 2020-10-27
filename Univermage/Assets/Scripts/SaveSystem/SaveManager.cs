@@ -3,6 +3,14 @@ using UnityEngine;
 
 public class SaveManager : Singleton<SaveManager>
 {
+    [SerializeField]
+    private PlayerSaveable playerSaveable;
+
+    [SerializeField]
+    private Saveable[] saveableTags;
+
+    private ISaveable[] saveables;
+
     private SaveSystem saveSystem;
 
     private SaveData startLevelSave;
@@ -13,7 +21,8 @@ public class SaveManager : Singleton<SaveManager>
 
     private void Start()
     {
-        SaveSystemInit();
+        Init();
+
         startLevelSave = saveSystem.Save();
     }
 
@@ -35,21 +44,25 @@ public class SaveManager : Singleton<SaveManager>
         }
     }
 
-    public void SaveSystemInit()
+    private void Init()
     {
         saveSystem = new SaveSystem();
 
-        var player = FindObjectOfType<PlayerSaveable>();
-
-        var saveableTags = FindObjectsOfType<Saveable>();
-        var saveables = new ISaveable[saveableTags.Length];
+        saveables = new ISaveable[saveableTags.Length];
 
         for (int i = 0; i < saveables.Length; i++)
         {
             saveables[i] = saveableTags[i].GetComponent<ISaveable>();
         }
 
-        saveSystem.Init(player, saveables);
+        saveSystem.Init(playerSaveable, saveables);
+    }
+
+    public void FindSaveables()
+    {
+        playerSaveable = FindObjectOfType<PlayerSaveable>();
+
+        saveableTags = FindObjectsOfType<Saveable>();
     }
 
     public void Save()

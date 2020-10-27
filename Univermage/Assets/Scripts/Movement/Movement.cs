@@ -63,23 +63,17 @@ public class Movement : MonoBehaviour
         characterDirection.Flip(velocity.x);
     }
 
-    public void SetPosition(Vector2 position)
+    public void SetInputDirection(Vector2 inputDirection)
     {
-        myTransform.position = position;
-        RB.velocity = Vector2.zero;
-    }
+        var verticalSpeed = verticalMovement.GetVelocity(inputDirection.y) * moveSpeed;
 
-    public void SetDirection(Vector2 direction)
-    {
-        var verticalSpeed = verticalMovement.GetVelocity(direction.y) * moveSpeed;
+        var groundedDirection = new Vector2(inputDirection.x, 0);
 
-        var groundedDirection = new Vector2(direction.x, 0);
-
-        direction = verticalSpeed > 0 ? direction.normalized : groundedDirection;
+        inputDirection = verticalSpeed > 0 ? inputDirection.normalized : groundedDirection;
 
         velocity = new Vector2
         {
-            x = direction.x * moveSpeed,
+            x = inputDirection.x * moveSpeed,
             y = verticalSpeed
         };
     }
@@ -87,5 +81,11 @@ public class Movement : MonoBehaviour
     public void SetVerticalMovement(bool verticalMovement)
     {
         this.verticalMovement.OnJetPack(verticalMovement);
+    }
+
+    public void SetPosition(Vector2 position)
+    {
+        myTransform.position = position;
+        RB.velocity = Vector2.zero;
     }
 }

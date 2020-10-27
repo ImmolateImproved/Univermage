@@ -34,7 +34,7 @@ public class PlayerInput : MonoBehaviour
             direction = joystick.Direction;
         }
 
-        movement.SetDirection(direction);
+        movement.SetInputDirection(direction);
     }
 
     private void ToolsInput()

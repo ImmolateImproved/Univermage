@@ -16,6 +16,6 @@ public class VerticalMovement
 
     public float GetVelocity(float inputY)
     {
-        return (onJetPack || onLadder) ? inputY : -10;
+        return (onJetPack || onLadder) ? inputY : -5;
     }
 }

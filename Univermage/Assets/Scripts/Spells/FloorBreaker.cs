@@ -11,7 +11,7 @@ public class FloorBreaker : Spell
     private LayerMask mask;
 
     [SerializeField]
-    private float radius, delay;
+    private float delay;
 
     private CoroutineHandle coroutineHandle;
 
@@ -30,13 +30,14 @@ public class FloorBreaker : Spell
     private IEnumerator<float> Wait()
     {
         spellController.OnSpellUse(this, 0);
+
         yield return Timing.WaitForSeconds(delay);
 
-        var collider = Physics2D.OverlapCircle(castPointDown.position, radius, mask);
+        var hit = Physics2D.Raycast(castPointDown.position, -castPointDown.up, 1, mask);
 
-        if (collider)
+        if (hit)
         {
-            collider.GetComponent<DestructableObstacle>().Disable();
-        }
+            hit.collider.gameObject.SetActive(false);   
+        }        
     }
 }

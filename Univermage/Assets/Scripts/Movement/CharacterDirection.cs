@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class CharacterDirection : MonoBehaviour
 {
-    private Vector3 direction, castDirection;
+    private Vector2 direction, castDirection;
     public bool FacingRight { get; private set; } = true;
 
-    public Vector3 Direction
+    public Vector2 Direction
     {
         get
         {
@@ -13,7 +13,7 @@ public class CharacterDirection : MonoBehaviour
         }
     }
 
-    public Vector3 CastDirection
+    public Vector2 CastDirection
     {
         get
         {
@@ -42,11 +42,11 @@ public class CharacterDirection : MonoBehaviour
 
         if (FacingRight)
         {
-            castDirection = Vector3.right;
+            castDirection = Vector2.right;
         }
         else
         {
-            castDirection = Vector3.left;
+            castDirection = Vector2.left;
         }
     }
 
