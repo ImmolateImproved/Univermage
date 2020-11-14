@@ -1,0 +1,1468 @@
+Using pre-set license
+Built from 'trunk' branch; Version is '2021.1.0a2 (37c5ec4c3cb1) revision 3655148'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'ru' Physical Memory: 4095 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\Programs\Unity\2021.1.0a2\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Projects/MagicPuzzle/Univermage
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+56272
+Successfully changed project path to: D:/Projects/MagicPuzzle/Univermage
+D:/Projects/MagicPuzzle/Univermage
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 318.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.1.0a2 (37c5ec4c3cb1)
+[Subsystems] Discovering subsystems at path D:/Programs/Unity/2021.1.0a2/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Projects/MagicPuzzle/Univermage/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 6700 Series (ID=0x68bf)
+    Vendor:   
+    VRAM:     1014 MB
+    Driver:   15.200.1062.1004
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'D:/Programs/Unity/2021.1.0a2/Editor/Data/Managed'
+Mono path[1] = 'D:/Programs/Unity/2021.1.0a2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Programs/Unity/2021.1.0a2/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56728
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Programs/Unity/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002903 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 168.88 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.964 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005300 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Projects\MagicPuzzle\Univermage\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 173.87 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.236 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 1.79 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2594 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 247.6 MB.
+System memory in use after: 247.8 MB.
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3031.
+Total: 8.887000 ms (FindLiveObjects: 1.227000 ms CreateObjectMapping: 0.392500 ms MarkObjects: 7.119700 ms  DeleteObjects: 0.144600 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_154.asset
+  artifactKey: Guid(459c2e03bb14cdf4dae2362f1262683f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.074626 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_169.asset
+  artifactKey: Guid(d20a04a5ee2b93d48ba5ed0b7e8162a0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.135628 seconds.
+  path: Assets/Sprites/Rogue/Rogue_elbow_r_02.png
+  artifactKey: Guid(e1cf0148d2f367e42966b7ce6ee32e73) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.107106 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_45.asset
+  artifactKey: Guid(3128955341263c74090c006ed71470a2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.079336 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_145.asset
+  artifactKey: Guid(6d19c62ba6111ea459729fcaff8e4e77) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.093845 seconds.
+  path: Assets/Sprites/Rogue/Rogue_shoulder_r_06.png
+  artifactKey: Guid(b2bfd98da49248e42b93a78607ac257a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.085849 seconds.
+  path: Assets/Animations/FloorBreaker/ExpAnimator.controller
+  artifactKey: Guid(15e758bb18aad9c438161ec381f54da8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.081109 seconds.
+  path: Assets/TilePalettes/Castle/Tiles/Castle Platforms.asset
+  artifactKey: Guid(eb29d59401c4bf94497c5b6f7cf0217e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.069333 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_152.asset
+  artifactKey: Guid(5f1ec2df8efff4a42905f989f12d1a3b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.077615 seconds.
+  path: Assets/Virtual Joystick Pack/Prefabs/Variable Joystick.prefab
+  artifactKey: Guid(b737c9d1a3e7e174793d05f4637d64e4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.082933 seconds.
+  path: Assets/Sprites/Rogue/Rogue_boot_l_06.png
+  artifactKey: Guid(add7b98e4870e9d4c8e1dd5e07e3de1c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.049623 seconds.
+  path: Assets/Virtual Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Plain.png
+  artifactKey: Guid(097782735540f2d4db5606eae04ae6a7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.088390 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_150.asset
+  artifactKey: Guid(568c06a7131de484382a5107b5c66953) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.077837 seconds.
+  path: Assets/Sprites/Rogue/Rogue_torso_06.png
+  artifactKey: Guid(250530d3e9754ed418009e3d539275b3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.087217 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_14.asset
+  artifactKey: Guid(1643ced41447bb446a5b15799b0b5503) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.067199 seconds.
+  path: Assets/Animations/Rogue_animations/Rogue_attack_02.anim
+  artifactKey: Guid(64a73d86c86da4e47acf1b4bbe74fb16) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.063611 seconds.
+  path: Assets/Sprites/RogueWeapons/Rogue_weapon_05.png
+  artifactKey: Guid(97ad91e8b9bc5f94f941f06a70776c26) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.078414 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_146.asset
+  artifactKey: Guid(49d60429b2715d5449208de189f01bb6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.076841 seconds.
+  path: Assets/Scripts/Obstacle/DestructableObstacle.cs
+  artifactKey: Guid(8eb037127b69d4947adf1cb979bf5cdc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.083667 seconds.
+  path: Assets/Sprites/Wizard/Attack1.png
+  artifactKey: Guid(24c408640a337bb41a57e5e0fc8295db) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.042193 seconds.
+  path: Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader
+  artifactKey: Guid(85187c2149c549c5b33f0cdb02836b17) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.074770 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_89.asset
+  artifactKey: Guid(a41c5be3fa5d77d47a53d8dae4eca2a7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.068831 seconds.
+  path: Assets/Sprites/Rogue/Rogue_torso_04.png
+  artifactKey: Guid(3d9056df586b6024fbc5b9fee2433eef) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.065927 seconds.
+  path: Assets/Sprites/RogueWeapons/Rogue_weapon_005.png
+  artifactKey: Guid(da3944b1a7fbca740b934312a9827421) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.068589 seconds.
+  path: Assets/Virtual Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Plain_Arrows.png
+  artifactKey: Guid(2a1f3cba20f3e11498474a705db12fde) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.067807 seconds.
+  path: Assets/Prefabs/SpellScrolls/WallBreakerScroll.prefab
+  artifactKey: Guid(c58f59121a9435748a9cee0e1766ca7c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.081530 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_116.asset
+  artifactKey: Guid(7849befd6c6d6524c921999e21f55787) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.066445 seconds.
+  path: Assets/Virtual Joystick Pack/Sprites/Handles/Handle_Outline_Arrows.png
+  artifactKey: Guid(5eda94a9dcf71e445ad17e3c065d1460) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.080831 seconds.
+  path: Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader
+  artifactKey: Guid(128e987d567d4e2c824d754223b3f3b0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.068556 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_13.asset
+  artifactKey: Guid(6ac5fee16c2e8da4d91c8ad5aab85514) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.058802 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_133.asset
+  artifactKey: Guid(fdbaf32fb853b8c49b6fce7cb3e1b66d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.074761 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_53.asset
+  artifactKey: Guid(f329e299f14bcfb49a756b3f099187e5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.069711 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_25.asset
+  artifactKey: Guid(45b87adb5b36d1a419ec58982723b566) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.077405 seconds.
+  path: Assets/Animations/Rogue_animations/Rogue_attack_03.anim
+  artifactKey: Guid(8c1e88648e47cbf4b92f6cb1b7b7c8fd) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.064083 seconds.
+  path: Assets/Prefabs/Obstacles/DestructableFloor.prefab
+  artifactKey: Guid(32b52bff4728e704abed9265c2b30f81) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.076185 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_56.asset
+  artifactKey: Guid(8b5fd3f4903507840b77e6878986a4f7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.083260 seconds.
+  path: Assets/Sprites/UI/Icons/ButtonAcceleratorUpSprite.png
+  artifactKey: Guid(f588d850485d0ae479d73cf3bd0b7b00) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.074283 seconds.
+  path: Assets/Sprites/Rogue/Rogue_elbow_l_03.png
+  artifactKey: Guid(5e7415947ce8b1c47ade9a3d811da6cd) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.057194 seconds.
+  path: Assets/TilePalettes/Rule Override Tile/Scripts/RuleOverrideTile.cs
+  artifactKey: Guid(4c779848d9dd029409ca676b49e10a18) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.070343 seconds.
+  path: Assets/ScriptableObjects/Spells/FloorBreaker.asset
+  artifactKey: Guid(c7d013ac01ba52e438934b554eac7d76) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.076158 seconds.
+  path: Assets/Sprites/Rogue/Rogue_elbow_r_01.png
+  artifactKey: Guid(ece48dca5e286fd48b5dc0633b08b15d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.065805 seconds.
+  path: Assets/Virtual Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Outline.png
+  artifactKey: Guid(f054197ef28924b4986cbd91de2ab054) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.065082 seconds.
+  path: Assets/Prefabs/Characters/Rogue/Rogue_06.prefab
+  artifactKey: Guid(5b210609803658e488f512fc13a6163e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.067240 seconds.
+  path: Assets/Sprites/Rogue/Rogue_torso_02.png
+  artifactKey: Guid(90458a12b047bb84ba77cb7ea81ba457) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.077941 seconds.
+  path: Assets/Scripts/SaveSystem/SaveManager.cs
+  artifactKey: Guid(ea1a54e02de672444a234be7d888bba1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.081888 seconds.
+  path: Assets/Scripts/SaveSystem/Saveable.cs
+  artifactKey: Guid(46a0f32d2dc44744c91a48dc04498dfe) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.065631 seconds.
+  path: Assets/Scripts/Spells/GhostMode.cs
+  artifactKey: Guid(41e663ed5d28eeb4aab2e6b82aafae27) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.084082 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_136.asset
+  artifactKey: Guid(5cb89e68aa312fd47bc29afdd0558369) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.069132 seconds.
+  path: Assets/Scripts/Spells/SpellController.cs
+  artifactKey: Guid(96d1407c2b77b3840b70a4442db3fdf1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.068670 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_48.asset
+  artifactKey: Guid(7f36776e1b185bd479fe5d20e2e23995) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.081253 seconds.
+  path: Assets/Sprites/Rogue/Rogue_leg_r_06.png
+  artifactKey: Guid(e374a8e2ee1ae6b4c938a59399b39ffb) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.065678 seconds.
+  path: Assets/Sprites/UI/Icons/ButtonResetSprite.png
+  artifactKey: Guid(a94c9a7eb94ceec4a8d67a1890e22e51) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.070258 seconds.
+  path: Assets/Sprites/UI/Icons/TouchpadSprite.png
+  artifactKey: Guid(e4f1fee3de32377429fd1348fae62b10) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.073119 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_46.asset
+  artifactKey: Guid(2268a5d94b519824fbdf5db5d3eb0cba) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.069245 seconds.
+  path: Assets/Sprites/Rogue/Rogue_wrist_l_02.png
+  artifactKey: Guid(342c30774664cc34088bfe173b77c96e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.084634 seconds.
+  path: Assets/Sprites/Rogue/Rogue_shoulder_l_05.png
+  artifactKey: Guid(9573c51cf9ed4c94ca1925d245b830c5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.059769 seconds.
+  path: Assets/Virtual Joystick Pack/Scripts/Base/Joystick.cs
+  artifactKey: Guid(8307f1d11e319054582872b057d8de98) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.059969 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_12.asset
+  artifactKey: Guid(c5d5c0047362956438d3faa1d935620b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.080427 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_175.asset
+  artifactKey: Guid(475983c3644ce514aba920048826bd09) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.059032 seconds.
+  path: Assets/Scenes/Level2.unity
+  artifactKey: Guid(f6393610993a02045845db6e59cd4ad7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.061616 seconds.
+  path: Assets/Prefabs/Characters/Rogue/Rogue_05.prefab
+  artifactKey: Guid(30ef59945f2a7ea499bbbe10a7d48f1a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.063309 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Scenes/demo_scene_FREESettings.lighting
+  artifactKey: Guid(6f7c16dba43b8e5498735263c0f4d43d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.073847 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_0.asset
+  artifactKey: Guid(d9f98adac48e02c4ca93094b79d999d5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.085222 seconds.
+  path: Assets/Animations/Rogue_animations/Rogue_run_01.anim
+  artifactKey: Guid(a3dbadbb5ff405843843db913e3d2bc7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.068246 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_97.asset
+  artifactKey: Guid(78e61841b3a727140835283c3dbbec06) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.067277 seconds.
+  path: Assets/Sprites/Rogue/Rogue_hood_02.png
+  artifactKey: Guid(f7e7bed775fff8347b9e53c67e20875f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.065660 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_127.asset
+  artifactKey: Guid(20ad6d673310d0441ae263cf3523851e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.081963 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_111.asset
+  artifactKey: Guid(7822fd69407e377479774b422528aba3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.083123 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_37.asset
+  artifactKey: Guid(2692f4efbd3809341a0d5eeb348d9bd8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.069413 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_173.asset
+  artifactKey: Guid(28a4406a951c43d409a707d74168c67f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.082528 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Prefabs/Props_free/Medieval_props_free_14.prefab
+  artifactKey: Guid(573f2969d3071a44fa563048fb3422d8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.059055 seconds.
+  path: Assets/Sprites/Rogue/Rogue_shoulder_l_02.png
+  artifactKey: Guid(57e9977661e6a7246b75c2de487e5bb3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.073948 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_115.asset
+  artifactKey: Guid(62d5b7c65a606664c954cc6da1e1c300) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.082875 seconds.
+  path: Assets/Virtual Joystick Pack/Prefabs/Floating Joystick.prefab
+  artifactKey: Guid(cdd5474b97f1a9d40bea678ca8dec2bb) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.067899 seconds.
+  path: Assets/ScriptableObjects/Spells/GhostMode.asset
+  artifactKey: Guid(aa06368d885a56f4d834ec7d26d57437) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.081971 seconds.
+  path: Assets/Scripts/SaveSystem/SaveSystem.cs
+  artifactKey: Guid(cb7ce35c007c8104bb4044ad24a9cc7d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.074530 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_126.asset
+  artifactKey: Guid(ef4054ce9b9759d49a5c16d381221590) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.083327 seconds.
+  path: Assets/Sprites/Castle/Medieval_tiles_free2.png
+  artifactKey: Guid(cf57b3e7835b02e4493371d9bc259b1b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.076495 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_74.asset
+  artifactKey: Guid(3da4324532840ab47b24c4e7a77daf44) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.105956 seconds.
+  path: Assets/PhysicsMaterials/Default.physicsMaterial2D
+  artifactKey: Guid(5074a52f9addbd749be99adcdf429ce5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.076072 seconds.
+  path: Assets/Animations/WalBreaker/thrust_green_0.controller
+  artifactKey: Guid(a38b7a7ec3b4d6145947da9916daa2d4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.071934 seconds.
+  path: Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf
+  artifactKey: Guid(1b8d251f9af63b746bf2f7ffe00ebb9b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.091716 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_121.asset
+  artifactKey: Guid(3bc8684c8bcf8ae4fa089767112fbd7f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.067937 seconds.
+  path: Assets/Sprites/Wizard/Death.png
+  artifactKey: Guid(115f381eaccd4c24a85020eb6ca6e3b3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.085770 seconds.
+  path: Assets/Prefabs/Obstacles/WallDestructable.prefab
+  artifactKey: Guid(f88d586501e2057408751e6ef00666cd) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.073882 seconds.
+  path: Assets/Sprites/RogueWeapons/Rogue_weapon_004.png
+  artifactKey: Guid(c2f0536a0535f2d48842f8525beb4bb6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.103601 seconds.
+  path: Assets/Scripts/Others/DontDestroyOnLoad.cs
+  artifactKey: Guid(72ce173e8916f57428fcae0314e8d3af) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.112969 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_87.asset
+  artifactKey: Guid(fa37831e8939b64439d7e1b25c3bc824) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.163966 seconds.
+  path: Assets/Scripts/UI/JoystickSettings.cs
+  artifactKey: Guid(5c48a4a49a8e17a49afb011df4cd029a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.077608 seconds.
+  path: Assets/Sprites/RogueWeapons/Rogue_weapon_001.png
+  artifactKey: Guid(a67dcd548e2cfcc40b0c865c7461e835) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.103149 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
+  artifactKey: Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.070987 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_153.asset
+  artifactKey: Guid(016dd1fa05139b84bb19f6093b8d47ad) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.067008 seconds.
+  path: Assets/Animations/Rogue_animations/Rogue_attack_01.anim
+  artifactKey: Guid(1005dfb1994dd4d4c9407b61173a0890) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.036623 seconds.
+  path: Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader
+  artifactKey: Guid(bc1ede39bf3643ee8e493720e4259791) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.046677 seconds.
+  path: Assets/Scripts/UI/Editor/SaveManagerEditor.cs
+  artifactKey: Guid(4de63674f267f844bb0baafc4c9c52d1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.042343 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_107.asset
+  artifactKey: Guid(80ff01adb65a3e04bab350f2e930ede5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.038993 seconds.
+  path: Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt
+  artifactKey: Guid(fade42e8bc714b018fac513c043d323b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.038948 seconds.
+  path: Assets/Sprites/Rogue/Rogue_leg_r_01.png
+  artifactKey: Guid(7b78357522a34d64bb8775b962b0deb0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.050187 seconds.
+  path: Assets/Virtual Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline.png
+  artifactKey: Guid(5b56d9fa0e8bd6e409ed188db38a692c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.039114 seconds.
+  path: Assets/Sprites/Environments/PassThroughPlatformAlien.png
+  artifactKey: Guid(f67d52e5fa8873946867aa19a7bac3b6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.040501 seconds.
+  path: Assets/Sprites/Tilesets/GrassPlatform_TileSet.psd
+  artifactKey: Guid(5bdebc31617e5475f9757dbb57389d3b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.040486 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Prefabs/Props_free/Medieval_props_free_22.prefab
+  artifactKey: Guid(e2a26257b5e648040b6edae4f19a74b1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.038969 seconds.
+  path: Assets/Scripts/Spells/Flight.cs
+  artifactKey: Guid(b2825e8bb6efe7d42b28346d5f788ccc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.035570 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_142.asset
+  artifactKey: Guid(fcb3667d9e9d0ef43be0442f7becb63d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.035818 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_44.asset
+  artifactKey: Guid(954409f4ba53fb24a9eb9592050da5b5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.035594 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_120.asset
+  artifactKey: Guid(d37828d89c32b364e9f028131f68ef7c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.040468 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_172.asset
+  artifactKey: Guid(28f9a0e7187804444a7bfd9ed00a76ec) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.035282 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_33.asset
+  artifactKey: Guid(4d39f938b384d774589f5eec56572f61) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.035796 seconds.
+  path: Assets/Sprites/Rogue/Rogue_torso_01.png
+  artifactKey: Guid(215dd6c48c732d744aecd29e7fecbbfa) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.052346 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_134.asset
+  artifactKey: Guid(0681986743c7dac43a02a65ef0b48e0e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.041731 seconds.
+  path: Assets/Animations/Wizard/Attack2.anim
+  artifactKey: Guid(3c25ed4fe2c48ea4d8d18995d3989d8b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.045522 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_99.asset
+  artifactKey: Guid(c04fa706db18f354e973f5bf23f16f89) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.044458 seconds.
+  path: Assets/Sprites/Wizard/Emission/DefaultEmission.png
+  artifactKey: Guid(42e9feee9d8035a42a8292209a02c07e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.042190 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_9.asset
+  artifactKey: Guid(8cbb1fc886e2cf04083457e2b390e43b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.060796 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_72.asset
+  artifactKey: Guid(2f7bf868b7625964f99d392577b74060) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.038140 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_157.asset
+  artifactKey: Guid(5afcfd647aaa0b04f8b184668eac4994) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.044238 seconds.
+  path: Assets/TilePalettes/Castle/Tiles/DestructableFloorTile.asset
+  artifactKey: Guid(afdf70666c9d9584aa92fb7d5195f52a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.068764 seconds.
+  path: Assets/Scripts/UI/Editor/SaveManager.uxml
+  artifactKey: Guid(51533126a0c169441916117f9f0b3620) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.222367 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_39.asset
+  artifactKey: Guid(623aaf92a77c47b49a49e59d04951323) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.514482 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Prefabs/Props_free/Medieval_props_free_20.prefab
+  artifactKey: Guid(b8b3c490f21c87345a2f86d0e594c439) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.625202 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_10.asset
+  artifactKey: Guid(6f8ffdf4dd9eff74d826989fdc289ecc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.060684 seconds.
+  path: Assets/Sprites/Wizard/Hit.png
+  artifactKey: Guid(784d109a402c8564b8929b174f0fcae0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.035160 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Prefabs/Props_free/Medieval_props_free_16.prefab
+  artifactKey: Guid(ad8aee53221f9c44bb741edfa9bbafe3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.050907 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_57.asset
+  artifactKey: Guid(adebb42c4b9514746b250d606bc847d5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.061751 seconds.
+  path: Assets/Sprites/Rogue/Rogue_shoulder_r_01.png
+  artifactKey: Guid(9af6155338c0e8f4ab8f5bb30b4c586e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.092959 seconds.
+  path: Assets/Sprites/UI/Icons/ButtonThumbstickUpSprite.png
+  artifactKey: Guid(9866a92691696b346901281f2b329034) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.045076 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.164862 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_65.asset
+  artifactKey: Guid(1bc8d63dc35d75e4d89c90a5c9be0097) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.053814 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_129.asset
+  artifactKey: Guid(ff07edf7de3fcf947a488f41bf17fbc5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.052731 seconds.
+  path: Assets/Sprites/Rogue/Rogue_hair_01.png
+  artifactKey: Guid(04f6c40e52535b941b42e11550f9cb8c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.036453 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_155.asset
+  artifactKey: Guid(fa17457a5ccc7d746bdad9e715199991) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.039395 seconds.
+  path: Assets/Materials/GlowUnlit.shadergraph
+  artifactKey: Guid(498ec83d72a69464da82a8e79a70f5e8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.035013 seconds.
+  path: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.040028 seconds.
+  path: Assets/Scripts/SaveSystem/PlayerSaveable.cs
+  artifactKey: Guid(94fad05684ae4a447a97ee1dfbaf2b10) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.035227 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_85.asset
+  artifactKey: Guid(727ee8fd8cdc7ea4ebbc3c59e527904d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.039604 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Prefabs/Props_free/Medieval_props_free_3.prefab
+  artifactKey: Guid(2e158dd1922dd2f429687179bedb7503) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.039058 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_92.asset
+  artifactKey: Guid(e718d46dbbb67674fb5579fe6e979b64) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.035088 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Prefabs/Props_free/Medieval_props_free_5.prefab
+  artifactKey: Guid(38d22e1553bfb7943b9544b849dee0dd) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.037395 seconds.
+  path: Assets/Sprites/Rogue/Rogue_boot_l_03.png
+  artifactKey: Guid(2932647fff9189e40a62a25143f3f534) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.039719 seconds.
+  path: Assets/Sprites/Rogue/Rogue_leg_r_02.png
+  artifactKey: Guid(321cb2880c53eb743987a6a94741e4f0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.036843 seconds.
+  path: Assets/Sprites/Rogue/Rogue_shoulder_l_04.png
+  artifactKey: Guid(7c0d0c89b736eb54cac31e27a02a92e5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.035997 seconds.
+  path: Assets/Scripts/Movement/CharacterDirection.cs
+  artifactKey: Guid(34292f229e8b4a542ba40bf47ee88728) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.041324 seconds.
+  path: Assets/Sprites/Rogue/Rogue_shoulder_r_03.png
+  artifactKey: Guid(9fe981f3e80b99e429e4399b985d07f4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.043457 seconds.
+  path: Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset
+  artifactKey: Guid(c41005c129ba4d66911b75229fd70b45) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.054227 seconds.
+  path: Assets/Sprites/UI/Icons/SliderHandleSprite.png
+  artifactKey: Guid(0626b924325d1c34cafa6b22297f4e4f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.060478 seconds.
+  path: Assets/Sprites/Items/prop_bomb.png
+  artifactKey: Guid(c2fc7b356ebe242deaefac9ceb95a7e1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.311092 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_32.asset
+  artifactKey: Guid(b9eda2a54a9f40348804c9aaabe17b1d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.234337 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_140.asset
+  artifactKey: Guid(0fddfa2d4f697ab47a0d9828b6a04ebf) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.057584 seconds.
+  path: Assets/Scripts/Input/PlayerInput.cs
+  artifactKey: Guid(c3d7b34a3bb2d4e4b926e7e729d3d410) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.071976 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_164.asset
+  artifactKey: Guid(83a05c14c527d3c4bbdda1f9bd1ee63d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.090118 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_60.asset
+  artifactKey: Guid(aa3f6a82a6124f74ab6a46e72846b500) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.035630 seconds.
+  path: Assets/Sprites/Wizard/Fall.png
+  artifactKey: Guid(997193fe8f2eaf0458b9b2a04f50716e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.070117 seconds.
+  path: Assets/Sprites/Rogue/Rogue_elbow_l_06.png
+  artifactKey: Guid(fa66f03a93fcebb418b876e0f4731600) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.036071 seconds.
+  path: Assets/Sprites/Rogue/Rogue_boot_r_01.png
+  artifactKey: Guid(ed569bcf23ebe674180d6ae7a5d29495) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.043029 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_174.asset
+  artifactKey: Guid(c9eb2fa7107207b49a9e21ac9ddfb5d3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.085282 seconds.
+  path: Assets/Sprites/UI/Icons/ButtonSpacebarSprite.png
+  artifactKey: Guid(3d8675433a508ec47b8f895201eacf20) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.070881 seconds.
+  path: Assets/Virtual Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged.png
+  artifactKey: Guid(6304ad603f150b649b764d29bbc2a87b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.100648 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_54.asset
+  artifactKey: Guid(61005a1b0358eee498315897c030d417) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.189157 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_128.asset
+  artifactKey: Guid(eef859e546aa4e344829c5d95ad2eb16) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.269918 seconds.
+  path: Assets/Sprites/Wizard/Attack2.png
+  artifactKey: Guid(56ca49b185368cc4fb5a0fc40cc3a0e7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.111816 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_73.asset
+  artifactKey: Guid(bac52dd12c309e5469d0092bc20ce68c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.132295 seconds.
+  path: Assets/Scripts/Spells/SpellScroll.cs
+  artifactKey: Guid(fc8deca0914fa7441ac056aad4f75e5a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.235017 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_149.asset
+  artifactKey: Guid(56f25d9b6ecdec94f87e279553c8e9d1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.121432 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_50.asset
+  artifactKey: Guid(a4bb22a71934f524cb9bfbfdc56c7bc1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.131537 seconds.
+  path: Assets/Scripts/Spells/SpellViews/WallBreakerView.cs
+  artifactKey: Guid(bab3f640dcdb2934a821e04bb17f3e41) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.111970 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_162.asset
+  artifactKey: Guid(ed0437fdaeb75f642be7c7bc6c677a01) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.144269 seconds.
+  path: Assets/Sprites/Rogue/Rogue_pelvis_03.png
+  artifactKey: Guid(0c6412d95175c2b40bd9a27f7d1fa096) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.083726 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_83.asset
+  artifactKey: Guid(c61609dcfd495194698028eadeaef068) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.088413 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Prefabs/Props_free/Medieval_props_free_21.prefab
+  artifactKey: Guid(71cce0e18cda5cf41922fd12f108ed51) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.034948 seconds.
+  path: Assets/Sprites/Wizard/Emission/Attack2EmissionMap.png
+  artifactKey: Guid(61c63c7470ab3384389c0680ecb289ef) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.040378 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_35.asset
+  artifactKey: Guid(75ac9449cb30b084f837aa903efca74b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.037109 seconds.
+  path: Assets/Sprites/Environments/Background_Gradient.png
+  artifactKey: Guid(dcd91517448b04a3da3ae2f45cd11a57) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.048207 seconds.
+  path: Assets/Sprites/Rogue/Rogue_wrist_l_05.png
+  artifactKey: Guid(fde91a030e5382647a20ec036c8d578f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.155246 seconds.
+  path: Assets/Sprites/Wizard/Jump.png
+  artifactKey: Guid(a36992b94c89e6147b3a9a454d90654e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.084356 seconds.
+  path: Assets/Prefabs/Characters/Rogue/Rogue_01.prefab
+  artifactKey: Guid(722924ec8a0056f4a8fb443b2fb65ff9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.059853 seconds.
+  path: Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader
+  artifactKey: Guid(48bb5f55d8670e349b6e614913f9d910) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.062240 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_11.asset
+  artifactKey: Guid(bd0adafd2601bb74dacbd30d5efcd1d3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.077481 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_104.asset
+  artifactKey: Guid(22c99bc047967e04896bef12bd77e11c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.083379 seconds.
+  path: Assets/Sprites/Rogue/Rogue_face_01.png
+  artifactKey: Guid(518ab34707033904cb1d99dbfcc9f4bb) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.109160 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/palettes/Medieval_pixel_art_tileset_free.prefab
+  artifactKey: Guid(24d7ac66bf388d14186f825aca992a57) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.122730 seconds.
+  path: Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader
+  artifactKey: Guid(a02a7d8c237544f1962732b55a9aebf1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.372304 seconds.
+  path: Assets/Scenes/Level2/Global Volume Profile.asset
+  artifactKey: Guid(dc3700e10005f1b41914df0a7a3b171c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.174014 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_67.asset
+  artifactKey: Guid(48739b254deb5b84888af6fd0e3fafc8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.090875 seconds.
+  path: Assets/Sprites/FX/Explosion.png
+  artifactKey: Guid(c8260d15cb31d3d49a251f7cdb4d1777) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.081523 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_47.asset
+  artifactKey: Guid(d6dcffd7ba5598f498736d5eef96c311) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.086269 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_161.asset
+  artifactKey: Guid(20dfcd4cf0355c54aaebdad9d23bb589) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.076286 seconds.
+  path: Assets/Prefabs/Characters/Rogue/Rogue_02.prefab
+  artifactKey: Guid(7ac6bdc2e4b5e47468b8b460ca863a5f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.063077 seconds.
+  path: Assets/Sprites/Rogue/Rogue_wrist_r_01.png
+  artifactKey: Guid(661842e23ba86e34abbf52c56c321411) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.084486 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_31.asset
+  artifactKey: Guid(384bd6f8a294d504db2f6dcd946cfc84) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.083531 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Prefabs/Props_free/Medieval_props_free_11.prefab
+  artifactKey: Guid(d74fca2a20f3b9a4cbd82b9ff4ba2891) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.075991 seconds.
+  path: Assets/Sprites/Rogue/Rogue_elbow_l_02.png
+  artifactKey: Guid(3a94b1e5121a110479590d1d60ce75f0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.089477 seconds.
+  path: Assets/Sprites/Rogue/Rogue_wrist_r_06.png
+  artifactKey: Guid(bbec2f9af2fefd4459cd1f041e6850cf) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.078212 seconds.
+  path: Assets/Scripts/Spells/Spell.cs
+  artifactKey: Guid(6b1730ba901f4224287674d8257e2439) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.077418 seconds.
+  path: Assets/Virtual Joystick Pack/Sprites/Handles/Handle_Ridged.png
+  artifactKey: Guid(3a74f678ee8f3bd49aacf3de1ae4bcaa) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.077795 seconds.
+  path: Assets/Sprites/Rogue/Rogue_01.png
+  artifactKey: Guid(5f184284ff230b44992dfd45d7153af4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.096228 seconds.
+  path: Assets/TilePalettes/Rule Tile/Scripts/RuleTile.cs
+  artifactKey: Guid(9d1514134bc4fbd41bb739b1b9a49231) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.079355 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_113.asset
+  artifactKey: Guid(dc3f66d233574ae409780b730a934931) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.040020 seconds.
+  path: Assets/Prefabs/SpellScrolls/FlightScroll.prefab
+  artifactKey: Guid(d6056ac896a12b34e95584608f90b26e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.043469 seconds.
+  path: Assets/Scripts/Spells/Blink.cs
+  artifactKey: Guid(529f3fd0cb8f11d4cac0f2286f724b9e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.035376 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_179.asset
+  artifactKey: Guid(dbb1ea24c2001c6418e572bdb9fe54b0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.073411 seconds.
+  path: Assets/Virtual Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Plain.png
+  artifactKey: Guid(84487d73ca4b791498332d8f6858417f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.070368 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_55.asset
+  artifactKey: Guid(c9bc746670b28ec418142d49023fbecd) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.088824 seconds.
+  path: Assets/Sprites/Rogue/Rogue_wrist_l_03.png
+  artifactKey: Guid(44fa20638679f684891b3b8f8ae65078) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.059854 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_147.asset
+  artifactKey: Guid(2f64576086942ad4b8a4b22acb0fe2c4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.084218 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/pixel_snapping_README.txt
+  artifactKey: Guid(19b786f85f56f694bb2f879e139d85d4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.063492 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Scenes/demo_scene_FREE.unity
+  artifactKey: Guid(f2120731c167b44499fb4a0263fa8368) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.081871 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_132.asset
+  artifactKey: Guid(97b7109c43351994f89972c153b6ed18) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.106852 seconds.
+  path: Assets/Sprites/Rogue/Rogue_elbow_r_03.png
+  artifactKey: Guid(c100ecf6707adf24083cea1e4063c659) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.123642 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_69.asset
+  artifactKey: Guid(c9d09ad4fafe1d440aea84178b5a39a5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.098302 seconds.
+  path: Assets/Sprites/FX/JetPack.png
+  artifactKey: Guid(2d74c98e17def9340b491950b798b512) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.081671 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Prefabs/Props_free/Medieval_props_free_19.prefab
+  artifactKey: Guid(44054954b77510d47b1fcbe02bebc579) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.085195 seconds.
+  path: Assets/Sprites/Rogue/Rogue_boot_l_04.png
+  artifactKey: Guid(7b9383d96cedcd9409cc1f3d6d355cf6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.088806 seconds.
+  path: Assets/Animations/Wizard/MageController.controller
+  artifactKey: Guid(6d57536362a47c3418652f87ee48f329) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.086285 seconds.
+  path: Assets/Sprites/RogueWeapons/Rogue_weapon_003.png
+  artifactKey: Guid(3a3f60d3a7506e54795a7bdc644550c9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.044643 seconds.
+  path: Assets/Renderer/2D Renderer Data.asset
+  artifactKey: Guid(4226110ad64330a48a67e534e8ae1510) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.037610 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Prefabs/Props_free/Medieval_props_free_4.prefab
+  artifactKey: Guid(5f00a24494233a242bb7397e971a1e7f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.035135 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_102.asset
+  artifactKey: Guid(0bb988223add60444a10f3dc3b09f484) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.035119 seconds.
+  path: Assets/Sprites/Rogue/Rogue_elbow_r_05.png
+  artifactKey: Guid(c8246436787abd045a65c5d246ef4344) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.036110 seconds.
+  path: Assets/Sprites/Tilesets/Square.png
+  artifactKey: Guid(cee17a2f06d746047878922a3dd1bc79) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.041239 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_51.asset
+  artifactKey: Guid(4f7b4c99fffee0a40876fadafdf9fcec) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.046842 seconds.
+  path: Assets/Prefabs/UIManager.prefab
+  artifactKey: Guid(d9b6df789b1ba6d4084979c646660d66) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.034863 seconds.
+  path: Assets/Sprites/Wizard/Idle.png
+  artifactKey: Guid(cdb1623d53b02a844a9de6b50019573c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.035482 seconds.
+  path: Assets/Sprites/Rogue/Rogue_boot_l_05.png
+  artifactKey: Guid(e97e92bbd1093e044ab575af7f9999e9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.041280 seconds.
+  path: Assets/Sprites/RogueWeapons/Rogue_weapon_06.png
+  artifactKey: Guid(37e05d8dcd5e386498e75d924efbc7c1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.039290 seconds.
+  path: Assets/Scripts/Spells/SpellViews/PortalView.cs
+  artifactKey: Guid(bd8cc0d0e20ab0a439d8c7225171667d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.039812 seconds.
+  path: Assets/Sprites/Environments/DestructibleColumn.png
+  artifactKey: Guid(cbf958bb9960a5d4cb587a17cedbfeac) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.036749 seconds.
+  path: Assets/Sprites/Items/Portal.png
+  artifactKey: Guid(b60a7d54c61a86446a40360f97204b64) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.036442 seconds.
+  path: Assets/Sprites/Rogue/Rogue_face_04.png
+  artifactKey: Guid(f0dca671fefddc54c98270536b979b8b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.036928 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_168.asset
+  artifactKey: Guid(3e72ee6bbf7a22a4993a14ff3b47ec63) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.038026 seconds.
+  path: Assets/Virtual Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Plain.png
+  artifactKey: Guid(ab6db91373811284caeba2e9472fa9c2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.035353 seconds.
+  path: Assets/Sprites/Rogue/Rogue_wrist_r_05.png
+  artifactKey: Guid(c764210032bc5df46a28cb6e1f3ad991) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.108108 seconds.
+  path: Assets/Prefabs/LevelSetup.prefab
+  artifactKey: Guid(4858c23829479a841988f5c6960199e0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.143962 seconds.
+  path: Assets/TextMesh Pro/Resources/Shaders/TMP_Sprite.shader
+  artifactKey: Guid(cf81c85f95fe47e1a27f6ae460cf182c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.060513 seconds.
+  path: Assets/Virtual Joystick Pack/Prefabs/Fixed Joystick.prefab
+  artifactKey: Guid(ce5089f3caa5bb042a4d4c23a427bc82) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.140629 seconds.
+  path: Assets/Prefabs/SpellScrolls/FloorBreakerScroll.prefab
+  artifactKey: Guid(6489d5515c1146b4c92bdbcd0556d983) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.243897 seconds.
+  path: Assets/Sprites/Rogue/Rogue_hood_06.png
+  artifactKey: Guid(20eb058aea3c3a744bb5d47a1610550a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.578393 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_112.asset
+  artifactKey: Guid(982914e9bf0c83f4581e24181e2b4ace) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.062677 seconds.
+  path: Assets/Sprites/Rogue/Rogue_leg_l_06.png
+  artifactKey: Guid(0038d4b0669b99846b9be93321f9d7a4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.149830 seconds.
+  path: Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader
+  artifactKey: Guid(1e3b057af24249748ff873be7fafee47) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.869098 seconds.
+  path: Assets/Medieval_pixel_art_asset_FREE/Tiles_free/Medieval_tiles_free2_19.asset
+  artifactKey: Guid(e64f4d07434b48e4eae4df3a53982d2a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Import Request.
+  Time since last request: 0.348247 seconds.
+  path: Assets/Prefabs/Left Joystick Canvas.prefab
+  artifactKey: Guid(cdecfde9243f76a4a9aa330d8e6880a4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Programs/Unity/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004241 seconds.
+Symbol file LoadedFromMemory doesn't match image D:\Projects\MagicPuzzle\Univermage\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 180.59 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.517 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.007220 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Projects\MagicPuzzle\Univermage\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.673 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 3.14 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 26 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 193.6 MB.
+System memory in use after: 193.8 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 3035.
+Total: 9.866500 ms (FindLiveObjects: 2.368800 ms CreateObjectMapping: 0.337900 ms MarkObjects: 7.054500 ms  DeleteObjects: 0.101900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 270.026396 seconds.
+  path: Assets/Prefabs/Obstacles
+  artifactKey: Guid(353c3c0b963dd6c4881e9b0b517c32c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 1.033615 seconds.
+  path: Assets/Prefabs/Characters
+  artifactKey: Guid(e90027b74e3a85c4ab639bf4c2dee8a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 0.499949 seconds.
+  path: Assets/Prefabs/SpellScrolls
+  artifactKey: Guid(4ee7fb22869878d4ca4d4669190d8a95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 3.168077 seconds.
+  path: Assets/Prefabs/SpellScrolls/VFX
+  artifactKey: Guid(b5a19f1ac3c4da541843982b05ab95b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Import Request.
+  Time since last request: 581.925674 seconds.
+  path: Assets/Scripts/SaveSystem/SaveManager.cs
+  artifactKey: Guid(ea1a54e02de672444a234be7d888bba1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Programs/Unity/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.150512 seconds.
+Symbol file LoadedFromMemory doesn't match image D:\Projects\MagicPuzzle\Univermage\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 455.01 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  6.755 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005436 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Projects\MagicPuzzle\Univermage\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.660 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.75 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 26 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 193.7 MB.
+System memory in use after: 193.9 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 3039.
+Total: 89.107900 ms (FindLiveObjects: 11.837900 ms CreateObjectMapping: 35.753700 ms MarkObjects: 40.652000 ms  DeleteObjects: 0.859800 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Programs/Unity/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003729 seconds.
+Symbol file LoadedFromMemory doesn't match image D:\Projects\MagicPuzzle\Univermage\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 323.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.212 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005381 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Projects\MagicPuzzle\Univermage\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.299 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 4.78 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 26 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 194.5 MB.
+System memory in use after: 194.7 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 3043.
+Total: 8.723600 ms (FindLiveObjects: 1.935500 ms CreateObjectMapping: 0.815700 ms MarkObjects: 5.604200 ms  DeleteObjects: 0.363500 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Programs/Unity/2021.1.0a2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005633 seconds.
+Symbol file LoadedFromMemory doesn't match image D:\Projects\MagicPuzzle\Univermage\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 149.99 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.291 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.007384 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Projects\MagicPuzzle\Univermage\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.969 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 26 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 194.7 MB.
+System memory in use after: 194.9 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 3047.
+Total: 11.306300 ms (FindLiveObjects: 1.656500 ms CreateObjectMapping: 0.443500 ms MarkObjects: 9.139100 ms  DeleteObjects: 0.062400 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

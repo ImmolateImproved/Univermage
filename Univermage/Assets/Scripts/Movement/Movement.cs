@@ -7,12 +7,15 @@ public class Movement : MonoBehaviour
     private Animator anim;
     private CharacterDirection characterDirection;
 
-    private VerticalMovement verticalMovement;
-
     private Vector2 velocity;
+
+    private bool verticalMovement;
 
     [SerializeField]
     private float moveSpeed;
+
+    [SerializeField]
+    private float gravityScale;
 
     private int moveAnimationHash;
 
@@ -26,7 +29,6 @@ public class Movement : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         RB = GetComponent<Rigidbody2D>();
         characterDirection = GetComponent<CharacterDirection>();
-        verticalMovement = new VerticalMovement();
 
         moveAnimationHash = Animator.StringToHash("Speed");
     }
@@ -34,22 +36,6 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Ladder")
-        {
-            verticalMovement.OnLadder(true);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Ladder")
-        {
-            verticalMovement.OnLadder(false);
-        }
     }
 
     private void Move()
@@ -65,22 +51,14 @@ public class Movement : MonoBehaviour
 
     public void SetInputDirection(Vector2 inputDirection)
     {
-        var verticalSpeed = verticalMovement.GetVelocity(inputDirection.y) * moveSpeed;
-
-        var groundedDirection = new Vector2(inputDirection.x, 0);
-
-        inputDirection = verticalSpeed > 0 ? inputDirection.normalized : groundedDirection;
-
-        velocity = new Vector2
-        {
-            x = inputDirection.x * moveSpeed,
-            y = verticalSpeed
-        };
+        velocity = verticalMovement
+                 ? inputDirection.normalized * moveSpeed
+                 : new Vector2(inputDirection.x * moveSpeed, -gravityScale);
     }
 
     public void SetVerticalMovement(bool verticalMovement)
     {
-        this.verticalMovement.OnJetPack(verticalMovement);
+        this.verticalMovement = verticalMovement;
     }
 
     public void SetPosition(Vector2 position)
