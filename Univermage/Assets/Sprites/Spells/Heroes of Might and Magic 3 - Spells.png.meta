@@ -1,0 +1,3492 @@
+fileFormatVersion: 2
+guid: 4c7e0fde5da1fdf48bfd95f8b9432c09
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7884012106102413030
+    second: Heroes of Might and Magic 3 - Spells_0
+  - first:
+      213: 961660630279292152
+    second: Heroes of Might and Magic 3 - Spells_1
+  - first:
+      213: -6316029271272126530
+    second: Heroes of Might and Magic 3 - Spells_2
+  - first:
+      213: 4948599684833540894
+    second: Heroes of Might and Magic 3 - Spells_3
+  - first:
+      213: -8886473082097536147
+    second: Heroes of Might and Magic 3 - Spells_4
+  - first:
+      213: -3758663755296888993
+    second: Heroes of Might and Magic 3 - Spells_5
+  - first:
+      213: 5263479382993825553
+    second: Heroes of Might and Magic 3 - Spells_6
+  - first:
+      213: -6381908046597608023
+    second: Heroes of Might and Magic 3 - Spells_7
+  - first:
+      213: -6483084884356464524
+    second: Heroes of Might and Magic 3 - Spells_8
+  - first:
+      213: -438399392780126659
+    second: Heroes of Might and Magic 3 - Spells_9
+  - first:
+      213: -4510978852851391930
+    second: Heroes of Might and Magic 3 - Spells_10
+  - first:
+      213: 5609053356332217863
+    second: Heroes of Might and Magic 3 - Spells_11
+  - first:
+      213: 2658909752219428221
+    second: Heroes of Might and Magic 3 - Spells_12
+  - first:
+      213: -7579203963594116329
+    second: Heroes of Might and Magic 3 - Spells_13
+  - first:
+      213: -4829722036215987445
+    second: Heroes of Might and Magic 3 - Spells_14
+  - first:
+      213: -6551271284853799572
+    second: Heroes of Might and Magic 3 - Spells_15
+  - first:
+      213: -3619410573261837987
+    second: Heroes of Might and Magic 3 - Spells_16
+  - first:
+      213: -8277362776724654292
+    second: Heroes of Might and Magic 3 - Spells_17
+  - first:
+      213: 4427937765908246071
+    second: Heroes of Might and Magic 3 - Spells_18
+  - first:
+      213: -6243808489003303121
+    second: Heroes of Might and Magic 3 - Spells_19
+  - first:
+      213: 6864628984310829778
+    second: Heroes of Might and Magic 3 - Spells_20
+  - first:
+      213: 7908442135099426665
+    second: Heroes of Might and Magic 3 - Spells_21
+  - first:
+      213: 435321088186468005
+    second: Heroes of Might and Magic 3 - Spells_22
+  - first:
+      213: 3172843933638454503
+    second: Heroes of Might and Magic 3 - Spells_23
+  - first:
+      213: -5056281656119612433
+    second: Heroes of Might and Magic 3 - Spells_24
+  - first:
+      213: 7203696932977792311
+    second: Heroes of Might and Magic 3 - Spells_25
+  - first:
+      213: -4669692821196561571
+    second: Heroes of Might and Magic 3 - Spells_26
+  - first:
+      213: 3372416682558746410
+    second: Heroes of Might and Magic 3 - Spells_27
+  - first:
+      213: -5145663847746766480
+    second: Heroes of Might and Magic 3 - Spells_28
+  - first:
+      213: 1995010000896088069
+    second: Heroes of Might and Magic 3 - Spells_29
+  - first:
+      213: -3508588652543231953
+    second: Heroes of Might and Magic 3 - Spells_30
+  - first:
+      213: 8540474691040740954
+    second: Heroes of Might and Magic 3 - Spells_31
+  - first:
+      213: -1116245320533206878
+    second: Heroes of Might and Magic 3 - Spells_32
+  - first:
+      213: -5266252754560470141
+    second: Heroes of Might and Magic 3 - Spells_33
+  - first:
+      213: 3460269631612261388
+    second: Heroes of Might and Magic 3 - Spells_34
+  - first:
+      213: 226910055699017942
+    second: Heroes of Might and Magic 3 - Spells_35
+  - first:
+      213: 321108895602184472
+    second: Heroes of Might and Magic 3 - Spells_36
+  - first:
+      213: -8104585838386999694
+    second: Heroes of Might and Magic 3 - Spells_37
+  - first:
+      213: -5814819853044635670
+    second: Heroes of Might and Magic 3 - Spells_38
+  - first:
+      213: -522828752187604462
+    second: Heroes of Might and Magic 3 - Spells_39
+  - first:
+      213: -8541457091684615350
+    second: Heroes of Might and Magic 3 - Spells_40
+  - first:
+      213: -3778297900408987750
+    second: Heroes of Might and Magic 3 - Spells_41
+  - first:
+      213: -8363431251843123387
+    second: Heroes of Might and Magic 3 - Spells_42
+  - first:
+      213: 3624372395314743864
+    second: Heroes of Might and Magic 3 - Spells_43
+  - first:
+      213: -9211276133606823563
+    second: Heroes of Might and Magic 3 - Spells_44
+  - first:
+      213: -7058250332947385937
+    second: Heroes of Might and Magic 3 - Spells_45
+  - first:
+      213: 9158911019449387561
+    second: Heroes of Might and Magic 3 - Spells_46
+  - first:
+      213: -4133137387650450486
+    second: Heroes of Might and Magic 3 - Spells_47
+  - first:
+      213: 6658723899653801943
+    second: Heroes of Might and Magic 3 - Spells_48
+  - first:
+      213: 1186551679023517654
+    second: Heroes of Might and Magic 3 - Spells_49
+  - first:
+      213: 3418161559916867669
+    second: Heroes of Might and Magic 3 - Spells_50
+  - first:
+      213: -2489998811078186217
+    second: Heroes of Might and Magic 3 - Spells_51
+  - first:
+      213: 2136039766316951506
+    second: Heroes of Might and Magic 3 - Spells_52
+  - first:
+      213: 4783219510567622734
+    second: Heroes of Might and Magic 3 - Spells_53
+  - first:
+      213: -4141031720870529914
+    second: Heroes of Might and Magic 3 - Spells_54
+  - first:
+      213: -87579385837523219
+    second: Heroes of Might and Magic 3 - Spells_55
+  - first:
+      213: -2008832190532257817
+    second: Heroes of Might and Magic 3 - Spells_56
+  - first:
+      213: -1608456782956338816
+    second: Heroes of Might and Magic 3 - Spells_57
+  - first:
+      213: 983679842825752917
+    second: Heroes of Might and Magic 3 - Spells_58
+  - first:
+      213: -8544689128076566430
+    second: Heroes of Might and Magic 3 - Spells_59
+  - first:
+      213: 1671199220616159402
+    second: Heroes of Might and Magic 3 - Spells_60
+  - first:
+      213: -2436654055482644250
+    second: Heroes of Might and Magic 3 - Spells_61
+  - first:
+      213: -213158996190011323
+    second: Heroes of Might and Magic 3 - Spells_62
+  - first:
+      213: 3775420171991374857
+    second: Heroes of Might and Magic 3 - Spells_63
+  - first:
+      213: 2272532852702018476
+    second: Heroes of Might and Magic 3 - Spells_64
+  - first:
+      213: 8495460213599617485
+    second: Heroes of Might and Magic 3 - Spells_65
+  - first:
+      213: -7382854218786264206
+    second: Heroes of Might and Magic 3 - Spells_66
+  - first:
+      213: -2028960123823148231
+    second: Heroes of Might and Magic 3 - Spells_67
+  - first:
+      213: -4069558547484143154
+    second: Heroes of Might and Magic 3 - Spells_68
+  - first:
+      213: -5952564142002189443
+    second: Heroes of Might and Magic 3 - Spells_69
+  - first:
+      213: 8544195818502261820
+    second: Heroes of Might and Magic 3 - Spells_70
+  - first:
+      213: -6979707551310661774
+    second: Heroes of Might and Magic 3 - Spells_71
+  - first:
+      213: 7672960327890222581
+    second: Heroes of Might and Magic 3 - Spells_72
+  - first:
+      213: -7959909647744007563
+    second: Heroes of Might and Magic 3 - Spells_73
+  - first:
+      213: -7589527099378600525
+    second: Heroes of Might and Magic 3 - Spells_74
+  - first:
+      213: 1936546256864809864
+    second: Heroes of Might and Magic 3 - Spells_75
+  - first:
+      213: -6286390306907224330
+    second: Heroes of Might and Magic 3 - Spells_76
+  - first:
+      213: -254245493081579710
+    second: Heroes of Might and Magic 3 - Spells_77
+  - first:
+      213: -3220270176690619286
+    second: Heroes of Might and Magic 3 - Spells_78
+  - first:
+      213: 1613942172611932676
+    second: Heroes of Might and Magic 3 - Spells_79
+  - first:
+      213: 2787587591067702508
+    second: Heroes of Might and Magic 3 - Spells_80
+  - first:
+      213: 7418115033969179463
+    second: Heroes of Might and Magic 3 - Spells_81
+  - first:
+      213: 7730091264899345259
+    second: Heroes of Might and Magic 3 - Spells_82
+  - first:
+      213: 3131004827770031061
+    second: Heroes of Might and Magic 3 - Spells_83
+  - first:
+      213: -6585905434820790122
+    second: Heroes of Might and Magic 3 - Spells_84
+  - first:
+      213: -4836459479095187227
+    second: Heroes of Might and Magic 3 - Spells_85
+  - first:
+      213: 6173147307583003881
+    second: Heroes of Might and Magic 3 - Spells_86
+  - first:
+      213: -7602431717802477053
+    second: Heroes of Might and Magic 3 - Spells_87
+  - first:
+      213: 3084436924431020212
+    second: Heroes of Might and Magic 3 - Spells_88
+  - first:
+      213: -5579571970066104261
+    second: Heroes of Might and Magic 3 - Spells_89
+  - first:
+      213: -8559071628101260953
+    second: Heroes of Might and Magic 3 - Spells_90
+  - first:
+      213: 7356292149907135798
+    second: Heroes of Might and Magic 3 - Spells_91
+  - first:
+      213: -2424239378497660176
+    second: Heroes of Might and Magic 3 - Spells_92
+  - first:
+      213: -1702797421830139385
+    second: Heroes of Might and Magic 3 - Spells_93
+  - first:
+      213: -6768863537845374110
+    second: Heroes of Might and Magic 3 - Spells_94
+  - first:
+      213: -2453209927352898707
+    second: Heroes of Might and Magic 3 - Spells_95
+  - first:
+      213: -132052252892878680
+    second: Heroes of Might and Magic 3 - Spells_96
+  - first:
+      213: 3365908764234702439
+    second: Heroes of Might and Magic 3 - Spells_97
+  - first:
+      213: 8771374289308830237
+    second: Heroes of Might and Magic 3 - Spells_98
+  - first:
+      213: 3574493487918269813
+    second: Heroes of Might and Magic 3 - Spells_99
+  - first:
+      213: -9102746311514961257
+    second: Heroes of Might and Magic 3 - Spells_100
+  - first:
+      213: -3717788948512111460
+    second: Heroes of Might and Magic 3 - Spells_101
+  - first:
+      213: 8992258455120091311
+    second: Heroes of Might and Magic 3 - Spells_102
+  - first:
+      213: 4148586136549577550
+    second: Heroes of Might and Magic 3 - Spells_103
+  - first:
+      213: 7672793402326323664
+    second: Heroes of Might and Magic 3 - Spells_104
+  - first:
+      213: -2332722306289728749
+    second: Heroes of Might and Magic 3 - Spells_105
+  - first:
+      213: 4997150733833937229
+    second: Heroes of Might and Magic 3 - Spells_106
+  - first:
+      213: -3742187391916955612
+    second: Heroes of Might and Magic 3 - Spells_107
+  - first:
+      213: -5305137026874649381
+    second: Heroes of Might and Magic 3 - Spells_108
+  - first:
+      213: -6920093131376062006
+    second: Heroes of Might and Magic 3 - Spells_109
+  - first:
+      213: -4903011479886826500
+    second: Heroes of Might and Magic 3 - Spells_110
+  - first:
+      213: -3775869662622949963
+    second: Heroes of Might and Magic 3 - Spells_111
+  - first:
+      213: -1237921672668309501
+    second: Heroes of Might and Magic 3 - Spells_112
+  - first:
+      213: -5958885393316139977
+    second: Heroes of Might and Magic 3 - Spells_113
+  - first:
+      213: -7043795001508698402
+    second: Heroes of Might and Magic 3 - Spells_114
+  - first:
+      213: -1561305805369390131
+    second: Heroes of Might and Magic 3 - Spells_115
+  - first:
+      213: 6608823476673846692
+    second: Heroes of Might and Magic 3 - Spells_116
+  - first:
+      213: -6451555893510054445
+    second: Heroes of Might and Magic 3 - Spells_117
+  - first:
+      213: -980301708687518309
+    second: Heroes of Might and Magic 3 - Spells_118
+  - first:
+      213: 697360221140606563
+    second: Heroes of Might and Magic 3 - Spells_119
+  - first:
+      213: -1341807593372886298
+    second: Heroes of Might and Magic 3 - Spells_120
+  - first:
+      213: -3925078683458562392
+    second: Heroes of Might and Magic 3 - Spells_121
+  - first:
+      213: 7858233411927517898
+    second: Heroes of Might and Magic 3 - Spells_122
+  - first:
+      213: 2648862945895490646
+    second: Heroes of Might and Magic 3 - Spells_123
+  - first:
+      213: 1582695408443448085
+    second: Heroes of Might and Magic 3 - Spells_124
+  - first:
+      213: 6821687136686163515
+    second: Heroes of Might and Magic 3 - Spells_125
+  - first:
+      213: -937928641311597837
+    second: Heroes of Might and Magic 3 - Spells_126
+  - first:
+      213: -368388843889192218
+    second: Heroes of Might and Magic 3 - Spells_127
+  - first:
+      213: -6400497758894062958
+    second: Heroes of Might and Magic 3 - Spells_128
+  - first:
+      213: -4118059102667688684
+    second: Heroes of Might and Magic 3 - Spells_129
+  - first:
+      213: 1454513618137576349
+    second: Heroes of Might and Magic 3 - Spells_130
+  - first:
+      213: 8480627713555432034
+    second: Heroes of Might and Magic 3 - Spells_131
+  - first:
+      213: -7699939060710769005
+    second: Heroes of Might and Magic 3 - Spells_132
+  - first:
+      213: 5887091295290179344
+    second: Heroes of Might and Magic 3 - Spells_133
+  - first:
+      213: 2081555786631580754
+    second: Heroes of Might and Magic 3 - Spells_134
+  - first:
+      213: 7884219976459759183
+    second: Heroes of Might and Magic 3 - Spells_135
+  - first:
+      213: 4577024492430488493
+    second: Heroes of Might and Magic 3 - Spells_136
+  - first:
+      213: -5247159121758519139
+    second: Heroes of Might and Magic 3 - Spells_137
+  - first:
+      213: -3706130486878430703
+    second: Heroes of Might and Magic 3 - Spells_138
+  - first:
+      213: 3005984359690379056
+    second: Heroes of Might and Magic 3 - Spells_139
+  - first:
+      213: 2765740481909672494
+    second: Heroes of Might and Magic 3 - Spells_140
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 937
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19e2e2c2cc569290800000000000000
+      internalID: -7884012106102413030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 937
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f486468f31885d00800000000000000
+      internalID: 961660630279292152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_2
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 937
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb70bde67d4f858a0800000000000000
+      internalID: -6316029271272126530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_3
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 937
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1bfc1ec135fca440800000000000000
+      internalID: 4948599684833540894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_4
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 937
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63718b70d7eca480800000000000000
+      internalID: -8886473082097536147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_5
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 937
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57a4639a3b86dbc0800000000000000
+      internalID: -3758663755296888993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_6
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 937
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f60f99c92ab0940800000000000000
+      internalID: 5263479382993825553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_7
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 937
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ada755c178ee67a0800000000000000
+      internalID: -6381908046597608023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_8
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 937
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4708a3385a47706a0800000000000000
+      internalID: -6483084884356464524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_9
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 937
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d36f793331e7ae9f0800000000000000
+      internalID: -438399392780126659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_10
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 937
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6426e7e22a8c561c0800000000000000
+      internalID: -4510978852851391930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_11
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 867
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706f46e3f4c57dd40800000000000000
+      internalID: 5609053356332217863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_12
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 867
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d756cd6055856e420800000000000000
+      internalID: 2658909752219428221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_13
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 867
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7137db5c62241d690800000000000000
+      internalID: -7579203963594116329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_14
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 867
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b034873a56169fcb0800000000000000
+      internalID: -4829722036215987445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_15
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 867
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65821ff9753515a0800000000000000
+      internalID: -6551271284853799572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_16
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 867
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d596f64924545cdc0800000000000000
+      internalID: -3619410573261837987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_17
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 867
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c273940f866e02d80800000000000000
+      internalID: -8277362776724654292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_18
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 867
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e6f7810f1337d30800000000000000
+      internalID: 4427937765908246071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_19
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 867
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2fb367a2498959a0800000000000000
+      internalID: -6243808489003303121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_20
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 867
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d292bcd0bf044f50800000000000000
+      internalID: 6864628984310829778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_21
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 867
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967455d983e60cd60800000000000000
+      internalID: 7908442135099426665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_22
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 798
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6479829329a0600800000000000000
+      internalID: 435321088186468005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_23
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 798
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ece5484fb4380c20800000000000000
+      internalID: 3172843933638454503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_24
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 798
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: febaaa28f9a74d9b0800000000000000
+      internalID: -5056281656119612433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_25
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 798
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73556b7913ca8f360800000000000000
+      internalID: 7203696932977792311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_26
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 798
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d532366ce1be13fb0800000000000000
+      internalID: -4669692821196561571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_27
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 798
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2fe38eda1b3dce20800000000000000
+      internalID: 3372416682558746410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_28
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 798
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079fb7d4efde698b0800000000000000
+      internalID: -5145663847746766480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_29
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 798
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50853ca9603bfab10800000000000000
+      internalID: 1995010000896088069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_30
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 798
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28b136b53dfe4fc0800000000000000
+      internalID: -3508588652543231953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_31
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 798
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5682bc6b7cd58670800000000000000
+      internalID: 8540474691040740954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_32
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 798
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a81d6b8bcc4280f0800000000000000
+      internalID: -1116245320533206878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_33
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 729
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383300385038ae6b0800000000000000
+      internalID: -5266252754560470141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_34
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 729
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04125b85e8550030800000000000000
+      internalID: 3460269631612261388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_35
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 729
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d077e15e75262300800000000000000
+      internalID: 226910055699017942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_36
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 729
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8111698d6dec47400800000000000000
+      internalID: 321108895602184472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_37
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 729
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e0843be1ab68f80800000000000000
+      internalID: -8104585838386999694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_38
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 729
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7a262e62c9d4fa0800000000000000
+      internalID: -5814819853044635670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_39
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 729
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2124f7b150a8eb8f0800000000000000
+      internalID: -522828752187604462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_40
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 729
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bb5e99706a67980800000000000000
+      internalID: -8541457091684615350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_41
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 729
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f948ee31ac09bc0800000000000000
+      internalID: -3778297900408987750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_42
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 729
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5477d7a769f1feb80800000000000000
+      internalID: -8363431251843123387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_43
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 729
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a8774ad7b5c4230800000000000000
+      internalID: 3624372395314743864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_44
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 660
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579e450f829fa2080800000000000000
+      internalID: -9211276133606823563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_45
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 660
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa173e8e7be0c0e90800000000000000
+      internalID: -7058250332947385937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_46
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 660
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a01b3db0dfa1f70800000000000000
+      internalID: 9158911019449387561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_47
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 660
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb7539b17524a6c0800000000000000
+      internalID: -4133137387650450486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_48
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 660
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7c4487b1a886c50800000000000000
+      internalID: 6658723899653801943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_49
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 660
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df07d7277a777010800000000000000
+      internalID: 1186551679023517654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_50
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 660
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5507dbb14dfbf6f20800000000000000
+      internalID: 3418161559916867669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_51
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 660
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b2a8e164fb17dd0800000000000000
+      internalID: -2489998811078186217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_52
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 660
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d72e69a9dcb4ad10800000000000000
+      internalID: 2136039766316951506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_53
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 660
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e48d9126dc8616240800000000000000
+      internalID: 4783219510567622734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_54
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 660
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68433e907991886c0800000000000000
+      internalID: -4141031720870529914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_55
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 589
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deee189330bd8cef0800000000000000
+      internalID: -87579385837523219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_56
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 589
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e774f514c13f14e0800000000000000
+      internalID: -2008832190532257817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_57
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 589
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081e15fe31d9da9e0800000000000000
+      internalID: -1608456782956338816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_58
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 589
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5515754fa9bb6ad00800000000000000
+      internalID: 983679842825752917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_59
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 589
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 260aadc728a2b6980800000000000000
+      internalID: -8544689128076566430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_60
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 589
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa06cb536da413710800000000000000
+      internalID: 1671199220616159402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_61
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 589
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e82176eb044f2ed0800000000000000
+      internalID: -2436654055482644250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_62
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 589
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5406a67b505ba0df0800000000000000
+      internalID: -213158996190011323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_63
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 589
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90cd365b4acf46430800000000000000
+      internalID: 3775420171991374857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_64
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 589
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab75b1d698a98f10800000000000000
+      internalID: 2272532852702018476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_65
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 589
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1c11bad00f5e570800000000000000
+      internalID: 8495460213599617485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_66
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 520
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b20cc3435da8990800000000000000
+      internalID: -7382854218786264206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_67
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 520
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933b61c648fa7d3e0800000000000000
+      internalID: -2028960123823148231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_68
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 520
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec19d8000160687c0800000000000000
+      internalID: -4069558547484143154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_69
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 520
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b4b3d637e346da0800000000000000
+      internalID: -5952564142002189443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_70
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 520
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c843de3d4139670800000000000000
+      internalID: 8544195818502261820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_71
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 449
+        width: 65
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277340056f8132f90800000000000000
+      internalID: -6979707551310661774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_72
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 448
+        width: 67
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fdbf8fd3c4db7a60800000000000000
+      internalID: 7672960327890222581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_73
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 448
+        width: 74
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 572830a4958b88190800000000000000
+      internalID: -7959909647744007563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_74
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 444
+        width: 67
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5765c60559ca690800000000000000
+      internalID: -7589527099378600525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_75
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 448
+        width: 66
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8831a837f8effda10800000000000000
+      internalID: 1936546256864809864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_76
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 447
+        width: 67
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f60655925142c8a0800000000000000
+      internalID: -6286390306907224330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_77
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 449
+        width: 65
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24fd023321db87cf0800000000000000
+      internalID: -254245493081579710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_78
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 448
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c3295065d4f43d0800000000000000
+      internalID: -3220270176690619286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_79
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 449
+        width: 65
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4027e8edadfd56610800000000000000
+      internalID: 1613942172611932676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_80
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 448
+        width: 67
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce490e115208fa620800000000000000
+      internalID: 2787587591067702508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_81
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 448
+        width: 65
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74bb7be025072f660800000000000000
+      internalID: 7418115033969179463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_82
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 384
+        width: 65
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6beca5bc0dc64b60800000000000000
+      internalID: 7730091264899345259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_83
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 383
+        width: 67
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db04455d40937b20800000000000000
+      internalID: 3131004827770031061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_84
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 383
+        width: 66
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698313196e92a94a0800000000000000
+      internalID: -6585905434820790122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_85
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 382
+        width: 67
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e8e5f97ab171ecb0800000000000000
+      internalID: -4836459479095187227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_86
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 383
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ecd4aef4cc6ba550800000000000000
+      internalID: 6173147307583003881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_87
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 383
+        width: 67
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a783fc1acbe7690800000000000000
+      internalID: -7602431717802477053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_88
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 383
+        width: 68
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b03fcc6a0f1eca20800000000000000
+      internalID: 3084436924431020212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_89
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 383
+        width: 71
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30cb75ead06192b0800000000000000
+      internalID: -5579571970066104261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_90
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 384
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76966efb3b1183980800000000000000
+      internalID: -8559071628101260953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_91
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 383
+        width: 67
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d953b2cbcc61660800000000000000
+      internalID: 7356292149907135798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_92
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 383
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa1222212f5b5ed0800000000000000
+      internalID: -2424239378497660176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_93
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 319
+        width: 65
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7021d5344c27e58e0800000000000000
+      internalID: -1702797421830139385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_94
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 318
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263f1ada97a2012a0800000000000000
+      internalID: -6768863537845374110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_95
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 318
+        width: 67
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b2ba8919274fdd0800000000000000
+      internalID: -2453209927352898707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_96
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 318
+        width: 65
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8a786fc2bda2ef0800000000000000
+      internalID: -132052252892878680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_97
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 318
+        width: 67
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e559e003c16be20800000000000000
+      internalID: 3365908764234702439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_98
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 315
+        width: 66
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a4f32817e2ab970800000000000000
+      internalID: 8771374289308830237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_99
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 318
+        width: 67
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 575c05783e62b9130800000000000000
+      internalID: 3574493487918269813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_100
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 318
+        width: 65
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a47a5457c8ca180800000000000000
+      internalID: -9102746311514961257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_101
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 318
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94001626a2c76cc0800000000000000
+      internalID: -3717788948512111460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_102
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 318
+        width: 67
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa89fe10c6beacc70800000000000000
+      internalID: 8992258455120091311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_103
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 318
+        width: 67
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e43d52d6c1db29930800000000000000
+      internalID: 4148586136549577550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_104
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 253
+        width: 67
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d11f9c72fc3b7a60800000000000000
+      internalID: 7672793402326323664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_105
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 253
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31388f5fb6180afd0800000000000000
+      internalID: -2332722306289728749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_106
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 253
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41214bcd12795540800000000000000
+      internalID: 4997150733833937229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_107
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 253
+        width: 67
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42828ddd464111cc0800000000000000
+      internalID: -3742187391916955612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_108
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 252
+        width: 65
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd45d5c5bfd5066b0800000000000000
+      internalID: -5305137026874649381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_109
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 253
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac195b316f3e6ff90800000000000000
+      internalID: -6920093131376062006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_110
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 253
+        width: 67
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3feab490105fbb0800000000000000
+      internalID: -4903011479886826500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_111
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 253
+        width: 66
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd5f291c8a699bc0800000000000000
+      internalID: -3775869662622949963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_112
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 253
+        width: 66
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30819d82cc402dee0800000000000000
+      internalID: -1237921672668309501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_113
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 253
+        width: 66
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ca02a6e49cd4da0800000000000000
+      internalID: -5958885393316139977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_114
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 254
+        width: 65
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6e66804c96f3e90800000000000000
+      internalID: -7043795001508698402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_115
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 189
+        width: 65
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcbc33564a0255ae0800000000000000
+      internalID: -1561305805369390131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_116
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 188
+        width: 65
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad186edfe147bb50800000000000000
+      internalID: 6608823476673846692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_117
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 188
+        width: 67
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd51ceb8187776a0800000000000000
+      internalID: -6451555893510054445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_118
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 188
+        width: 69
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95d8f03ac44562f0800000000000000
+      internalID: -980301708687518309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_119
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 188
+        width: 65
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ed2952d658da900800000000000000
+      internalID: 697360221140606563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_120
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 188
+        width: 67
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea56106a11f06de0800000000000000
+      internalID: -1341807593372886298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_121
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 189
+        width: 65
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a69efcbbb15789c0800000000000000
+      internalID: -3925078683458562392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_122
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 188
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acaab0847ad0e0d60800000000000000
+      internalID: 7858233411927517898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_123
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 188
+        width: 65
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654abc4a0d6a2c420800000000000000
+      internalID: 2648862945895490646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_124
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 188
+        width: 67
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51bd9e7a61dd6f510800000000000000
+      internalID: 1582695408443448085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_125
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 188
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36c707de408bae50800000000000000
+      internalID: 6821687136686163515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_126
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 123
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa15fdbedecbf2f0800000000000000
+      internalID: -937928641311597837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_127
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 123
+        width: 65
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e294cc5c4833eaf0800000000000000
+      internalID: -368388843889192218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_128
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 123
+        width: 66
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2928f67133ddc27a0800000000000000
+      internalID: -6400497758894062958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_129
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 123
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415bd658017b9d6c0800000000000000
+      internalID: -4118059102667688684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_130
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 124
+        width: 65
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93fe0aed687f2410800000000000000
+      internalID: 1454513618137576349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_131
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 124
+        width: 66
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2620ec229fd31b570800000000000000
+      internalID: 8480627713555432034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_132
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 123
+        width: 67
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39efd266832542590800000000000000
+      internalID: -7699939060710769005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_133
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 123
+        width: 65
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01fb018875623b150800000000000000
+      internalID: 5887091295290179344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_134
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 123
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c855a95fb23ec10800000000000000
+      internalID: 2081555786631580754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_135
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 123
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e2ce3db406a6d60800000000000000
+      internalID: 7884219976459759183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_136
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 123
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3f497968bd48f30800000000000000
+      internalID: 4577024492430488493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_137
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 58
+        width: 67
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9002a354985e27b0800000000000000
+      internalID: -5247159121758519139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_138
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 58
+        width: 68
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a9d5645fd219cc0800000000000000
+      internalID: -3706130486878430703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_139
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 58
+        width: 67
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f99b749d667b920800000000000000
+      internalID: 3005984359690379056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heroes of Might and Magic 3 - Spells_140
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 58
+        width: 67
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ac4259052e16620800000000000000
+      internalID: 2765740481909672494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

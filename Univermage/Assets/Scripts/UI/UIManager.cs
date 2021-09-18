@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
     public static UIManager inst;
 
     [SerializeField]
-    private Image currentTool;
+    private Image currentSpell;
 
     [SerializeField]
     private Text mesasgeText;
@@ -53,33 +53,34 @@ public class UIManager : MonoBehaviour
         mesasgeText.enabled = false;
     }
 
-    public void OnSetItem(Spell toolSprite)
+    public void OnSetSpell(Spell spell)
     {
-        var itemIsNotNull = toolSprite != null;
+        var spellIsNotNull = spell?.SpellUi != null;
 
-        currentTool.enabled = itemIsNotNull;
+        currentSpell.enabled = spellIsNotNull;
 
-        //if (itemIsNotNull)
-        //    currentTool.sprite = toolSprite.Sprite;
+        if (spellIsNotNull)
+            currentSpell.sprite = spell.SpellUi;
     }
 
-    public void OnItemUsed()
+    public void OnSpellUsed()
     {
-        currentTool.enabled = false;
+        currentSpell.enabled = false;
     }
 
     private void OnEnable()
     {
-        SpellCaster.OnSetSpell += OnSetItem;
-        SpellCaster.OnSpellUsed += OnItemUsed;
+        SpellCaster.OnSetSpell += OnSetSpell;
+        SpellCaster.OnSpellUsed += OnSpellUsed;
 
-        SaveManager.SaveEvent += ShowSaveEventText;
+        SaveManager.OnSave += ShowSaveEventText;
     }
 
     private void OnDisable()
     {
-        SpellCaster.OnSetSpell -= OnSetItem;
-        SpellCaster.OnSpellUsed -= OnItemUsed;
-        SaveManager.SaveEvent -= ShowSaveEventText;
+        SpellCaster.OnSetSpell -= OnSetSpell;
+        SpellCaster.OnSpellUsed -= OnSpellUsed;
+
+        SaveManager.OnSave -= ShowSaveEventText;
     }
 }

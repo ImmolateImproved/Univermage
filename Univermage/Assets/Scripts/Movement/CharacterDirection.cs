@@ -21,7 +21,7 @@ public class CharacterDirection : MonoBehaviour
         }
     }
 
-    void Awake()
+    private void Awake()
     {
         direction = transform.localScale;
 
@@ -50,7 +50,15 @@ public class CharacterDirection : MonoBehaviour
         }
     }
 
-    public void Flip()
+    public void Flip(float dir)
+    {
+        if (dir > 0 && !FacingRight || (dir < 0 && FacingRight))
+        {
+            Flip();
+        }
+    }
+
+    private void Flip()
     {
         FacingRight = !FacingRight;
 
@@ -58,13 +66,5 @@ public class CharacterDirection : MonoBehaviour
 
         direction.x *= -1;
         transform.localScale = Direction;
-    }
-
-    public void Flip(float dir)
-    {
-        if (dir > 0 && !FacingRight || (dir < 0 && FacingRight))
-        {
-            Flip();
-        }
     }
 }

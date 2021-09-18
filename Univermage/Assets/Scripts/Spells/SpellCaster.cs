@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SpellCaster : MonoBehaviour
@@ -9,13 +10,13 @@ public class SpellCaster : MonoBehaviour
 
     public void SetSpell(Spell spell)
     {
+        OnSetSpell(spell);
         CurrentSpell = spell;
-        OnSetSpell(CurrentSpell);
     }
 
     public void PickUpSpell(SpellScroll spell)
     {
-        if (!CurrentSpell)
+        if (CurrentSpell == null)
         {
             SetSpell(spell.value);
             spell.Disable();
@@ -24,24 +25,11 @@ public class SpellCaster : MonoBehaviour
 
     public void UseSpell()
     {
-        if (CurrentSpell)
+        if (CurrentSpell != null)
         {
             OnSpellUsed();
-            CurrentSpell.Use();
+            CurrentSpell.Cast();
             CurrentSpell = null;
-        }
-    }
-
-    void OnTriggerStay2D(Collider2D collision)
-    {
-        if (CurrentSpell)
-            return;
-
-        var spellScroll = collision.GetComponent<SpellScroll>();
-
-        if (spellScroll)
-        {
-            PickUpSpell(spellScroll);
         }
     }
 }

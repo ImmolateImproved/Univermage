@@ -1,6 +1,6 @@
 
 public interface ISaveable
 {
-    SaveablesData Save();
+    bool Save();
     void Load(bool data);
 }

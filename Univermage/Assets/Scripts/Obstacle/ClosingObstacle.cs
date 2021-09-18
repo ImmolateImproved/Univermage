@@ -32,10 +32,9 @@ public class ClosingObstacle : MonoBehaviour, ISaveable
         sprite.SetActive(!state);
     }
 
-    SaveablesData ISaveable.Save()
+    bool ISaveable.Save()
     {
-        var data = new SaveablesData { saveable = this, state = obstacle.isTrigger };
-        return data;
+        return obstacle.isTrigger;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

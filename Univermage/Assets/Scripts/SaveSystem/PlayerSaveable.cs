@@ -2,61 +2,44 @@ using UnityEngine;
 
 public class PlayerSaveable : MonoBehaviour
 {
-    private SpellCaster spellManager;
+    private SpellCaster spellCaster;
     private Movement movement;
     private CharacterDirection characterDirection;
 
-    public SpellController spellInitializer { get; private set; }
+    public SpellController spellController { get; private set; }
 
     private void Awake()
     {
-        spellManager = GetComponent<SpellCaster>();
+        spellCaster = GetComponent<SpellCaster>();
         movement = GetComponent<Movement>();
         characterDirection = GetComponent<CharacterDirection>();
-        spellInitializer = GetComponent<SpellController>();
+        spellController = GetComponent<SpellController>();
     }
 
-    public void Save(ref SaveData save)
+    public PlayerSaveData Save()
     {
-        save.playerData.position = transform.position;
-        save.playerData.facingRight = GetComponent<CharacterDirection>().FacingRight;
-        save.playerData.currentSpell = spellManager.CurrentSpell;
-    }
+        var playerPos = movement.GetPosition;
 
-    public void Load(in PlayerData playerData)
-    {
-        spellInitializer.ResetSpells();
-        spellManager.SetSpell(playerData.currentSpell);
-
-        movement.SetPosition(playerData.position);
-
-        if (characterDirection.FacingRight != playerData.facingRight)
+        var playerData = new PlayerSaveData
         {
-            characterDirection.Flip();
-        }
-    }
-
-    public BinaryPlayerData GetBinaryData(in PlayerData playerData)
-    {
-        var binaryPlayerData = new BinaryPlayerData
-        {
-            position = new float[2] { playerData.position.x, playerData.position.y },
-            facingRight = playerData.facingRight,
-            itemIndex = spellInitializer.GetSpellIndex(playerData.currentSpell)
-        };
-
-        return binaryPlayerData;
-    }
-
-    public PlayerData GetPlayerDataFormBinary(in BinaryPlayerData binaryData)
-    {
-        var playerData = new PlayerData()
-        {
-            currentSpell = spellInitializer.GetSpellFromIndex(binaryData.itemIndex),
-            position = new Vector2(binaryData.position[0], binaryData.position[1]),
-            facingRight = binaryData.facingRight
+            position = new float[2] { playerPos.x, playerPos.y },
+            facingRight = characterDirection.FacingRight,
+            spellIndex = spellController.GetSpellIndex(spellCaster.CurrentSpell)
         };
 
         return playerData;
+    }
+
+    public void Load(in PlayerSaveData playerSaveData)
+    {
+        var playerPosition = new Vector2(playerSaveData.position[0], playerSaveData.position[1]);
+        var playerDirection = playerSaveData.facingRight ? 1 : -1;
+        var playerSpell = spellController.GetSpellFromIndex(playerSaveData.spellIndex);
+
+        movement.SetPosition(playerPosition);
+        characterDirection.Flip(playerDirection);
+        spellCaster.SetSpell(playerSpell);
+
+        spellController.ResetSpells();
     }
 }

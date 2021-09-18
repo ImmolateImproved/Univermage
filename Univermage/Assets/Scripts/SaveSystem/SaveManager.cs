@@ -1,39 +1,44 @@
 using System;
 using UnityEngine;
 
+public static class SaveNames
+{
+    public const string LEVEL_START = "levelStart";
+    public const string LAST_SAVE = "lastSave";
+}
+
 public class SaveManager : Singleton<SaveManager>
 {
     [SerializeField]
     private PlayerSaveable playerSaveable;
 
     [SerializeField]
-    private Saveable[] saveableTags;
+    private SwitchListener nextLevelLoader;
 
-    private ISaveable[] saveables;
+    [SerializeField]
+    private Saveable[] saveables;
 
     private SaveSystem saveSystem;
 
     private SaveData startLevelSave;
 
+    private SaveData lastSave;
+
+    [SerializeField]
     private int savesCount = 5;
 
-    public static event Action<string> SaveEvent = delegate { };
+    public static event Action<string> OnSave = delegate { };
 
     private void Start()
     {
         Init();
 
-        startLevelSave = saveSystem.Save();
+        startLevelSave = saveSystem.Save(SaveNames.LEVEL_START);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            LoadFromFile();
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.F5))
         {
             Save();
         }
@@ -46,60 +51,50 @@ public class SaveManager : Singleton<SaveManager>
 
     private void Init()
     {
-        saveSystem = new SaveSystem();
-
-        saveables = new ISaveable[saveableTags.Length];
-
         for (int i = 0; i < saveables.Length; i++)
         {
-            saveables[i] = saveableTags[i].GetComponent<ISaveable>();
+            saveables[i].Init();
         }
-
-        saveSystem.Init(playerSaveable, saveables);
+        saveSystem = new SaveSystem(playerSaveable, nextLevelLoader, saveables);
     }
 
     public void FindSaveables()
     {
         playerSaveable = FindObjectOfType<PlayerSaveable>();
 
-        saveableTags = FindObjectsOfType<Saveable>();
+        nextLevelLoader = FindObjectOfType<EndLevel>().GetComponent<SwitchListener>();
+
+        saveables = FindObjectsOfType<Saveable>();
     }
 
     public void Save()
     {
         if (savesCount == 0)
         {
-            SaveEvent($"Save faild.\n Saves count: {savesCount}");
+            OnSave($"Save faild.\n Saves count: {savesCount}");
             return;
         }
 
-        var save = saveSystem.Save();
-
-        saveSystem.SaveToFile(save);
+        lastSave = saveSystem.Save(SaveNames.LAST_SAVE);
 
         savesCount--;
 
-        SaveEvent($"Save succeeded.\n Saves count: {savesCount}");
+        OnSave($"Save succeeded.\n Saves count: {savesCount}");
+    }
+
+    public void RestartLevel()
+    {
+        saveSystem.Load(startLevelSave, SaveNames.LEVEL_START);
     }
 
     public void LoadLastSave()
     {
-        saveSystem.LoadLastSave();
-    }
-
-    public void LoadFromFile()
-    {
-        saveSystem.LoadFromFile();
+        saveSystem.Load(lastSave, SaveNames.LAST_SAVE);
     }
 
     public void AddSaves()
     {
         savesCount++;
-        SaveEvent($"Saves count: {savesCount}");
-    }
-
-    public void RestartLevel()
-    {
-        saveSystem.Load(startLevelSave);
+        OnSave($"Saves count: {savesCount}");
     }
 }

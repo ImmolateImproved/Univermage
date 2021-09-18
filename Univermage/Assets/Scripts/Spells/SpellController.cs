@@ -28,7 +28,7 @@ public class SpellController : MonoBehaviour
         }
     }
 
-    public void OnSpellUse(Spell spell, int actionIndex)
+    public void OnSpellCast(Spell spell, int actionIndex)
     {
         if (spellToViewMap.TryGetValue(spell, out var spellView))
         {
@@ -57,7 +57,7 @@ public class SpellController : MonoBehaviour
 
     public void ResetSpells()
     {
-        MEC.Timing.KillCoroutines();
+        MEC.Timing.KillCoroutines(CoroutineTags.GAMEPLAY);
 
         for (int i = 0; i < spells.Length; i++)
         {

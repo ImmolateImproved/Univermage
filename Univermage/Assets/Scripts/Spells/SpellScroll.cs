@@ -10,10 +10,9 @@ public class SpellScroll : MonoBehaviour, ISaveable
         gameObject.SetActive(state);
     }
 
-    SaveablesData ISaveable.Save()
+    bool ISaveable.Save()
     {
-        var data = new SaveablesData { saveable = this, state = gameObject.activeSelf };
-        return data;
+        return gameObject.activeSelf;
     }
 
     public void Disable()

@@ -5,9 +5,6 @@ public class PlayerInput : MonoBehaviour
     private Movement movement;
     private SpellCaster spellManager;
 
-    [SerializeField]
-    private Joystick joystick;
-
     private void Awake()
     {
         movement = GetComponent<Movement>();
@@ -28,11 +25,6 @@ public class PlayerInput : MonoBehaviour
         float v = Input.GetAxisRaw("Vertical");
 
         var direction = new Vector2(h, v);
-
-        if (direction == Vector2.zero)
-        {
-            direction = joystick.Direction;
-        }
 
         movement.SetInputDirection(direction);
     }

@@ -12,8 +12,8 @@ public static class LevelManager
     {
         Timing.KillCoroutines();
 
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-        SaveManager.inst.RestartLevel();
+        //SaveManager.inst.RestartLevel();
     }
 }
