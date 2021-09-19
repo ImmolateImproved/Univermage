@@ -1,13 +1,18 @@
 ﻿using UnityEngine;
+using System;
 
 public class LivingEntity : MonoBehaviour
 {
     private Animator animator;
     private PlayerInput playerInput;
+    private SpellController spellController;
+
+    public static event Action OnDeath;
 
     private void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        spellController = GetComponent<SpellController>();
         playerInput = GetComponent<PlayerInput>();
     }
 
@@ -19,8 +24,9 @@ public class LivingEntity : MonoBehaviour
 
     public void Death()
     {
-        UIManager.inst?.ShowDeathText();
+        OnDeath();
 
+        spellController.ResetSpells();
         animator.SetTrigger("Death");
         playerInput.DisableGameplayInput();
     }

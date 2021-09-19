@@ -16,7 +16,11 @@ public class PlayerInput : MonoBehaviour
 
         movement = GetComponent<Movement>();
         spellManager = GetComponent<SpellCaster>();
-        saveManager = SaveManager.inst;        
+    }
+
+    private void Start()
+    {
+        saveManager = SaveManager.inst;
     }
 
     private void Update()

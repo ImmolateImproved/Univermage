@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using MEC;
 using TMPro;
 
-public class UIManager : Singleton<UIManager>
+public class UIManager : MonoBehaviour
 {
     [SerializeField]
     private Image currentSpell;
@@ -92,10 +92,16 @@ public class UIManager : Singleton<UIManager>
         HideDeathText();
     }
 
+    private void LivingEntity_OnDeath()
+    {
+        ShowDeathText();
+    }
+
     private void OnEnable()
     {
         SpellCaster.OnSetSpell += OnSetSpell;
         SpellCaster.OnSpellUsed += OnSpellUsed;
+        LivingEntity.OnDeath += LivingEntity_OnDeath; 
 
         SaveManager.SaveEvent += ShowSaveEventText;
         SaveSystem.OnLoad += SaveSystem_OnLoad;
@@ -105,6 +111,7 @@ public class UIManager : Singleton<UIManager>
     {
         SpellCaster.OnSetSpell -= OnSetSpell;
         SpellCaster.OnSpellUsed -= OnSpellUsed;
+        LivingEntity.OnDeath -= LivingEntity_OnDeath;
 
         SaveManager.SaveEvent -= ShowSaveEventText;
         SaveSystem.OnLoad -= SaveSystem_OnLoad;
