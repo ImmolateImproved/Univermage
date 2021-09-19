@@ -5,6 +5,7 @@ public class PlayerSaveable : MonoBehaviour
     private SpellCaster spellCaster;
     private Movement movement;
     private CharacterDirection characterDirection;
+    private LivingEntity livingEntity;
 
     public SpellController spellController { get; private set; }
 
@@ -14,6 +15,7 @@ public class PlayerSaveable : MonoBehaviour
         movement = GetComponent<Movement>();
         characterDirection = GetComponent<CharacterDirection>();
         spellController = GetComponent<SpellController>();
+        livingEntity = GetComponent<LivingEntity>();
     }
 
     public PlayerSaveData Save()
@@ -40,6 +42,7 @@ public class PlayerSaveable : MonoBehaviour
         characterDirection.Flip(playerDirection);
         spellCaster.SetSpell(playerSpell);
 
+        livingEntity.ResetState();
         spellController.ResetSpells();
     }
 }

@@ -2,25 +2,43 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using MEC;
+using TMPro;
 
-public class UIManager : MonoBehaviour
+public class UIManager : Singleton<UIManager>
 {
-    public static UIManager inst;
-
     [SerializeField]
     private Image currentSpell;
 
     [SerializeField]
-    private Text mesasgeText;
+    private TextMeshProUGUI mesasgeText;
+
+    [SerializeField]
+    private GameObject deathTextHolder;
 
     private CoroutineHandle textCoroutineHandle;
 
-    private void Awake()
+    public void ShowDeathText()
     {
-        inst = this;
+        deathTextHolder.SetActive( true);
     }
 
-    public void ShowText(string value, float duration = 2)
+    public void HideDeathText()
+    {
+        deathTextHolder.SetActive(false);
+    }
+
+    public void ShowMessage(string value)
+    {
+        mesasgeText.text = value;
+        mesasgeText.enabled = true;
+    }
+
+    public void HideMessage()
+    {
+        mesasgeText.enabled = false;
+    }
+
+    public void ShowMessage(string value, float duration = 2)
     {
         mesasgeText.text = value;
 
@@ -30,7 +48,7 @@ public class UIManager : MonoBehaviour
 
     private void ShowSaveEventText(string eventText)
     {
-        ShowText(eventText, 2);
+        ShowMessage(eventText, 4);
     }
 
     private IEnumerator<float> ShowAndHideText(float duration)
@@ -68,12 +86,19 @@ public class UIManager : MonoBehaviour
         currentSpell.enabled = false;
     }
 
+    private void SaveSystem_OnLoad()
+    {
+        HideMessage();
+        HideDeathText();
+    }
+
     private void OnEnable()
     {
         SpellCaster.OnSetSpell += OnSetSpell;
         SpellCaster.OnSpellUsed += OnSpellUsed;
 
-        SaveManager.OnSave += ShowSaveEventText;
+        SaveManager.SaveEvent += ShowSaveEventText;
+        SaveSystem.OnLoad += SaveSystem_OnLoad;
     }
 
     private void OnDisable()
@@ -81,6 +106,7 @@ public class UIManager : MonoBehaviour
         SpellCaster.OnSetSpell -= OnSetSpell;
         SpellCaster.OnSpellUsed -= OnSpellUsed;
 
-        SaveManager.OnSave -= ShowSaveEventText;
+        SaveManager.SaveEvent -= ShowSaveEventText;
+        SaveSystem.OnLoad -= SaveSystem_OnLoad;
     }
 }

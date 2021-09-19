@@ -23,7 +23,7 @@ public class SpellCaster : MonoBehaviour
         }
     }
 
-    public void UseSpell()
+    public void CastSpell()
     {
         if (CurrentSpell != null)
         {

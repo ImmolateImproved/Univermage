@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class SaveSystem
@@ -7,6 +8,8 @@ public class SaveSystem
     private readonly SwitchListener nextLevelLoader;
 
     private readonly Saveable[] saveables;
+
+    public static event Action OnLoad = delegate { };
 
     public SaveSystem(PlayerSaveable player, SwitchListener nextLevelLoader, Saveable[] saveables)
     {
@@ -44,6 +47,8 @@ public class SaveSystem
         {
             saveables[i].Load(save.saveableStates[i]);
         }
+
+        OnLoad();
     }
 
     private SaveData LoadFromFile(string saveName)

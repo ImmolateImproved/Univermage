@@ -14,9 +14,9 @@ public class ClosingObstacle : MonoBehaviour, ISaveable
 
     private Vector2 positionOnEnter;
 
-    private static int myLayer;
+    private int myLayer;
 
-    private static int playerLayer;
+    private int playerLayer;
 
     private void Awake()
     {

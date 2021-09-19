@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameObjectSpawnView : SpellView
 {
+    private Transform rootObject;
+
     [SerializeField]
     private GameObject prefab;
 
@@ -15,6 +17,8 @@ public class GameObjectSpawnView : SpellView
     public override void Init()
     {
         base.Init();
+
+        rootObject = transform.root;
 
         objectsToDisable = new Queue<GameObject>();
 
@@ -35,8 +39,8 @@ public class GameObjectSpawnView : SpellView
 
     private void First()
     {
-        var obj = Instantiate(prefab);
-        obj.transform.position = spawnPoint.position;
+        var obj = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        obj.transform.localScale = rootObject.localScale;
 
         objectsToDisable.Enqueue(obj);
     }

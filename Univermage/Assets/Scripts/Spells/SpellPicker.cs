@@ -15,7 +15,7 @@ public class SpellPicker : MonoBehaviour
         this.spellCaster = spellCaster;
     }
 
-    void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         var spellScroll = collision.GetComponent<SpellScroll>();
 

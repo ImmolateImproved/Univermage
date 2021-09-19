@@ -1,4 +1,3 @@
-using MEC;
 using UnityEngine.SceneManagement;
 
 public static class LevelManager
@@ -10,10 +9,7 @@ public static class LevelManager
 
     public static void Restart()
     {
-        Timing.KillCoroutines();
-
+        MEC.Timing.KillCoroutines(CoroutineTags.GAMEPLAY);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-        //SaveManager.inst.RestartLevel();
     }
 }

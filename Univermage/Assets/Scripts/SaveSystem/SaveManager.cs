@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public static class SaveNames
@@ -9,6 +10,8 @@ public static class SaveNames
 
 public class SaveManager : Singleton<SaveManager>
 {
+    private SaveSystem saveSystem;
+
     [SerializeField]
     private PlayerSaveable playerSaveable;
 
@@ -18,44 +21,32 @@ public class SaveManager : Singleton<SaveManager>
     [SerializeField]
     private Saveable[] saveables;
 
-    private SaveSystem saveSystem;
-
-    private SaveData startLevelSave;
-
-    private SaveData lastSave;
+    private Dictionary<string, SaveData> saves;
 
     [SerializeField]
     private int savesCount = 5;
 
-    public static event Action<string> OnSave = delegate { };
+    public static event Action<string> SaveEvent = delegate { };
 
     private void Start()
     {
         Init();
-
-        startLevelSave = saveSystem.Save(SaveNames.LEVEL_START);
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F5))
-        {
-            Save();
-        }
-
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            LoadLastSave();
-        }
     }
 
     private void Init()
     {
-        for (int i = 0; i < saveables.Length; i++)
+        foreach (var item in saveables)
         {
-            saveables[i].Init();
+            item.Init();
         }
+
         saveSystem = new SaveSystem(playerSaveable, nextLevelLoader, saveables);
+
+        saves = new Dictionary<string, SaveData>(2)
+        {
+            { SaveNames.LEVEL_START, saveSystem.Save(SaveNames.LEVEL_START) },
+            { SaveNames.LAST_SAVE, null }
+        };
     }
 
     public void FindSaveables()
@@ -71,30 +62,30 @@ public class SaveManager : Singleton<SaveManager>
     {
         if (savesCount == 0)
         {
-            OnSave($"Save faild.\n Saves count: {savesCount}");
+            SaveEvent($"Save faild.\n Saves count: {savesCount}");
             return;
         }
 
-        lastSave = saveSystem.Save(SaveNames.LAST_SAVE);
+        saves[SaveNames.LAST_SAVE] = saveSystem.Save(SaveNames.LAST_SAVE);
 
         savesCount--;
 
-        OnSave($"Save succeeded.\n Saves count: {savesCount}");
+        SaveEvent($"Save succeeded.\n Saves count: {savesCount}");
     }
 
     public void RestartLevel()
     {
-        saveSystem.Load(startLevelSave, SaveNames.LEVEL_START);
+        saveSystem.Load(saves[SaveNames.LEVEL_START], SaveNames.LEVEL_START);
     }
 
     public void LoadLastSave()
     {
-        saveSystem.Load(lastSave, SaveNames.LAST_SAVE);
+        saveSystem.Load(saves[SaveNames.LAST_SAVE], SaveNames.LAST_SAVE);
     }
 
     public void AddSaves()
     {
         savesCount++;
-        OnSave($"Saves count: {savesCount}");
+        SaveEvent($"Saves count: {savesCount}");
     }
 }
