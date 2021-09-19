@@ -26,6 +26,7 @@ public class Portal : Spell
 
     public override void Cast()
     {
+        OnEffectCastInvoke(SpellIcon, duration);
         coroutineHandle = Timing.RunCoroutine(Wait(), CoroutineTags.GAMEPLAY);
     }
 

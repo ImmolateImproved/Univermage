@@ -7,12 +7,12 @@ public abstract class SpellView : MonoBehaviour
 
     public virtual void ResetSpellView()
     {
-        
+
     }
 
     public virtual void Init()
     {
-        
+
     }
 
     public void Invoke(int actionIndex)

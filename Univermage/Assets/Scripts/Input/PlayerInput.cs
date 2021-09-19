@@ -84,7 +84,7 @@ public class PlayerInput : MonoBehaviour
 
     private void Save_performed(InputAction.CallbackContext value)
     {
-        saveManager.Save();
+        saveManager.TrySave();
     }
 
     private void LoadLastSave_performed(InputAction.CallbackContext value)

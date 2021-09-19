@@ -1,60 +1,52 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class SaveSystem
+public static class SaveNames
 {
-    private readonly PlayerSaveable player;
+    public const string LastSave = "LevelStart";
+}
 
-    private readonly SwitchListener nextLevelLoader;
+public struct SaveIdentifier
+{
+    private readonly string saveName;
 
-    private readonly Saveable[] saveables;
+    public SaveIdentifier(string saveName)
+    {
+        this.saveName = saveName;
+    }
+
+    public static implicit operator string(SaveIdentifier saveIdentifier)
+    {
+        return saveIdentifier.saveName + SceneManager.GetActiveScene().buildIndex;
+    }
+}
+
+public static class SaveSystem
+{
+    public static SaveableHolder saveableHolder;
 
     public static event Action OnLoad = delegate { };
 
-    public SaveSystem(PlayerSaveable player, SwitchListener nextLevelLoader, Saveable[] saveables)
+    public static SaveData Save(SaveIdentifier saveIdentifier)
     {
-        this.player = player;
-        this.nextLevelLoader = nextLevelLoader;
-        this.saveables = saveables;
-    }
+        var save = new SaveData(saveableHolder);
 
-    public SaveData Save(string saveName)
-    {
-        var save = new SaveData(player, nextLevelLoader, saveables);
-
-        SaveToFile(save, saveName);
+        BinarySaveHelper.SaveToFile(save, saveIdentifier);
 
         return save;
     }
 
-    private void SaveToFile(SaveData save, string saveName)
-    {
-        BinarySaveHelper.Save(save, saveName);
-    }
-
-    public void Load(SaveData save, string saveName)
+    public static void Load(SaveIdentifier saveIdentifier, SaveData save = null)
     {
         if (save == null)
         {
-            save = LoadFromFile(saveName);
+            save = BinarySaveHelper.LoadFromFile(saveIdentifier);
         }
 
-        player.Load(save.playerData);
-
-        nextLevelLoader.Load(save.activatedSwitchesCount);
-
-        for (int i = 0; i < saveables.Length; i++)
-        {
-            saveables[i].Load(save.saveableStates[i]);
-        }
+        saveableHolder.Load(save);
 
         OnLoad();
-    }
-
-    private SaveData LoadFromFile(string saveName)
-    {
-        var save = BinarySaveHelper.GetSaveDataFromFile(saveName);
-
-        return save;
     }
 }

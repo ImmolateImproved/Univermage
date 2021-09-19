@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using MEC;
 using TMPro;
 
-public class UIManager : MonoBehaviour
+public class MessageTextManager : MonoBehaviour
 {
     [SerializeField]
     private Image currentSpell;
@@ -17,9 +17,14 @@ public class UIManager : MonoBehaviour
 
     private CoroutineHandle textCoroutineHandle;
 
+    private void Awake()
+    {
+        Timing.KillCoroutines();
+    }
+
     public void ShowDeathText()
     {
-        deathTextHolder.SetActive( true);
+        deathTextHolder.SetActive(true);
     }
 
     public void HideDeathText()
@@ -73,12 +78,12 @@ public class UIManager : MonoBehaviour
 
     public void OnSetSpell(Spell spell)
     {
-        var spellIsNotNull = spell?.SpellUi != null;
+        var spellIsNotNull = spell?.SpellIcon != null;
 
         currentSpell.enabled = spellIsNotNull;
 
         if (spellIsNotNull)
-            currentSpell.sprite = spell.SpellUi;
+            currentSpell.sprite = spell.SpellIcon;
     }
 
     public void OnSpellUsed()
@@ -101,7 +106,7 @@ public class UIManager : MonoBehaviour
     {
         SpellCaster.OnSetSpell += OnSetSpell;
         SpellCaster.OnSpellUsed += OnSpellUsed;
-        LivingEntity.OnDeath += LivingEntity_OnDeath; 
+        LivingEntity.OnDeath += LivingEntity_OnDeath;
 
         SaveManager.SaveEvent += ShowSaveEventText;
         SaveSystem.OnLoad += SaveSystem_OnLoad;

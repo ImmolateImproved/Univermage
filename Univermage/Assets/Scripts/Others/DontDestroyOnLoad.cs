@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 
-public class DontDestroyOnLoad : MonoBehaviour
+public class DontDestroyOnLoad : Singleton<DontDestroyOnLoad>
 {
-    private void Awake()
+    public override void Awake()
     {
+        base.Awake();
         DontDestroyOnLoad(gameObject);
     }
 }

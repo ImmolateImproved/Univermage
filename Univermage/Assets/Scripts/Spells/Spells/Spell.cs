@@ -1,11 +1,14 @@
+using System;
 using UnityEngine;
 
 public abstract class Spell : ScriptableObject
 {
     [field: SerializeField]
-    public Sprite SpellUi { get; private set; }
+    public Sprite SpellIcon { get; private set; }
 
     protected SpellController spellController;
+
+    public static event Action<Sprite, float> OnEffectCast = delegate { };
 
     public abstract void Cast();
 
@@ -17,5 +20,10 @@ public abstract class Spell : ScriptableObject
     public virtual void ResetSpell()
     {
 
+    }
+
+    protected void OnEffectCastInvoke(Sprite effectIcon, float effectDuration)
+    {
+        OnEffectCast(effectIcon, effectDuration);
     }
 }

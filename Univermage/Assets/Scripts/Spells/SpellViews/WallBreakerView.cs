@@ -10,6 +10,7 @@ public class WallBreakerView : SpellView
     public override void Init()
     {
         base.Init();
+
         animationHash = Animator.StringToHash("Attack2");
 
         actions = new Action[1];

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public struct PlayerSaveData
@@ -17,24 +18,28 @@ public class SaveData
     public int activatedSwitchesCount;
     public bool[] saveableStates;
 
-    public SaveData(PlayerSaveable playerSaveable, SwitchListener nextLevelLoader, Saveable[] saveables)
+    public int levelIndex;
+
+    public SaveData(SaveableHolder saveableHolder)
     {
-        playerData = playerSaveable.Save();
+        this.levelIndex = SceneManager.GetActiveScene().buildIndex;
 
-        this.activatedSwitchesCount = nextLevelLoader.Save();
+        playerData = saveableHolder.player.Save();
 
-        saveableStates = new bool[saveables.Length];
+        this.activatedSwitchesCount = saveableHolder.nextLevelLoader.Save();
 
-        for (int i = 0; i < saveables.Length; i++)
+        saveableStates = new bool[saveableHolder.saveables.Length];
+
+        for (int i = 0; i < saveableHolder.saveables.Length; i++)
         {
-            this.saveableStates[i] = saveables[i].Save();
+            this.saveableStates[i] = saveableHolder.saveables[i].Save();
         }
     }
 }
 
 public static class BinarySaveHelper
 {
-    public static void Save(SaveData saveableData, string saveName)
+    public static void SaveToFile(SaveData saveableData, string saveName)
     {
         var formatter = new BinaryFormatter();
         var stream = new FileStream(GetPathFromName(saveName), FileMode.Create);
@@ -43,7 +48,7 @@ public static class BinarySaveHelper
         stream.Close();
     }
 
-    public static SaveData GetSaveDataFromFile(string saveName)
+    public static SaveData LoadFromFile(string saveName)
     {
         var path = GetPathFromName(saveName);
 

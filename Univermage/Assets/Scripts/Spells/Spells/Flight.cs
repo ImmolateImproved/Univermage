@@ -29,6 +29,8 @@ public class Flight : Spell
 
     public override void Cast()
     {
+        OnEffectCastInvoke(SpellIcon, duration);
+
         Timing.KillCoroutines(coroutineHandle);
         coroutineHandle = Timing.RunCoroutine(Wait(), CoroutineTags.GAMEPLAY);
     }

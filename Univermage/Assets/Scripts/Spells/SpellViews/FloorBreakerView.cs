@@ -9,6 +9,8 @@ public class FloorBreakerView : SpellView
 
     public override void Init()
     {
+        base.Init();
+
         animationHash = Animator.StringToHash("Attack1");
 
         actions = new Action[1];
