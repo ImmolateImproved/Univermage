@@ -37,24 +37,31 @@ public class AstralBody : Spell
         astralBody.transform.position = spellController.castPoint.position;
         astralBody.GetComponent<SpellPicker>().Init(spellController.GetComponent<SpellCaster>());
 
-        var astralBodyMovement = astralBody.GetComponent<CharacterMovement>();
-        astralBodyMovement.VerticalMovement = true;
+        var astralBodyMovement = astralBody.GetComponent<Movement>();
+        astralBodyMovement.SetVerticalMovement(true);
         astralBodyMovement.GetComponent<Animator>().SetBool("Flight", true);
-        Move(astralBodyMovement);
+        var moveHandle = Timing.RunCoroutine(Move(astralBodyMovement), CoroutineTags.GAMEPLAY);
 
         yield return Timing.WaitForSeconds(duration);
 
         astralBodyMovement.GetComponent<Animator>().SetBool("Flight", false);
-
+        Timing.KillCoroutines(moveHandle);
         allAstralBodies.Dequeue();
         GameObject.Destroy(astralBody);
     }
 
-    private void Move(CharacterMovement movement)
+    private IEnumerator<float> Move(Movement movement)
     {
         var myDirection = spellController.GetComponent<CharacterDirection>();
         movement.transform.localScale = myDirection.transform.localScale;
 
-        movement.SetMoveDirection(myDirection.Direction);
+        var direction = myDirection.Direction;
+        direction.y = 0;
+
+        while (true)
+        {
+            movement.SetInputDirection(direction);
+            yield return Timing.WaitForOneFrame;
+        }
     }
 }

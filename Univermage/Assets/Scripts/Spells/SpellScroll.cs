@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Saveable))]
 public class SpellScroll : MonoBehaviour, ISaveable
 {
-    public Spell spell;
+    public Spell value;
 
     void ISaveable.Load(bool state)
     {

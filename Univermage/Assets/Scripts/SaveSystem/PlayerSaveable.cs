@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerSaveable : MonoBehaviour
 {
     private SpellCaster spellCaster;
-    private CharacterMovement movement;
+    private Movement movement;
     private CharacterDirection characterDirection;
     private LivingEntity livingEntity;
 
@@ -12,7 +12,7 @@ public class PlayerSaveable : MonoBehaviour
     private void Awake()
     {
         spellCaster = GetComponent<SpellCaster>();
-        movement = GetComponent<CharacterMovement>();
+        movement = GetComponent<Movement>();
         characterDirection = GetComponent<CharacterDirection>();
         spellController = GetComponent<SpellController>();
         livingEntity = GetComponent<LivingEntity>();
@@ -25,7 +25,7 @@ public class PlayerSaveable : MonoBehaviour
         var playerData = new PlayerSaveData
         {
             position = new float[2] { playerPos.x, playerPos.y },
-            direction = characterDirection.DirectionX,
+            facingRight = characterDirection.FacingRight,
             spellIndex = spellController.GetSpellIndex(spellCaster.CurrentSpell)
         };
 
@@ -35,7 +35,7 @@ public class PlayerSaveable : MonoBehaviour
     public void Load(in PlayerSaveData playerSaveData)
     {
         var playerPosition = new Vector2(playerSaveData.position[0], playerSaveData.position[1]);
-        var playerDirection = playerSaveData.direction;
+        var playerDirection = playerSaveData.facingRight ? 1 : -1;
         var playerSpell = spellController.GetSpellFromIndex(playerSaveData.spellIndex);
 
         movement.SetPosition(playerPosition);

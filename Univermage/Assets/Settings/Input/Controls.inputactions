@@ -44,29 +44,13 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press"
-                },
-                {
-                    "name": "NextTutorial",
-                    "type": "Button",
-                    "id": "8dcf5d0f-1d58-42bd-a6fd-07520fcab16d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press"
-                },
-                {
-                    "name": "FreeCamera",
-                    "type": "Button",
-                    "id": "ce84968c-915f-4538-8044-01ec80aeccc5",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press"
                 }
             ],
             "bindings": [
                 {
                     "name": "2D Vector",
                     "id": "de0cc1d0-cd70-46bc-b6ec-2806fd06e585",
-                    "path": "2DVector(mode=1)",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -159,126 +143,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "LoadLastSave",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "56ef9036-59b3-4e21-8349-5941046c2db7",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "NextTutorial",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b4b9877b-9ce5-4c73-8e0f-19f3d31617cd",
-                    "path": "<Keyboard>/f",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "FreeCamera",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "FreeCamera",
-            "id": "efb0d6ce-ef19-4bb4-8e73-b92101485a9e",
-            "actions": [
-                {
-                    "name": "Movement",
-                    "type": "Button",
-                    "id": "19a2d3c9-2b1a-48c4-bf1a-a13d7f95d6bf",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "2D Vector",
-                    "id": "d44b6a8c-c602-443e-865d-fdd06a08ee0f",
-                    "path": "2DVector(mode=1)",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "7ae6d4f0-b04b-47a4-9353-eb8102a21c67",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "70e58688-c921-42ef-8012-4a432c99eb1c",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "4df8e5fb-66fe-4ada-87f5-90ccbfbd0a16",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "75176458-1f32-4d83-8afd-0fa22662c593",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                }
-            ]
-        },
-        {
-            "name": "Tutorial",
-            "id": "31352516-5942-4542-b946-d3d3d3dc2c27",
-            "actions": [
-                {
-                    "name": "NextTutorial",
-                    "type": "Button",
-                    "id": "41583991-bcf1-4efd-ba01-91d297309988",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press"
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "40f9a9c8-0746-4b78-97b6-bd499edd1a46",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "NextTutorial",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

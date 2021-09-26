@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public struct PlayerSaveData
 {
     public float[] position;
-    public int direction;
+    public bool facingRight;
     public int spellIndex;
 }
 

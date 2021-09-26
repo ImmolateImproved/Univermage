@@ -3,10 +3,8 @@ using System;
 
 public class LivingEntity : MonoBehaviour
 {
-    [SerializeField]
-    private InputManager inputManager;
-
     private Animator animator;
+    private PlayerInput playerInput;
     private SpellController spellController;
 
     public static event Action OnDeath;
@@ -15,11 +13,12 @@ public class LivingEntity : MonoBehaviour
     {
         animator = GetComponentInChildren<Animator>();
         spellController = GetComponent<SpellController>();
+        playerInput = GetComponent<PlayerInput>();
     }
 
     public void ResetState()
     {
-        inputManager.EnableGameplayInput();
+        playerInput.EnableGameplayInput();
         animator.SetTrigger("Restart");
     }
 
@@ -29,6 +28,6 @@ public class LivingEntity : MonoBehaviour
 
         spellController.ResetSpells();
         animator.SetTrigger("Death");
-        inputManager.DisableGameplayInput();
+        playerInput.DisableGameplayInput();
     }
 }

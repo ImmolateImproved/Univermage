@@ -2,26 +2,57 @@ using UnityEngine;
 
 public class CharacterDirection : MonoBehaviour
 {
-    public int DirectionX { get; private set; }
+    private Vector2 direction, castDirection;
+    public bool FacingRight { get; private set; } = true;
 
     public Vector2 Direction
     {
-        get => new Vector2(DirectionX, 0);
+        get
+        {
+            return direction;
+        }
+    }
+
+    public Vector2 CastDirection
+    {
+        get
+        {
+            return castDirection;
+        }
     }
 
     private void Awake()
     {
-        DirectionX = (int)transform.localScale.x;
+        direction = transform.localScale;
+
+        if (Mathf.Sign(transform.localScale.x) == 1)
+        {
+            if (!FacingRight)
+            {
+                FacingRight = !FacingRight;
+            }
+        }
+        else
+        {
+            if (FacingRight)
+            {
+                FacingRight = !FacingRight;
+            }
+        }
+
+        if (FacingRight)
+        {
+            castDirection = Vector2.right;
+        }
+        else
+        {
+            castDirection = Vector2.left;
+        }
     }
 
-    public void Flip(int dir)
+    public void Flip(float dir)
     {
-        var direction = dir == 0 ? 0 : Mathf.Sign(dir);
-
-        if (direction == 0)
-            return;
-
-        if (direction != DirectionX)
+        if (dir > 0 && !FacingRight || (dir < 0 && FacingRight))
         {
             Flip();
         }
@@ -29,10 +60,11 @@ public class CharacterDirection : MonoBehaviour
 
     private void Flip()
     {
-        DirectionX *= -1;
+        FacingRight = !FacingRight;
 
-        var scale = transform.localScale;
-        scale.x = DirectionX;
-        transform.localScale = scale;
+        castDirection.x *= -1;
+
+        direction.x *= -1;
+        transform.localScale = Direction;
     }
 }
