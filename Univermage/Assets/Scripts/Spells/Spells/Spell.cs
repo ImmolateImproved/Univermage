@@ -1,10 +1,15 @@
 using System;
 using UnityEngine;
+using UnityEngine.Video;
 
 public abstract class Spell : ScriptableObject
 {
     [field: SerializeField]
     public Sprite SpellIcon { get; private set; }
+
+    public VideoClip videoClip;
+
+    public string description;
 
     protected SpellController spellController;
 

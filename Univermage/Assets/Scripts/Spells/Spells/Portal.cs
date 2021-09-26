@@ -5,7 +5,7 @@ using MEC;
 [CreateAssetMenu(menuName = "ScriptableObjects/Spells/Portal")]
 public class Portal : Spell
 {
-    private Movement movement;
+    private CharacterMovement movement;
     private Collider2D collider;
 
     [SerializeField]
@@ -20,7 +20,7 @@ public class Portal : Spell
     {
         base.Init(controller);
 
-        movement = controller.GetComponent<Movement>();
+        movement = controller.GetComponent<CharacterMovement>();
         collider = controller.GetComponent<Collider2D>();
     }
 
