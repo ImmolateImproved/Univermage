@@ -5,7 +5,7 @@ using MEC;
 [CreateAssetMenu(menuName = "ScriptableObjects/Spells/Flight")]
 public class Flight : Spell
 {
-    private Movement movement;
+    private CharacterMovement movement;
 
     [SerializeField]
     private float speed;
@@ -19,12 +19,12 @@ public class Flight : Spell
     {
         base.Init(controller);
 
-        movement = controller.GetComponent<Movement>();
+        movement = controller.GetComponent<CharacterMovement>();
     }
 
     public override void ResetSpell()
     {
-        movement.SetVerticalMovement(false);
+        movement.VerticalMovement = false;
     }
 
     public override void Cast()
@@ -37,12 +37,12 @@ public class Flight : Spell
 
     private IEnumerator<float> Wait()
     {
-        movement.SetVerticalMovement(true);
+        movement.VerticalMovement = true;
         spellController.OnSpellCast(this, 0);
 
         yield return Timing.WaitForSeconds(duration);
 
         spellController.OnSpellCast(this, 1);
-        movement.SetVerticalMovement(false);
+        movement.VerticalMovement = false;
     }
 }

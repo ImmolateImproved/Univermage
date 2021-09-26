@@ -6,11 +6,9 @@ public class ClosingObstacle : MonoBehaviour, ISaveable
     [SerializeField]
     private Collider2D obstacle;
 
-    [SerializeField]
-    private LineRenderer line;
+    private SpriteRenderer sr;
 
-    [SerializeField]
-    private GameObject sprite;
+    private float opacity;
 
     private Vector2 positionOnEnter;
 
@@ -20,6 +18,8 @@ public class ClosingObstacle : MonoBehaviour, ISaveable
 
     private void Awake()
     {
+        sr = GetComponent<SpriteRenderer>();
+        opacity = sr.color.a;
         myLayer = 1 << gameObject.layer;
         playerLayer = LayerMask.NameToLayer("Player");
     }
@@ -28,8 +28,9 @@ public class ClosingObstacle : MonoBehaviour, ISaveable
     {
         obstacle.isTrigger = state;
 
-        line.enabled = state;
-        sprite.SetActive(!state);
+        var color = sr.color;
+        color.a = state ? opacity : 1;
+        sr.color = color;
     }
 
     bool ISaveable.Save()
@@ -55,8 +56,9 @@ public class ClosingObstacle : MonoBehaviour, ISaveable
             {
                 obstacle.isTrigger = false;
 
-                line.enabled = false;
-                sprite.SetActive(true);
+                var color = sr.color;
+                color.a = 1;
+                sr.color = color;
             }
         }
     }

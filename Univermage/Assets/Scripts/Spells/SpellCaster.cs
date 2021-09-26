@@ -3,10 +3,16 @@ using UnityEngine;
 
 public class SpellCaster : MonoBehaviour
 {
+    [field: SerializeField]
     public Spell CurrentSpell { get; private set; }
 
     public static event System.Action<Spell> OnSetSpell = delegate { };
     public static event System.Action OnSpellUsed = delegate { };
+
+    private void Start()
+    {
+        SetSpell(CurrentSpell);
+    }
 
     public void SetSpell(Spell spell)
     {
@@ -18,7 +24,7 @@ public class SpellCaster : MonoBehaviour
     {
         if (CurrentSpell == null)
         {
-            SetSpell(spell.value);
+            SetSpell(spell.spell);
             spell.Disable();
         }
     }

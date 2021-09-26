@@ -59,11 +59,13 @@ public class SpellEffectUI : MonoBehaviour
     {
         Spell.OnEffectCast += SpellView_OnSpellEffect;
         SaveSystem.OnLoad += ResetState;
+        LivingEntity.OnDeath += ResetState;
     }
 
     private void OnDisable()
     {
         Spell.OnEffectCast -= SpellView_OnSpellEffect;
         SaveSystem.OnLoad -= ResetState;
+        LivingEntity.OnDeath -= ResetState;
     }
 }
