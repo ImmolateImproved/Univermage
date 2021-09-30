@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
 using UnityEngine.Video;
 using System.Collections.Generic;
-using System.Collections;
 using MEC;
+using TMPro;
 
 public class SpellTooltipManager : MonoBehaviour
 {
@@ -12,27 +11,33 @@ public class SpellTooltipManager : MonoBehaviour
     private GameObject spellTooltipHolder;
 
     [SerializeField]
+    private TextMeshProUGUI spellNameText;
+
+    [SerializeField]
+    private TextMeshProUGUI spellDescriptionText;
+
+    [SerializeField]
     private VideoPlayer videoPlayer;
 
     [SerializeField]
     private RenderTexture videoTexture;
 
-    [SerializeField]
-    private TextMeshProUGUI descriptionText;
+    private Spell currentSpell;
 
     [SerializeField]
     private LayerMask spellCsrollMask;
 
+    private Keyboard keyboard;
+
     private void Start()
     {
         videoTexture.Release();
-
-        Timing.RunCoroutine(ShowTooltip());
+        keyboard = Keyboard.current;
     }
 
-    private IEnumerator<float> ShowTooltip()
+    private void Update()
     {
-        while (true)
+        if (keyboard.altKey.isPressed)
         {
             var mousePos = Mouse.current.position.ReadValue();
 
@@ -40,30 +45,67 @@ public class SpellTooltipManager : MonoBehaviour
 
             var spellScrollCollider = Physics2D.OverlapPoint(worldPoint, spellCsrollMask);
 
-            if (!spellTooltipHolder.activeSelf && spellScrollCollider && Keyboard.current.altKey.isPressed)
+            var spell = currentSpell;
+
+            if (spellScrollCollider)
             {
-                Cursor.visible = false;
-
-                var spellScroll = spellScrollCollider.GetComponent<SpellScroll>();
-
-                videoTexture.Release();
-                videoPlayer.time = 0;
-                videoPlayer.clip = spellScroll.spell.videoClip;
-                videoPlayer.Play();
-
-                yield return Timing.WaitForSeconds(0.1f);
-
-                spellTooltipHolder.SetActive(true);
-            }
-            else if (Keyboard.current.altKey.wasReleasedThisFrame)
-            {
-                spellTooltipHolder.SetActive(false);
-                Cursor.visible = true;
-                videoPlayer.time = 0;
-                videoPlayer.Stop();
+                if (spellScrollCollider.TryGetComponent<SpellScroll>(out var spellScroll))
+                {
+                    spell = spellScroll.spell;
+                }
             }
 
-            yield return Timing.WaitForOneFrame;
+            Timing.RunCoroutine(ShowTooltip(spell));
         }
+        if (keyboard.altKey.wasReleasedThisFrame)
+        {
+            HideToolTip();
+        }
+    }
+
+    private IEnumerator<float> ShowTooltip(Spell spell)
+    {
+        if (spell == null || spellTooltipHolder.activeSelf)
+        {
+            yield break;
+        }
+
+        Cursor.visible = false;
+
+        spellNameText.text = spell.spellName;
+        spellDescriptionText.text = spell.description;
+
+        videoPlayer.time = 0;
+        videoPlayer.clip = spell.videoClip;
+        videoPlayer.Play();
+
+        yield return Timing.WaitForSeconds(0.1f);
+
+        if (keyboard.altKey.isPressed)
+            spellTooltipHolder.SetActive(true);
+    }
+
+    private void HideToolTip()
+    {
+        spellTooltipHolder.SetActive(false);
+        videoTexture.Release();
+        Cursor.visible = true;
+        videoPlayer.time = 0;
+        videoPlayer.Stop();
+    }
+
+    private void SpellCaster_OnSetSpell(Spell spell)
+    {
+        currentSpell = spell;
+    }
+
+    private void OnEnable()
+    {
+        SpellCaster.OnSetSpell += SpellCaster_OnSetSpell;
+    }
+
+    private void OnDisable()
+    {
+        SpellCaster.OnSetSpell -= SpellCaster_OnSetSpell;
     }
 }

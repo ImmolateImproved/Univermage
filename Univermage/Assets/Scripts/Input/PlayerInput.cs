@@ -10,16 +10,13 @@ public class PlayerInput : MonoBehaviour
     private InputAction movementAction;
 
     private CharacterMovement movement;
-    private SpellCaster spellManager;
+    private SpellCaster spellCaster;
     private SaveManager saveManager;
-
-    [SerializeField]
-    private bool initialEnablePlayerInput;
 
     private void Awake()
     {
         movement = GetComponent<CharacterMovement>();
-        spellManager = GetComponent<SpellCaster>();
+        spellCaster = GetComponent<SpellCaster>();
     }
 
     private void Start()
@@ -42,10 +39,8 @@ public class PlayerInput : MonoBehaviour
         controls.Player.LoadLastSave.performed += LoadLastSave_performed;
         controls.Player.RestartLevel.performed += RestartLevel_performed;
 
-        if (initialEnablePlayerInput)
-        {
-            inputManager.EnablePlayerInput();
-        }
+        inputManager.PlayerInputEnabled(true);
+
     }
 
     private void OnDisable()
@@ -57,12 +52,12 @@ public class PlayerInput : MonoBehaviour
         controls.Player.LoadLastSave.performed -= LoadLastSave_performed;
         controls.Player.RestartLevel.performed -= RestartLevel_performed;
 
-        inputManager.DisablePlayerInput();
+        inputManager.PlayerInputEnabled(false);
     }
 
     private void SpellCast_performed(InputAction.CallbackContext value)
     {
-        spellManager.CastSpell();
+        spellCaster.CastSpell();
     }
 
     private void Save_performed(InputAction.CallbackContext value)

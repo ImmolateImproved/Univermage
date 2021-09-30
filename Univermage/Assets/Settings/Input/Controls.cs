@@ -59,15 +59,7 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""interactions"": ""Press""
                 },
                 {
-                    ""name"": ""NextTutorial"",
-                    ""type"": ""Button"",
-                    ""id"": ""8dcf5d0f-1d58-42bd-a6fd-07520fcab16d"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press""
-                },
-                {
-                    ""name"": ""FreeCamera"",
+                    ""name"": ""FreeCameraToggle"",
                     ""type"": ""Button"",
                     ""id"": ""ce84968c-915f-4538-8044-01ec80aeccc5"",
                     ""expectedControlType"": ""Button"",
@@ -145,7 +137,7 @@ public class @Controls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5c1b0cac-6e6a-4016-96b5-163312dd86fa"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -177,23 +169,12 @@ public class @Controls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""56ef9036-59b3-4e21-8349-5941046c2db7"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""NextTutorial"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""b4b9877b-9ce5-4c73-8e0f-19f3d31617cd"",
                     ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""FreeCamera"",
+                    ""action"": ""FreeCameraToggle"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -275,7 +256,7 @@ public class @Controls : IInputActionCollection, IDisposable
             ""id"": ""31352516-5942-4542-b946-d3d3d3dc2c27"",
             ""actions"": [
                 {
-                    ""name"": ""NextTutorial"",
+                    ""name"": ""NextTooltip"",
                     ""type"": ""Button"",
                     ""id"": ""41583991-bcf1-4efd-ba01-91d297309988"",
                     ""expectedControlType"": ""Button"",
@@ -291,7 +272,34 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""NextTutorial"",
+                    ""action"": ""NextTooltip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Menu"",
+            ""id"": ""f2c9c71f-e154-4891-a021-0c2b0a24fedc"",
+            ""actions"": [
+                {
+                    ""name"": ""ShowControllsPanel"",
+                    ""type"": ""Button"",
+                    ""id"": ""58b66e27-c997-4803-820c-faaf05bc0c0b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""af6e8e7e-d9f4-46b3-8958-a02a39c8dab5"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ShowControllsPanel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -307,14 +315,16 @@ public class @Controls : IInputActionCollection, IDisposable
         m_Player_Save = m_Player.FindAction("Save", throwIfNotFound: true);
         m_Player_LoadLastSave = m_Player.FindAction("LoadLastSave", throwIfNotFound: true);
         m_Player_RestartLevel = m_Player.FindAction("RestartLevel", throwIfNotFound: true);
-        m_Player_NextTutorial = m_Player.FindAction("NextTutorial", throwIfNotFound: true);
-        m_Player_FreeCamera = m_Player.FindAction("FreeCamera", throwIfNotFound: true);
+        m_Player_FreeCameraToggle = m_Player.FindAction("FreeCameraToggle", throwIfNotFound: true);
         // FreeCamera
         m_FreeCamera = asset.FindActionMap("FreeCamera", throwIfNotFound: true);
         m_FreeCamera_Movement = m_FreeCamera.FindAction("Movement", throwIfNotFound: true);
         // Tutorial
         m_Tutorial = asset.FindActionMap("Tutorial", throwIfNotFound: true);
-        m_Tutorial_NextTutorial = m_Tutorial.FindAction("NextTutorial", throwIfNotFound: true);
+        m_Tutorial_NextTooltip = m_Tutorial.FindAction("NextTooltip", throwIfNotFound: true);
+        // Menu
+        m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
+        m_Menu_ShowControllsPanel = m_Menu.FindAction("ShowControllsPanel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -369,8 +379,7 @@ public class @Controls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Save;
     private readonly InputAction m_Player_LoadLastSave;
     private readonly InputAction m_Player_RestartLevel;
-    private readonly InputAction m_Player_NextTutorial;
-    private readonly InputAction m_Player_FreeCamera;
+    private readonly InputAction m_Player_FreeCameraToggle;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -380,8 +389,7 @@ public class @Controls : IInputActionCollection, IDisposable
         public InputAction @Save => m_Wrapper.m_Player_Save;
         public InputAction @LoadLastSave => m_Wrapper.m_Player_LoadLastSave;
         public InputAction @RestartLevel => m_Wrapper.m_Player_RestartLevel;
-        public InputAction @NextTutorial => m_Wrapper.m_Player_NextTutorial;
-        public InputAction @FreeCamera => m_Wrapper.m_Player_FreeCamera;
+        public InputAction @FreeCameraToggle => m_Wrapper.m_Player_FreeCameraToggle;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -406,12 +414,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @RestartLevel.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRestartLevel;
                 @RestartLevel.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRestartLevel;
                 @RestartLevel.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRestartLevel;
-                @NextTutorial.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNextTutorial;
-                @NextTutorial.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNextTutorial;
-                @NextTutorial.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNextTutorial;
-                @FreeCamera.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFreeCamera;
-                @FreeCamera.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFreeCamera;
-                @FreeCamera.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFreeCamera;
+                @FreeCameraToggle.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFreeCameraToggle;
+                @FreeCameraToggle.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFreeCameraToggle;
+                @FreeCameraToggle.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFreeCameraToggle;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -431,12 +436,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @RestartLevel.started += instance.OnRestartLevel;
                 @RestartLevel.performed += instance.OnRestartLevel;
                 @RestartLevel.canceled += instance.OnRestartLevel;
-                @NextTutorial.started += instance.OnNextTutorial;
-                @NextTutorial.performed += instance.OnNextTutorial;
-                @NextTutorial.canceled += instance.OnNextTutorial;
-                @FreeCamera.started += instance.OnFreeCamera;
-                @FreeCamera.performed += instance.OnFreeCamera;
-                @FreeCamera.canceled += instance.OnFreeCamera;
+                @FreeCameraToggle.started += instance.OnFreeCameraToggle;
+                @FreeCameraToggle.performed += instance.OnFreeCameraToggle;
+                @FreeCameraToggle.canceled += instance.OnFreeCameraToggle;
             }
         }
     }
@@ -478,12 +480,12 @@ public class @Controls : IInputActionCollection, IDisposable
     // Tutorial
     private readonly InputActionMap m_Tutorial;
     private ITutorialActions m_TutorialActionsCallbackInterface;
-    private readonly InputAction m_Tutorial_NextTutorial;
+    private readonly InputAction m_Tutorial_NextTooltip;
     public struct TutorialActions
     {
         private @Controls m_Wrapper;
         public TutorialActions(@Controls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @NextTutorial => m_Wrapper.m_Tutorial_NextTutorial;
+        public InputAction @NextTooltip => m_Wrapper.m_Tutorial_NextTooltip;
         public InputActionMap Get() { return m_Wrapper.m_Tutorial; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -493,20 +495,53 @@ public class @Controls : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_TutorialActionsCallbackInterface != null)
             {
-                @NextTutorial.started -= m_Wrapper.m_TutorialActionsCallbackInterface.OnNextTutorial;
-                @NextTutorial.performed -= m_Wrapper.m_TutorialActionsCallbackInterface.OnNextTutorial;
-                @NextTutorial.canceled -= m_Wrapper.m_TutorialActionsCallbackInterface.OnNextTutorial;
+                @NextTooltip.started -= m_Wrapper.m_TutorialActionsCallbackInterface.OnNextTooltip;
+                @NextTooltip.performed -= m_Wrapper.m_TutorialActionsCallbackInterface.OnNextTooltip;
+                @NextTooltip.canceled -= m_Wrapper.m_TutorialActionsCallbackInterface.OnNextTooltip;
             }
             m_Wrapper.m_TutorialActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @NextTutorial.started += instance.OnNextTutorial;
-                @NextTutorial.performed += instance.OnNextTutorial;
-                @NextTutorial.canceled += instance.OnNextTutorial;
+                @NextTooltip.started += instance.OnNextTooltip;
+                @NextTooltip.performed += instance.OnNextTooltip;
+                @NextTooltip.canceled += instance.OnNextTooltip;
             }
         }
     }
     public TutorialActions @Tutorial => new TutorialActions(this);
+
+    // Menu
+    private readonly InputActionMap m_Menu;
+    private IMenuActions m_MenuActionsCallbackInterface;
+    private readonly InputAction m_Menu_ShowControllsPanel;
+    public struct MenuActions
+    {
+        private @Controls m_Wrapper;
+        public MenuActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @ShowControllsPanel => m_Wrapper.m_Menu_ShowControllsPanel;
+        public InputActionMap Get() { return m_Wrapper.m_Menu; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MenuActions set) { return set.Get(); }
+        public void SetCallbacks(IMenuActions instance)
+        {
+            if (m_Wrapper.m_MenuActionsCallbackInterface != null)
+            {
+                @ShowControllsPanel.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnShowControllsPanel;
+                @ShowControllsPanel.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnShowControllsPanel;
+                @ShowControllsPanel.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnShowControllsPanel;
+            }
+            m_Wrapper.m_MenuActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @ShowControllsPanel.started += instance.OnShowControllsPanel;
+                @ShowControllsPanel.performed += instance.OnShowControllsPanel;
+                @ShowControllsPanel.canceled += instance.OnShowControllsPanel;
+            }
+        }
+    }
+    public MenuActions @Menu => new MenuActions(this);
     public interface IPlayerActions
     {
         void OnMovement(InputAction.CallbackContext context);
@@ -514,8 +549,7 @@ public class @Controls : IInputActionCollection, IDisposable
         void OnSave(InputAction.CallbackContext context);
         void OnLoadLastSave(InputAction.CallbackContext context);
         void OnRestartLevel(InputAction.CallbackContext context);
-        void OnNextTutorial(InputAction.CallbackContext context);
-        void OnFreeCamera(InputAction.CallbackContext context);
+        void OnFreeCameraToggle(InputAction.CallbackContext context);
     }
     public interface IFreeCameraActions
     {
@@ -523,6 +557,10 @@ public class @Controls : IInputActionCollection, IDisposable
     }
     public interface ITutorialActions
     {
-        void OnNextTutorial(InputAction.CallbackContext context);
+        void OnNextTooltip(InputAction.CallbackContext context);
+    }
+    public interface IMenuActions
+    {
+        void OnShowControllsPanel(InputAction.CallbackContext context);
     }
 }

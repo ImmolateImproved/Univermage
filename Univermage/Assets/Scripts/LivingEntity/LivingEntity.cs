@@ -19,7 +19,8 @@ public class LivingEntity : MonoBehaviour
 
     public void ResetState()
     {
-        inputManager.EnableGameplayInput();
+        inputManager.GameplayAndSaveEnabled(true);
+
         animator.SetTrigger("Restart");
     }
 
@@ -29,6 +30,7 @@ public class LivingEntity : MonoBehaviour
 
         spellController.ResetSpells();
         animator.SetTrigger("Death");
-        inputManager.DisableGameplayInput();
+
+        inputManager.GameplayAndSaveEnabled(false);
     }
 }

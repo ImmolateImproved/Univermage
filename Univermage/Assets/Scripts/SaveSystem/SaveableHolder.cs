@@ -37,10 +37,10 @@ public class SaveableHolder : MonoBehaviour
 
     public void FindSaveables()
     {
-        player = FindObjectOfType<PlayerSaveable>();
+        player = FindObjectOfType<PlayerSaveable>(true);
+        
+        nextLevelLoader = FindObjectOfType<EndLevel>(true).GetComponent<SwitchListener>();
 
-        nextLevelLoader = FindObjectOfType<EndLevel>().GetComponent<SwitchListener>();
-
-        saveables = FindObjectsOfType<Saveable>();
+        saveables = FindObjectsOfType<Saveable>(true);
     }
 }

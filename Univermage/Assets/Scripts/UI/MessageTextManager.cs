@@ -1,25 +1,29 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections.Generic;
-using MEC;
 using TMPro;
+using DG.Tweening;
 
 public class MessageTextManager : MonoBehaviour
 {
     [SerializeField]
-    private Image currentSpell;
+    private RectTransform messageTextHolder;
 
     [SerializeField]
-    private TextMeshProUGUI mesasgeText;
+    private TextMeshProUGUI messageText;
 
     [SerializeField]
     private GameObject deathTextHolder;
 
-    private CoroutineHandle textCoroutineHandle;
+    private Vector2 startPosition;
+
+    [SerializeField]
+    private Vector2 position;
+
+    private Sequence sequence;
 
     private void Awake()
     {
-        Timing.KillCoroutines();
+        startPosition = messageTextHolder.anchoredPosition;
+        DOTween.KillAll();
     }
 
     public void ShowDeathText()
@@ -32,63 +36,33 @@ public class MessageTextManager : MonoBehaviour
         deathTextHolder.SetActive(false);
     }
 
-    public void ShowMessage(string value)
+    public void ShowMessage(string value, float delay = 2)
     {
-        mesasgeText.text = value;
-        mesasgeText.enabled = true;
+        BuildSequence(delay);
+
+        messageText.text = value;
+        messageTextHolder.gameObject.SetActive(true);
     }
 
     public void HideMessage()
     {
-        mesasgeText.enabled = false;
-    }
-
-    public void ShowMessage(string value, float duration = 2)
-    {
-        mesasgeText.text = value;
-
-        Timing.KillCoroutines(textCoroutineHandle);
-        textCoroutineHandle = Timing.RunCoroutine(ShowAndHideText(duration));
+        messageTextHolder.gameObject.SetActive(false);
     }
 
     private void ShowSaveEventText(string eventText)
     {
-        ShowMessage(eventText, 4);
+        ShowMessage(eventText);
     }
 
-    private IEnumerator<float> ShowAndHideText(float duration)
+    private void BuildSequence(float delay)
     {
-        mesasgeText.enabled = true;
+        sequence.Kill();
+        sequence = DOTween.Sequence();
 
-        var defaultColor = mesasgeText.color;
-        defaultColor.a = 1;
-        mesasgeText.color = defaultColor;
-
-        while (mesasgeText.color.a > 0.1f)
-        {
-            var color = mesasgeText.color;
-            color.a -= Time.deltaTime / duration;
-            mesasgeText.color = color;
-
-            yield return Timing.WaitForOneFrame;
-        }
-
-        mesasgeText.enabled = false;
-    }
-
-    public void OnSetSpell(Spell spell)
-    {
-        var spellIsNotNull = spell?.SpellIcon != null;
-
-        currentSpell.enabled = spellIsNotNull;
-
-        if (spellIsNotNull)
-            currentSpell.sprite = spell.SpellIcon;
-    }
-
-    public void OnSpellUsed()
-    {
-        currentSpell.enabled = false;
+        sequence.Append(messageTextHolder.DOAnchorPos(position, 0.5f));
+        sequence.AppendInterval(delay);
+        sequence.Append(messageTextHolder.DOAnchorPos(startPosition, 0.5f));
+        sequence.AppendCallback(() => HideMessage());
     }
 
     private void SaveSystem_OnLoad()
@@ -104,8 +78,6 @@ public class MessageTextManager : MonoBehaviour
 
     private void OnEnable()
     {
-        SpellCaster.OnSetSpell += OnSetSpell;
-        SpellCaster.OnSpellUsed += OnSpellUsed;
         LivingEntity.OnDeath += LivingEntity_OnDeath;
 
         SaveManager.SaveEvent += ShowSaveEventText;
@@ -114,8 +86,8 @@ public class MessageTextManager : MonoBehaviour
 
     private void OnDisable()
     {
-        SpellCaster.OnSetSpell -= OnSetSpell;
-        SpellCaster.OnSpellUsed -= OnSpellUsed;
+        //sequence?.Kill();
+
         LivingEntity.OnDeath -= LivingEntity_OnDeath;
 
         SaveManager.SaveEvent -= ShowSaveEventText;

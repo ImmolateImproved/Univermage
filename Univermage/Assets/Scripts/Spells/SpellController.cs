@@ -27,6 +27,8 @@ public class SpellController : MonoBehaviour
 
             spellToViewMap.Add(spells[i], spellViews[i]);
         }
+
+        ResetSpells();
     }
 
     public void OnSpellCast(Spell spell, int actionIndex)

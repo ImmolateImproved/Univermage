@@ -11,31 +11,88 @@ public class InputManager : ScriptableObject
         Controls = new Controls();
     }
 
-    public void EnableGameplayInput()
+    public void PlayerInputEnabled(bool enable)
     {
-        Controls.Player.Movement.Enable();
-        Controls.Player.SpellCast.Enable();
-        Controls.Player.Save.Enable();
-        Controls.Player.FreeCamera.Enable();
+        if (enable)
+        {
+            Controls.Player.Enable();
+        }
+        else
+        {
+            Controls.Player.Disable();
+        }
+        Controls.Player.RestartLevel.Enable();
     }
 
-    public void DisableGameplayInput(bool disableFreeCamera = true)
+    public void GameplayInputEnabled(bool enable)
     {
-        Controls.Player.Movement.Disable();
-        Controls.Player.SpellCast.Disable();
-        Controls.Player.Save.Disable();
-
-        if (disableFreeCamera)
-            Controls.Player.FreeCamera.Disable();
+        if (enable)
+        {
+            Controls.Player.Movement.Enable();
+            Controls.Player.SpellCast.Enable();
+            Controls.Player.FreeCameraToggle.Enable();
+        }
+        else
+        {
+            Controls.Player.Movement.Disable();
+            Controls.Player.SpellCast.Disable();
+            Controls.Player.FreeCameraToggle.Disable();
+        }
     }
 
-    public void EnablePlayerInput()
+    public void PlayerMovementEnabled(bool enable)
     {
-        Controls.Player.Enable();
+        if (enable)
+        {
+            Controls.Player.Movement.Enable();
+        }
+        else
+        {
+            Controls.Player.Movement.Disable();
+        }
     }
 
-    public void DisablePlayerInput()
+    public void SaveInputEnabled(bool enable)
     {
-        Controls.Player.Disable();
+        if (enable)
+        {
+            Controls.Player.Save.Enable();
+            Controls.Player.LoadLastSave.Enable();
+        }
+        else
+        {
+            Controls.Player.Save.Disable();
+            Controls.Player.LoadLastSave.Disable();
+        }
+    }
+
+    public void LoadInputEnabled(bool enable)
+    {
+        if (enable)
+        {
+            Controls.Player.LoadLastSave.Enable();
+        }
+        else
+        {
+            Controls.Player.LoadLastSave.Disable();
+        }
+    }
+
+    public void GameplayAndSaveEnabled(bool enable)
+    {
+        GameplayInputEnabled(enable);
+        SaveInputEnabled(enable);
+    }
+
+    public void ShowControllsPanelEnabled(bool enable)
+    {
+        if (enable)
+        {
+            Controls.Menu.ShowControllsPanel.Enable();
+        }
+        else
+        {
+            Controls.Menu.ShowControllsPanel.Disable();
+        }
     }
 }

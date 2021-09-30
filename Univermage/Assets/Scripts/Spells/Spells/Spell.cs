@@ -7,9 +7,12 @@ public abstract class Spell : ScriptableObject
     [field: SerializeField]
     public Sprite SpellIcon { get; private set; }
 
-    public VideoClip videoClip;
+    public string spellName;
 
+    [Multiline]
     public string description;
+
+    public VideoClip videoClip;
 
     protected SpellController spellController;
 

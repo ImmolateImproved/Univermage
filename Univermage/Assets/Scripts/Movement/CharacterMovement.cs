@@ -1,13 +1,10 @@
-using System;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    private Transform myTransform;
-    private Animator anim;
-    private CharacterDirection characterDirection;
+    public Rigidbody2D rb;
 
-    private Vector2 velocity;
+    private CharacterDirection characterDirection;
 
     [SerializeField]
     private float moveSpeed;
@@ -15,22 +12,16 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private float gravityScale;
 
-    private int moveAnimationHash;
-
     public bool VerticalMovement { get; set; }
 
-    public Vector2 GetPosition { get => myTransform.position; }
+    public Vector2 Velocity { get; private set; }
 
-    public Rigidbody2D RB { get; private set; }
+    public Vector2 GetPosition { get => rb.position; }
 
     private void Awake()
     {
-        myTransform = transform;
-        anim = GetComponentInChildren<Animator>();
-        RB = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         characterDirection = GetComponent<CharacterDirection>();
-
-        moveAnimationHash = Animator.StringToHash("Speed");
     }
 
     private void FixedUpdate()
@@ -40,25 +31,23 @@ public class CharacterMovement : MonoBehaviour
 
     private void Move()
     {
-        anim.SetFloat(moveAnimationHash, Math.Abs(velocity.x));
+        var newPos = rb.position + Velocity * Time.fixedDeltaTime;
 
-        Vector2 newPos = RB.position + velocity * Time.fixedDeltaTime;
+        rb.MovePosition(newPos);
 
-        RB.MovePosition(newPos);
-
-        characterDirection.Flip((int)velocity.x);
+        characterDirection.Flip((int)Velocity.x);
     }
 
     public void SetMoveDirection(Vector2 inputDirection)
     {
-        velocity = VerticalMovement
+        Velocity = VerticalMovement
             ? inputDirection.normalized * moveSpeed
             : new Vector2(inputDirection.x * moveSpeed, -gravityScale);
     }
 
     public void SetPosition(Vector2 position)
     {
-        myTransform.position = position;
-        RB.velocity = Vector2.zero;
+        rb.MovePosition(position);
+        rb.velocity = Vector2.zero;
     }
 }

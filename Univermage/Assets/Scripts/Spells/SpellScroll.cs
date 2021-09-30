@@ -5,6 +5,11 @@ public class SpellScroll : MonoBehaviour, ISaveable
 {
     public Spell spell;
 
+    public void Init()
+    {
+
+    }
+
     void ISaveable.Load(bool state)
     {
         gameObject.SetActive(state);

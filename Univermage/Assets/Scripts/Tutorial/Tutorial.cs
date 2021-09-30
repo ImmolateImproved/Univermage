@@ -1,17 +1,15 @@
 using Cinemachine;
-using MEC;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [System.Serializable]
-public struct TutorialStage
+public class Tooltip
 {
     [Multiline]
-    public string tutorialText;
-    public UnityEvent tutorialEvent;
+    public string text;
+    public UnityEvent tooltipEvent;
 }
 
 public class Tutorial : MonoBehaviour
@@ -25,36 +23,65 @@ public class Tutorial : MonoBehaviour
     private CinemachineVirtualCamera lastCamera;
 
     [SerializeField]
+    private GameObject tooltipUIHolder;
+
+    [SerializeField]
     private TextMeshProUGUI textMesh;
 
     [SerializeField]
-    private TutorialStage[] tutorialStages;
-
-    private int currentStage;
+    private TooltipTrigger tooltipTrigger;
 
     private void Awake()
     {
         lastCamera = playerVCam;
-        NextTutorial();
+        NextTooltip();
     }
 
     private void OnEnable()
     {
         inputManager.Controls.Tutorial.Enable();
 
-        inputManager.Controls.Tutorial.NextTutorial.performed += NextTutorial_performed;
+        inputManager.Controls.Tutorial.NextTooltip.performed += NextTooltip;
+
+        SaveSystem.OnLoad += SaveSystem_OnLoad;
     }
 
     private void OnDisable()
     {
         inputManager.Controls.Tutorial.Disable();
 
-        inputManager.Controls.Tutorial.NextTutorial.performed -= NextTutorial_performed;
+        inputManager.Controls.Tutorial.NextTooltip.performed -= NextTooltip;
+
+        SaveSystem.OnLoad -= SaveSystem_OnLoad;
     }
 
-    private void NextTutorial_performed(InputAction.CallbackContext obj)
+    private void NextTooltip(InputAction.CallbackContext obj)
     {
-        NextTutorial();
+        NextTooltip();
+    }
+
+    public void NextTooltip()
+    {
+        var tooltip = tooltipTrigger?.NextTooltip();
+
+        var enableTooltipHolder = tooltip != null && !string.IsNullOrEmpty(tooltip.text);
+
+        tooltipUIHolder.SetActive(enableTooltipHolder);
+
+        if (tooltip != null)
+            ShowTooltip(tooltip);
+    }
+
+    public void ShowTooltip(Tooltip tooltip)
+    {
+        textMesh.text = tooltip.text;
+        tooltip.tooltipEvent?.Invoke();
+    }
+
+    public void SetTooltipTrigger(TooltipTrigger tooltipTrigger)
+    {
+        this.tooltipTrigger = tooltipTrigger;
+        NextTooltip();
     }
 
     public void SetVirtualCamera(CinemachineVirtualCamera virtualCamera)
@@ -68,30 +95,9 @@ public class Tutorial : MonoBehaviour
         SetVirtualCamera(playerVCam);
     }
 
-    public void NextTutorial()
+    private void SaveSystem_OnLoad()
     {
-        if (currentStage == tutorialStages.Length)
-        {
-            currentStage = 0;
-            gameObject.SetActive(false);
-            return;
-        }
-
-        textMesh.text = tutorialStages[currentStage].tutorialText;
-        tutorialStages[currentStage].tutorialEvent?.Invoke();
-
-        currentStage++;
-    }
-
-
-    public void DisableObjects(GameObject gameObject, float delay)
-    {
-        
-    }
-
-    public IEnumerator<float> Wait()
-    {
-        yield return Timing.WaitForSeconds(2);
-        Debug.Log("AZAZA");
+        tooltipUIHolder.SetActive(false);
+        tooltipTrigger = null;
     }
 }

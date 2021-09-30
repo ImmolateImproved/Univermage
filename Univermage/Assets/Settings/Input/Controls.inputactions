@@ -46,15 +46,7 @@
                     "interactions": "Press"
                 },
                 {
-                    "name": "NextTutorial",
-                    "type": "Button",
-                    "id": "8dcf5d0f-1d58-42bd-a6fd-07520fcab16d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press"
-                },
-                {
-                    "name": "FreeCamera",
+                    "name": "FreeCameraToggle",
                     "type": "Button",
                     "id": "ce84968c-915f-4538-8044-01ec80aeccc5",
                     "expectedControlType": "Button",
@@ -132,7 +124,7 @@
                 {
                     "name": "",
                     "id": "5c1b0cac-6e6a-4016-96b5-163312dd86fa",
-                    "path": "<Keyboard>/escape",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -164,23 +156,12 @@
                 },
                 {
                     "name": "",
-                    "id": "56ef9036-59b3-4e21-8349-5941046c2db7",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "NextTutorial",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "b4b9877b-9ce5-4c73-8e0f-19f3d31617cd",
                     "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "FreeCamera",
+                    "action": "FreeCameraToggle",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -262,7 +243,7 @@
             "id": "31352516-5942-4542-b946-d3d3d3dc2c27",
             "actions": [
                 {
-                    "name": "NextTutorial",
+                    "name": "NextTooltip",
                     "type": "Button",
                     "id": "41583991-bcf1-4efd-ba01-91d297309988",
                     "expectedControlType": "Button",
@@ -278,7 +259,34 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "NextTutorial",
+                    "action": "NextTooltip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Menu",
+            "id": "f2c9c71f-e154-4891-a021-0c2b0a24fedc",
+            "actions": [
+                {
+                    "name": "ShowControllsPanel",
+                    "type": "Button",
+                    "id": "58b66e27-c997-4803-820c-faaf05bc0c0b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "af6e8e7e-d9f4-46b3-8958-a02a39c8dab5",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShowControllsPanel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

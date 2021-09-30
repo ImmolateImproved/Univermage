@@ -16,7 +16,7 @@ public class ClosingObstacle : MonoBehaviour, ISaveable
 
     private int playerLayer;
 
-    private void Awake()
+    public void Init()
     {
         sr = GetComponent<SpriteRenderer>();
         opacity = sr.color.a;

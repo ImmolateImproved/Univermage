@@ -14,23 +14,32 @@ public class SaveManager : Singleton<SaveManager>
 
     public static event Action<string> SaveEvent = delegate { };
 
+    private const string saveFailedText = "Невозможно сохраниться сейчас.\n Причина: ";
+    private Dictionary<int, string> saveFailedCauses;
+
     private void Start()
     {
         canSave = true;
         lastSave = null;
+
+        saveFailedCauses = new Dictionary<int, string>(5)
+        {
+            [0] = saveFailedText + "Еффект",
+            [1] = saveFailedText + "Недостаточно сохранений"
+        };
     }
 
     public void TrySave()
     {
         if (!canSave)
         {
-            SaveEvent($"Save faild.\n Reason: effect");
+            SaveEvent(saveFailedCauses[0]);
             return;
         }
 
         if (savesCount == 0)
         {
-            SaveEvent($"Save faild.\n Saves count: {savesCount}");
+            SaveEvent(saveFailedCauses[0]);
             return;
         }
 
@@ -38,7 +47,14 @@ public class SaveManager : Singleton<SaveManager>
 
         savesCount--;
 
-        SaveEvent($"Save succeeded.\n Saves count: {savesCount}");
+        SaveEvent($"Cохранение\nОсталось сохранений: {savesCount}");
+    }
+
+    public void TutorialSave()
+    {
+        QuiqSave();
+
+        SaveEvent($"Cохранение");
     }
 
     private void QuiqSave()
@@ -58,7 +74,7 @@ public class SaveManager : Singleton<SaveManager>
     public void AddSaves()
     {
         savesCount++;
-        SaveEvent($"Saves count: {savesCount}");
+        SaveEvent($"Осталось сохранений: {savesCount}");
     }
 
     private IEnumerator<float> WaitEndEffect(float effecDuration)

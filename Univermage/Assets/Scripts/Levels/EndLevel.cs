@@ -12,15 +12,15 @@ public class EndLevel : MonoBehaviour, ISaveable
 
     private bool loadNextLevel;
 
-    private void Awake()
-    {
-        sr = GetComponent<SpriteRenderer>();
-    }
-
     public void Activate()
     {
         loadNextLevel = true;
         sr.sprite = activatedSprite;
+    }
+
+    public void Init()
+    {
+        sr = GetComponent<SpriteRenderer>();
     }
 
     public bool Save()
@@ -42,7 +42,7 @@ public class EndLevel : MonoBehaviour, ISaveable
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (!loadNextLevel) return;
 

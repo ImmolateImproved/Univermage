@@ -17,7 +17,7 @@ public class Switch : MonoBehaviour, ISaveable
 
     private bool activate;
 
-    private void Awake()
+    public void Init()
     {
         sr = GetComponent<SpriteRenderer>();
     }
