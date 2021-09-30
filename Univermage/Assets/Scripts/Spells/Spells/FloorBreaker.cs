@@ -33,6 +33,8 @@ public class FloorBreaker : Spell
 
         yield return Timing.WaitForSeconds(delay);
 
+        spellController.OnSpellCast(this, 1);
+
         var hit = Physics2D.Raycast(castPointDown.position, -castPointDown.up, 1, mask);
 
         if (hit)

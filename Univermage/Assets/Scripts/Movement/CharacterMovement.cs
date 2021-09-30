@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
 
     private CharacterDirection characterDirection;
 
@@ -47,7 +47,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void SetPosition(Vector2 position)
     {
-        rb.MovePosition(position);
+        rb.position = position;
         rb.velocity = Vector2.zero;
     }
 }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using MEC;
+using DG.Tweening;
 
 [CreateAssetMenu(menuName = "ScriptableObjects/Spells/Portal")]
 public class Portal : Spell
@@ -9,10 +10,13 @@ public class Portal : Spell
     private Collider2D collider;
 
     [SerializeField]
+    private Ease movementEase;
+
+    [SerializeField]
     private float duration;
 
     [SerializeField]
-    private float moveSpeed;
+    private float returnSpeed;
 
     private CoroutineHandle coroutineHandle;
 
@@ -36,35 +40,29 @@ public class Portal : Spell
         collider.enabled = true;
     }
 
+    protected virtual Vector2 GetPositon()
+    {
+        return movement.GetPosition;
+    }
+
     private IEnumerator<float> Wait()
     {
-        var position = movement.GetPosition;
         spellController.OnSpellCast(this, 0);
+        var returnPosition = GetPositon();
 
         yield return Timing.WaitForSeconds(duration);
 
-        Timing.RunCoroutine(MoveBack(position), CoroutineTags.GAMEPLAY);
-    }
-
-    private IEnumerator<float> MoveBack(Vector2 startPosition)
-    {
         var myTrasform = movement.transform;
         movement.enabled = false;
         collider.enabled = false;
 
-        while (true)
+        var distance = Vector2.Distance(myTrasform.position, returnPosition);
+
+        myTrasform.DOMove(returnPosition, distance / returnSpeed).SetEase(movementEase).OnComplete(() =>
         {
-            myTrasform.position = Vector3.MoveTowards(myTrasform.position, startPosition, moveSpeed * Time.deltaTime);
-
-            if (Vector2.Distance(myTrasform.position, startPosition) <= 0.01f)
-            {
-                spellController.OnSpellCast(this, 1);
-                movement.enabled = true;
-                collider.enabled = true;
-                yield break;
-            }
-
-            yield return Timing.WaitForOneFrame;
-        }
+            spellController.OnSpellCast(this, 1);
+            movement.enabled = true;
+            collider.enabled = true;
+        });
     }
 }

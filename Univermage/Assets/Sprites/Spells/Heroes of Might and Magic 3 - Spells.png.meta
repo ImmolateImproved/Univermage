@@ -28,7 +28,7 @@ TextureImporter:
     second: Heroes of Might and Magic 3 - Spells_7
   - first:
       213: -6483084884356464524
-    second: Heroes of Might and Magic 3 - Spells_8
+    second: TeleportScroll
   - first:
       213: -438399392780126659
     second: PortalScroll
@@ -241,7 +241,7 @@ TextureImporter:
     second: Heroes of Might and Magic 3 - Spells_78
   - first:
       213: 1613942172611932676
-    second: Heroes of Might and Magic 3 - Spells_79
+    second: Teleport
   - first:
       213: 2787587591067702508
     second: Portal
@@ -682,7 +682,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heroes of Might and Magic 3 - Spells_8
+      name: TeleportScroll
       rect:
         serializedVersion: 2
         x: 710
@@ -2173,7 +2173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heroes of Might and Magic 3 - Spells_79
+      name: Teleport
       rect:
         serializedVersion: 2
         x: 690

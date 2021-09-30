@@ -1,18 +1,18 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+using DG.Tweening;
 
 public class SpellController : MonoBehaviour
 {
     [SerializeField]
     private Spell[] spells;
 
-    [SerializeField]
     private SpellView[] spellViews;
 
     private Dictionary<Spell, SpellView> spellToViewMap = new Dictionary<Spell, SpellView>();
 
-    public Transform castPoint, castPointDown, spawnPoint;
+    public Transform castPoint, castPointDown, spawnPointDown, spawnPointMid, spawnPointFrontMid;
 
     private void Awake()
     {
@@ -21,11 +21,13 @@ public class SpellController : MonoBehaviour
             spells[i].Init(this);
         }
 
+        spellViews = GetComponentsInChildren<SpellView>();
+
         for (int i = 0; i < spellViews.Length; i++)
         {
             spellViews[i].Init();
 
-            spellToViewMap.Add(spells[i], spellViews[i]);
+            spellToViewMap.Add(spellViews[i].Spell, spellViews[i]);
         }
 
         ResetSpells();
@@ -60,6 +62,7 @@ public class SpellController : MonoBehaviour
 
     public void ResetSpells()
     {
+        DOTween.KillAll();
         MEC.Timing.KillCoroutines(CoroutineTags.GAMEPLAY);
 
         for (int i = 0; i < spells.Length; i++)

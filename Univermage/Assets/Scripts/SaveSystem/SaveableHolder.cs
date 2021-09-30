@@ -15,9 +15,9 @@ public class SaveableHolder : MonoBehaviour
 
     private void Init()
     {
-        foreach (var item in saveables)
+        foreach (var saveable in saveables)
         {
-            item.Init();
+            saveable.Init();
         }
 
         SaveSystem.saveableHolder = this;

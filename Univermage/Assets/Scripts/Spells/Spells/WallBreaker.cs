@@ -36,7 +36,10 @@ public class WallBreaker : Spell
     private IEnumerator<float> Wait()
     {
         spellController.OnSpellCast(this, 0);
+
         yield return Timing.WaitForSeconds(delay);
+
+        spellController.OnSpellCast(this, 1);
 
         RaycastHit2D hit = Physics2D.Raycast(castPoint.position, direction.Direction, distance, mask);
 

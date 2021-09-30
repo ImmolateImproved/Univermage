@@ -12,21 +12,31 @@ public class ClosingObstacle : MonoBehaviour, ISaveable
 
     private Vector2 positionOnEnter;
 
-    private int myLayer;
+    private int closingObstacleLayer;
 
     private int playerLayer;
+    private int tilemapLayer;
 
-    public void Init()
+    private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         opacity = sr.color.a;
-        myLayer = 1 << gameObject.layer;
+        closingObstacleLayer = 1 << gameObject.layer;
+
         playerLayer = LayerMask.NameToLayer("Player");
+        tilemapLayer = LayerMask.NameToLayer("Tilemap");
+    }
+
+    public void Init()
+    {
+ 
     }
 
     void ISaveable.Load(bool state)
     {
         obstacle.isTrigger = state;
+
+        gameObject.layer = state ? closingObstacleLayer : tilemapLayer;
 
         var color = sr.color;
         color.a = state ? opacity : 1;
@@ -50,11 +60,12 @@ public class ClosingObstacle : MonoBehaviour, ISaveable
     {
         if (collision.gameObject.layer == playerLayer)
         {
-            var hit = Physics2D.Linecast(collision.transform.position, positionOnEnter, myLayer);
+            var hit = Physics2D.Linecast(collision.transform.position, positionOnEnter, closingObstacleLayer);
 
             if (hit)
             {
                 obstacle.isTrigger = false;
+                gameObject.layer = tilemapLayer;
 
                 var color = sr.color;
                 color.a = 1;

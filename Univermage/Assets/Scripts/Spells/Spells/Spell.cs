@@ -20,9 +20,9 @@ public abstract class Spell : ScriptableObject
 
     public abstract void Cast();
 
-    public virtual void Init(SpellController initializer)
+    public virtual void Init(SpellController spellController)
     {
-        spellController = initializer;
+        this.spellController = spellController;
     }
 
     public virtual void ResetSpell()

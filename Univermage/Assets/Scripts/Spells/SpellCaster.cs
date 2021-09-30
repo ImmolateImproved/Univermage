@@ -6,6 +6,9 @@ public class SpellCaster : MonoBehaviour
     [field: SerializeField]
     public Spell CurrentSpell { get; private set; }
 
+    [SerializeField]
+    private bool infinite;
+
     public static event System.Action<Spell> OnSetSpell = delegate { };
     public static event System.Action OnSpellUsed = delegate { };
 
@@ -35,7 +38,8 @@ public class SpellCaster : MonoBehaviour
         {
             OnSpellUsed();
             CurrentSpell.Cast();
-            CurrentSpell = null;
+            if (!infinite)
+                CurrentSpell = null;
         }
     }
 }
