@@ -31,6 +31,7 @@ public class LivingEntity : MonoBehaviour
         spellController.ResetSpells();
         animator.SetTrigger("Death");
 
-        inputManager.GameplayAndSaveEnabled(false);
+        inputManager.GameplayInputEnabled(false);
+        inputManager.Controls.Player.Save.Disable();
     }
 }
