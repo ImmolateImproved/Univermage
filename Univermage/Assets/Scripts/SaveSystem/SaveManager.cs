@@ -6,9 +6,14 @@ using UnityEngine;
 public class SaveManager : Singleton<SaveManager>
 {
     [SerializeField]
+    private SaveSystem saveSystem;
+
+    [SerializeField]
     private int savesCount = 5;
 
     private bool canSave;
+
+    private CoroutineHandle waitEffectHandle;
 
     private SaveData lastSave;
 
@@ -61,14 +66,14 @@ public class SaveManager : Singleton<SaveManager>
     {
         var saveIdentifier = new SaveIdentifier(SaveNames.LastSave);
 
-        lastSave = SaveSystem.Save(saveIdentifier);
+        lastSave = saveSystem.Save(saveIdentifier);
     }
 
     public void LoadLastSave()
     {
         var saveIdentifier = new SaveIdentifier(SaveNames.LastSave);
 
-        SaveSystem.Load(saveIdentifier, lastSave);
+        saveSystem.Load(saveIdentifier, lastSave);
     }
 
     public void AddSaves()
@@ -88,7 +93,8 @@ public class SaveManager : Singleton<SaveManager>
 
     private void Spell_OnEffectCast(Sprite spell, float effecDuration)
     {
-        Timing.RunCoroutine(WaitEndEffect(effecDuration));
+        Timing.KillCoroutines(waitEffectHandle);
+        waitEffectHandle = Timing.RunCoroutine(WaitEndEffect(effecDuration));
     }
 
     private void OnEnable()

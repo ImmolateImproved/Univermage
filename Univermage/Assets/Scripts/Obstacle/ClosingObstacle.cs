@@ -12,45 +12,31 @@ public class ClosingObstacle : MonoBehaviour, ISaveable
 
     private Vector2 positionOnEnter;
 
-    private int closingObstacleLayer;
-
-    private int playerLayer;
-    private int tilemapLayer;
-
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         opacity = sr.color.a;
-        closingObstacleLayer = 1 << gameObject.layer;
-
-        playerLayer = LayerMask.NameToLayer("Player");
-        tilemapLayer = LayerMask.NameToLayer("Tilemap");
     }
 
-    public void Init()
-    {
- 
-    }
-
-    void ISaveable.Load(bool state)
+    public void Load(bool state)
     {
         obstacle.isTrigger = state;
 
-        gameObject.layer = state ? closingObstacleLayer : tilemapLayer;
+        gameObject.layer = state ? PhysicsLayers.ClosingObstacleLayer : PhysicsLayers.Tilemap;
 
         var color = sr.color;
         color.a = state ? opacity : 1;
         sr.color = color;
     }
 
-    bool ISaveable.Save()
+    public bool Save()
     {
         return obstacle.isTrigger;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == playerLayer)
+        if (collision.gameObject.layer == PhysicsLayers.Player)
         {
             positionOnEnter = collision.transform.position;
         }
@@ -58,14 +44,14 @@ public class ClosingObstacle : MonoBehaviour, ISaveable
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == playerLayer)
+        if (collision.gameObject.layer == PhysicsLayers.Player)
         {
-            var hit = Physics2D.Linecast(collision.transform.position, positionOnEnter, closingObstacleLayer);
+            var hit = Physics2D.Linecast(collision.transform.position, positionOnEnter, 1 << gameObject.layer);
 
             if (hit)
             {
                 obstacle.isTrigger = false;
-                gameObject.layer = tilemapLayer;
+                gameObject.layer = PhysicsLayers.Tilemap;
 
                 var color = sr.color;
                 color.a = 1;

@@ -5,17 +5,12 @@ public class SpellScroll : MonoBehaviour, ISaveable
 {
     public Spell spell;
 
-    public void Init()
-    {
-
-    }
-
-    void ISaveable.Load(bool state)
+    public void Load(bool state)
     {
         gameObject.SetActive(state);
     }
 
-    bool ISaveable.Save()
+    public bool Save()
     {
         return gameObject.activeSelf;
     }

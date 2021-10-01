@@ -3,17 +3,17 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-[CustomEditor(typeof(SaveableHolder))]
+[CustomEditor(typeof(SaveSystem))]
 public class SaveableHolderEditor : Editor
 {
-    private SaveableHolder saveableHolder;
+    private SaveSystem saveableHolder;
     private VisualElement root;
 
     private VisualTreeAsset visualTree;
 
     private void OnEnable()
     {
-        saveableHolder = target as SaveableHolder;
+        saveableHolder = target as SaveSystem;
 
         root = new VisualElement();
         visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets\\Scripts\\UI\\Editor\\SaveManager.uxml");

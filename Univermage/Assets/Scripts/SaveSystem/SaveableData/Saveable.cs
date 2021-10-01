@@ -7,7 +7,6 @@ public class Saveable : MonoBehaviour
     public void Init()
     {
         saveable = GetComponent<ISaveable>();
-        saveable.Init();
     }
 
     public bool Save()

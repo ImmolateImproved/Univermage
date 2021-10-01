@@ -8,9 +8,6 @@ public class Flight : Spell
     private CharacterMovement movement;
 
     [SerializeField]
-    private float speed;
-
-    [SerializeField]
     private float duration;
 
     private CoroutineHandle coroutineHandle;

@@ -1,41 +1,6 @@
 using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using UnityEngine.SceneManagement;
-
-[System.Serializable]
-public struct PlayerSaveData
-{
-    public float[] position;
-    public int direction;
-    public int spellIndex;
-}
-
-[System.Serializable]
-public class SaveData
-{
-    public PlayerSaveData playerData;
-    public int activatedSwitchesCount;
-    public bool[] saveableStates;
-
-    public int levelIndex;
-
-    public SaveData(SaveableHolder saveableHolder)
-    {
-        this.levelIndex = SceneManager.GetActiveScene().buildIndex;
-
-        playerData = saveableHolder.player.Save();
-
-        this.activatedSwitchesCount = saveableHolder.nextLevelLoader.Save();
-
-        saveableStates = new bool[saveableHolder.saveables.Length];
-
-        for (int i = 0; i < saveableHolder.saveables.Length; i++)
-        {
-            this.saveableStates[i] = saveableHolder.saveables[i].Save();
-        }
-    }
-}
 
 public static class BinarySaveHelper
 {

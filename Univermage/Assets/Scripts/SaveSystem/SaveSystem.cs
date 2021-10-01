@@ -1,52 +1,84 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
+using System;
 
-public static class SaveNames
+public class SaveSystem : MonoBehaviour
 {
-    public const string LastSave = "LevelStart";
-}
+    [SerializeField]
+    private PlayerSaveable player;
 
-public struct SaveIdentifier
-{
-    private readonly string saveName;
+    [SerializeField]
+    private SwitchListener nextLevelLoader;
 
-    public SaveIdentifier(string saveName)
-    {
-        this.saveName = saveName;
-    }
-
-    public static implicit operator string(SaveIdentifier saveIdentifier)
-    {
-        return saveIdentifier.saveName + SceneManager.GetActiveScene().buildIndex;
-    }
-}
-
-public static class SaveSystem
-{
-    public static SaveableHolder saveableHolder;
+    [SerializeField]
+    private Saveable[] saveables;
 
     public static event Action OnLoad = delegate { };
 
-    public static SaveData Save(SaveIdentifier saveIdentifier)
+    private void Awake()
     {
-        var save = new SaveData(saveableHolder);
+        Init();
+    }
+
+    private void Init()
+    {
+        foreach (var saveable in saveables)
+        {
+            saveable.Init();
+        }
+    }
+
+    private SaveData CostructSaveData()
+    {
+        var boolSaveables = saveables.Select(x => x.Save()).ToArray();
+
+        var saveData = new SaveData
+        {
+            saveables = boolSaveables,
+            activatedSwitchesCount = nextLevelLoader.Save(),
+            playerData = player.Save(),
+
+            levelIndex = SceneManager.GetActiveScene().buildIndex
+        };
+
+        return saveData;
+    }
+
+    public SaveData Save(SaveIdentifier saveIdentifier)
+    {
+        var save = CostructSaveData();
 
         BinarySaveHelper.SaveToFile(save, saveIdentifier);
 
         return save;
     }
 
-    public static void Load(SaveIdentifier saveIdentifier, SaveData save = null)
+    public void Load(SaveIdentifier saveIdentifier, SaveData save = null)
     {
         if (save == null)
         {
             save = BinarySaveHelper.LoadFromFile(saveIdentifier);
         }
 
-        saveableHolder.Load(save);
+        player.Load(save.playerData);
+
+        nextLevelLoader.Load(save.activatedSwitchesCount);
+
+        for (int i = 0; i < saveables.Length; i++)
+        {
+            saveables[i].Load(save.saveables[i]);
+        }
 
         OnLoad();
+    }
+
+    public void FindSaveables()
+    {
+        player = FindObjectOfType<PlayerSaveable>(true);
+
+        nextLevelLoader = FindObjectOfType<EndLevel>(true).GetComponent<SwitchListener>();
+
+        saveables = FindObjectsOfType<Saveable>(true);
     }
 }

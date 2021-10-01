@@ -32,11 +32,11 @@ public class PlayerSaveable : MonoBehaviour
         return playerData;
     }
 
-    public void Load(in PlayerSaveData playerSaveData)
+    public void Load(in PlayerSaveData data)
     {
-        var playerPosition = new Vector2(playerSaveData.position[0], playerSaveData.position[1]);
-        var playerDirection = playerSaveData.direction;
-        var playerSpell = spellController.GetSpellFromIndex(playerSaveData.spellIndex);
+        var playerPosition = new Vector2(data.position[0], data.position[1]);
+        var playerDirection = data.direction;
+        var playerSpell = spellController.GetSpellFromIndex(data.spellIndex);
 
         movement.SetPosition(playerPosition);
         characterDirection.Flip(playerDirection);
