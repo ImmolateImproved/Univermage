@@ -36,12 +36,17 @@ public class MessageTextManager : MonoBehaviour
         deathTextHolder.SetActive(false);
     }
 
-    public void ShowMessage(string value, float delay = 2)
+    public void ShowMessage(string value, float delay)
     {
         BuildSequence(delay);
 
         messageText.text = value;
         messageTextHolder.gameObject.SetActive(true);
+    }
+
+    public void ShowMessage(string value)
+    {
+        ShowMessage(value, 2);
     }
 
     public void HideMessage()
