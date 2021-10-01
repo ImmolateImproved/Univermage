@@ -12,7 +12,7 @@ public class Tooltip
     public UnityEvent tooltipEvent;
 }
 
-public class Tutorial : MonoBehaviour
+public class TooltipManager : MonoBehaviour
 {
     [SerializeField]
     private InputManager inputManager;
@@ -34,6 +34,10 @@ public class Tutorial : MonoBehaviour
     private void Awake()
     {
         lastCamera = playerVCam;
+    }
+
+    private void Start()
+    {
         NextTooltip();
     }
 
