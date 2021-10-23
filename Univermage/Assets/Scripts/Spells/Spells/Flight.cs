@@ -21,7 +21,7 @@ public class Flight : Spell
 
     public override void ResetSpell()
     {
-        movement.VerticalMovement = false;
+        movement.SetVerticalMovement(this, false);
     }
 
     public override void Cast()
@@ -34,12 +34,12 @@ public class Flight : Spell
 
     private IEnumerator<float> Wait()
     {
-        movement.VerticalMovement = true;
+        movement.SetVerticalMovement(this, true);
         spellController.OnSpellCast(this, 0);
 
         yield return Timing.WaitForSeconds(duration);
 
         spellController.OnSpellCast(this, 1);
-        movement.VerticalMovement = false;
+        movement.SetVerticalMovement(this, false);
     }
 }

@@ -18,6 +18,9 @@ public class Portal : Spell
     [SerializeField]
     private float returnSpeed;
 
+    [SerializeField]
+    private float castDelay;
+
     private CoroutineHandle coroutineHandle;
 
     public override void Init(SpellController controller)
@@ -45,9 +48,17 @@ public class Portal : Spell
         return movement.GetPosition;
     }
 
+    private IEnumerator<float> CastDelay()
+    {
+        yield return Timing.WaitForSeconds(castDelay);
+    }
+
     private IEnumerator<float> Wait()
     {
         spellController.OnSpellCast(this, 0);
+
+        yield return Timing.WaitUntilDone(Timing.RunCoroutine(CastDelay(), CoroutineTags.GAMEPLAY));
+
         var returnPosition = GetPositon();
 
         yield return Timing.WaitForSeconds(duration);

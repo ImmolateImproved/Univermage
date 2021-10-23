@@ -30,13 +30,11 @@ public class InputManager : ScriptableObject
         {
             Controls.Player.Movement.Enable();
             Controls.Player.SpellCast.Enable();
-            Controls.Player.FreeCameraToggle.Enable();
         }
         else
         {
             Controls.Player.Movement.Disable();
             Controls.Player.SpellCast.Disable();
-            Controls.Player.FreeCameraToggle.Disable();
         }
     }
 

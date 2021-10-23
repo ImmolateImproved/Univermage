@@ -14,7 +14,7 @@ public class AstralBody : SpawnerSpell
     public void InitMovement(GameObject gameObject)
     {
         var movement = gameObject.GetComponent<CharacterMovement>();
-        movement.VerticalMovement = true;
+        movement.SetVerticalMovement(this, true);
 
         var myDirection = spellController.GetComponent<CharacterDirection>();
         movement.transform.localScale = myDirection.transform.localScale;

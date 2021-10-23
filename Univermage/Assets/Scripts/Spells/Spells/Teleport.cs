@@ -1,8 +1,5 @@
-﻿using DG.Tweening;
-using MEC;
+﻿using UnityEngine;
 using System;
-using System.Collections.Generic;
-using UnityEngine;
 
 [CreateAssetMenu(menuName = "ScriptableObjects/Spells/Teleport")]
 public class Teleport : Portal

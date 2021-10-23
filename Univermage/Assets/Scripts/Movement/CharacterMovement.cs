@@ -12,7 +12,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private float gravityScale;
 
-    public bool VerticalMovement { get; set; }
+    private VerticalMovement verticalMovement = new VerticalMovement();
 
     public Vector2 Velocity { get; private set; }
 
@@ -40,7 +40,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void SetMoveDirection(Vector2 inputDirection)
     {
-        Velocity = VerticalMovement
+        Velocity = verticalMovement
             ? inputDirection.normalized * moveSpeed
             : new Vector2(inputDirection.x * moveSpeed, -gravityScale);
     }
@@ -49,5 +49,10 @@ public class CharacterMovement : MonoBehaviour
     {
         rb.position = position;
         rb.velocity = Vector2.zero;
+    }
+
+    public void SetVerticalMovement(object trigger, bool onOf)
+    {
+        verticalMovement.SetVerticalMovement(trigger, onOf);
     }
 }

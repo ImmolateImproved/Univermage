@@ -7,13 +7,19 @@ public class FreeCameraController : MonoBehaviour
     [SerializeField]
     public InputManager inputManager;
 
-    [SerializeField]
-    private CinemachineVirtualCamera virtualCamera;
 
     [SerializeField]
-    private FreeCameraMovement freeCamera;
+    private CinemachineVirtualCamera freeCamera;
+
+    [SerializeField]
+    private CinemachineVirtualCamera playerVCam;
+
+    [SerializeField]
+    private FreeCameraMovement freeCameraMovement;
 
     private InputAction movementAction;
+
+    private bool activated;
 
     private void Start()
     {
@@ -37,18 +43,20 @@ public class FreeCameraController : MonoBehaviour
 
     private void FreeCamera_performed(InputAction.CallbackContext obj)
     {
-        if (movementAction.enabled)
+        activated = !activated;
+
+        if (activated)
         {
+            freeCamera.transform.position = playerVCam.transform.position;
             inputManager.GameplayInputEnabled(false);
-            inputManager.Controls.FreeCamera.Disable();
-            virtualCamera.Priority = 0;
+            inputManager.Controls.FreeCamera.Enable();
+            freeCamera.Priority = 15;
         }
         else
         {
-            inputManager.GameplayInputEnabled(true); 
-            inputManager.Controls.Player.FreeCameraToggle.Enable();
-            inputManager.Controls.FreeCamera.Enable();
-            virtualCamera.Priority = 15;
+            inputManager.GameplayInputEnabled(true);
+            inputManager.Controls.FreeCamera.Disable();
+            freeCamera.Priority = 0;
         }
     }
 
@@ -56,6 +64,6 @@ public class FreeCameraController : MonoBehaviour
     {
         var direction = movementAction.ReadValue<Vector2>();
 
-        freeCamera.SetMoveDirection(direction);
+        freeCameraMovement.SetMoveDirection(direction);
     }
 }

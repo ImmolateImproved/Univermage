@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SaveSystem))]
 public class SaveManager : Singleton<SaveManager>
 {
-    [SerializeField]
     private SaveSystem saveSystem;
 
     [SerializeField]
@@ -21,6 +21,12 @@ public class SaveManager : Singleton<SaveManager>
 
     private const string saveFailedText = "Невозможно сохраниться сейчас.\n Причина: ";
     private Dictionary<int, string> saveFailedCauses;
+
+    public override void Awake()
+    {
+        base.Awake();
+        saveSystem = GetComponent<SaveSystem>();
+    }
 
     private void Start()
     {
