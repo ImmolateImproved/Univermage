@@ -5,6 +5,7 @@ using MEC;
 [CreateAssetMenu(menuName = "ScriptableObjects/Spells/FloorBreaker")]
 public class FloorBreaker : Spell
 {
+    private Transform spawnPosintDown;
     private Transform castPointDown;
 
     [SerializeField]
@@ -20,6 +21,7 @@ public class FloorBreaker : Spell
         base.Init(controller);
 
         castPointDown = controller.castPointDown;
+        spawnPosintDown = controller.spawnPointDown;
     }
 
     public override void Cast()
@@ -35,11 +37,14 @@ public class FloorBreaker : Spell
 
         spellController.OnSpellCast(this, 1);
 
-        var hit = Physics2D.Raycast(castPointDown.position, -castPointDown.up, 1, mask);
+        var firstConrner = spawnPosintDown.position;
+        var secondCorner = castPointDown.position;
+
+        var hit = Physics2D.OverlapArea(firstConrner, secondCorner, mask);// Physics2D.Raycast(castPointDown.position, -castPointDown.up, 1, mask);
 
         if (hit)
         {
-            hit.collider.gameObject.SetActive(false);   
-        }        
+            hit.gameObject.SetActive(false);
+        }
     }
 }
