@@ -11,7 +11,7 @@ public class PlayerInput : MonoBehaviour
 
     private CharacterMovement movement;
     private SpellCaster spellCaster;
-    private SaveManager saveManager;
+    private GameplaySaveManager saveManager;
 
     private void Awake()
     {
@@ -21,7 +21,7 @@ public class PlayerInput : MonoBehaviour
 
     private void Start()
     {
-        saveManager = SaveManager.inst;
+        saveManager = GameplaySaveManager.inst;
     }
 
     private void Update()

@@ -35,6 +35,7 @@ public class WallBreakerView : SpellView
         var effect = Instantiate(this.effect);
         effect.position = spawnPoint.position;
         effect.parent = transform;
+        PlaySpellSFX();
         Destroy(effect.gameObject, 2);
     }
 }

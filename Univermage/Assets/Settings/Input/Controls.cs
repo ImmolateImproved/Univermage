@@ -283,7 +283,7 @@ public class @Controls : IInputActionCollection, IDisposable
             ""id"": ""f2c9c71f-e154-4891-a021-0c2b0a24fedc"",
             ""actions"": [
                 {
-                    ""name"": ""ShowControllsPanel"",
+                    ""name"": ""OpenMenu"",
                     ""type"": ""Button"",
                     ""id"": ""58b66e27-c997-4803-820c-faaf05bc0c0b"",
                     ""expectedControlType"": ""Button"",
@@ -295,11 +295,11 @@ public class @Controls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""af6e8e7e-d9f4-46b3-8958-a02a39c8dab5"",
-                    ""path"": ""<Keyboard>/tab"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""ShowControllsPanel"",
+                    ""action"": ""OpenMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -324,7 +324,7 @@ public class @Controls : IInputActionCollection, IDisposable
         m_Tutorial_NextTooltip = m_Tutorial.FindAction("NextTooltip", throwIfNotFound: true);
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
-        m_Menu_ShowControllsPanel = m_Menu.FindAction("ShowControllsPanel", throwIfNotFound: true);
+        m_Menu_OpenMenu = m_Menu.FindAction("OpenMenu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -513,12 +513,12 @@ public class @Controls : IInputActionCollection, IDisposable
     // Menu
     private readonly InputActionMap m_Menu;
     private IMenuActions m_MenuActionsCallbackInterface;
-    private readonly InputAction m_Menu_ShowControllsPanel;
+    private readonly InputAction m_Menu_OpenMenu;
     public struct MenuActions
     {
         private @Controls m_Wrapper;
         public MenuActions(@Controls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @ShowControllsPanel => m_Wrapper.m_Menu_ShowControllsPanel;
+        public InputAction @OpenMenu => m_Wrapper.m_Menu_OpenMenu;
         public InputActionMap Get() { return m_Wrapper.m_Menu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -528,16 +528,16 @@ public class @Controls : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_MenuActionsCallbackInterface != null)
             {
-                @ShowControllsPanel.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnShowControllsPanel;
-                @ShowControllsPanel.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnShowControllsPanel;
-                @ShowControllsPanel.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnShowControllsPanel;
+                @OpenMenu.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnOpenMenu;
+                @OpenMenu.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnOpenMenu;
+                @OpenMenu.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnOpenMenu;
             }
             m_Wrapper.m_MenuActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @ShowControllsPanel.started += instance.OnShowControllsPanel;
-                @ShowControllsPanel.performed += instance.OnShowControllsPanel;
-                @ShowControllsPanel.canceled += instance.OnShowControllsPanel;
+                @OpenMenu.started += instance.OnOpenMenu;
+                @OpenMenu.performed += instance.OnOpenMenu;
+                @OpenMenu.canceled += instance.OnOpenMenu;
             }
         }
     }
@@ -561,6 +561,6 @@ public class @Controls : IInputActionCollection, IDisposable
     }
     public interface IMenuActions
     {
-        void OnShowControllsPanel(InputAction.CallbackContext context);
+        void OnOpenMenu(InputAction.CallbackContext context);
     }
 }

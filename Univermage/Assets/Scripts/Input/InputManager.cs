@@ -8,7 +8,7 @@ public class InputManager : ScriptableObject
 
     public void Init()
     {
-        Controls = new Controls();
+        Controls ??= new Controls();
     }
 
     public void PlayerInputEnabled(bool enable)
@@ -82,15 +82,15 @@ public class InputManager : ScriptableObject
         SaveInputEnabled(enable);
     }
 
-    public void ShowControllsPanelEnabled(bool enable)
+    public void OpenMenuEnabled(bool enable)
     {
         if (enable)
         {
-            Controls.Menu.ShowControllsPanel.Enable();
+            Controls.Menu.OpenMenu.Enable();
         }
         else
         {
-            Controls.Menu.ShowControllsPanel.Disable();
+            Controls.Menu.OpenMenu.Disable();
         }
     }
 }

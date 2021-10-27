@@ -79,7 +79,7 @@ public class SpellsUI : MonoBehaviour
         SpellCaster.OnSpellUsed += OnSpellUsed;
 
         Spell.OnEffectCast += SpellView_OnSpellEffect;
-        SaveSystem.OnLoad += ResetState;
+        GameplaySaveSystem.OnLoad += ResetState;
         LivingEntity.OnDeath += ResetState;
     }
 
@@ -89,7 +89,7 @@ public class SpellsUI : MonoBehaviour
         SpellCaster.OnSpellUsed -= OnSpellUsed;
 
         Spell.OnEffectCast -= SpellView_OnSpellEffect;
-        SaveSystem.OnLoad -= ResetState;
+        GameplaySaveSystem.OnLoad -= ResetState;
         LivingEntity.OnDeath -= ResetState;
     }
 }

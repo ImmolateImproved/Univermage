@@ -30,6 +30,7 @@ public class AstralFromView : SpellView
     private void First()
     {
         sr.color = astralColor;
+        PlaySpellSFX();
     }
 
     private void Second()

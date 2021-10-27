@@ -34,6 +34,7 @@ public class FloorBreakerView : SpellView
     {
         var explosion = Instantiate(explosionPrefab);
         explosion.position = spawnPoint.position;
+        PlaySpellSFX();
         Destroy(explosion.gameObject, 2);
     }
 }

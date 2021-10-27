@@ -47,7 +47,7 @@ public class TooltipManager : MonoBehaviour
 
         inputManager.Controls.Tutorial.NextTooltip.performed += NextTooltip;
 
-        SaveSystem.OnLoad += SaveSystem_OnLoad;
+        GameplaySaveSystem.OnLoad += SaveSystem_OnLoad;
     }
 
     private void OnDisable()
@@ -56,7 +56,7 @@ public class TooltipManager : MonoBehaviour
 
         inputManager.Controls.Tutorial.NextTooltip.performed -= NextTooltip;
 
-        SaveSystem.OnLoad -= SaveSystem_OnLoad;
+        GameplaySaveSystem.OnLoad -= SaveSystem_OnLoad;
     }
 
     private void NextTooltip(InputAction.CallbackContext obj)

@@ -5,6 +5,8 @@ public class Singleton<T> : MonoBehaviour
 {
     public static T inst;
 
+    protected bool Initialized => inst != null && inst != this;
+
     public virtual void Awake()
     {
         if (inst == null)

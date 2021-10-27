@@ -270,7 +270,7 @@
             "id": "f2c9c71f-e154-4891-a021-0c2b0a24fedc",
             "actions": [
                 {
-                    "name": "ShowControllsPanel",
+                    "name": "OpenMenu",
                     "type": "Button",
                     "id": "58b66e27-c997-4803-820c-faaf05bc0c0b",
                     "expectedControlType": "Button",
@@ -282,11 +282,11 @@
                 {
                     "name": "",
                     "id": "af6e8e7e-d9f4-46b3-8958-a02a39c8dab5",
-                    "path": "<Keyboard>/tab",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ShowControllsPanel",
+                    "action": "OpenMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -85,8 +85,8 @@ public class MessageTextManager : MonoBehaviour
     {
         LivingEntity.OnDeath += LivingEntity_OnDeath;
 
-        SaveManager.SaveEvent += ShowSaveEventText;
-        SaveSystem.OnLoad += SaveSystem_OnLoad;
+        GameplaySaveManager.SaveEvent += ShowSaveEventText;
+        GameplaySaveSystem.OnLoad += SaveSystem_OnLoad;
     }
 
     private void OnDisable()
@@ -95,7 +95,7 @@ public class MessageTextManager : MonoBehaviour
 
         LivingEntity.OnDeath -= LivingEntity_OnDeath;
 
-        SaveManager.SaveEvent -= ShowSaveEventText;
-        SaveSystem.OnLoad -= SaveSystem_OnLoad;
+        GameplaySaveManager.SaveEvent -= ShowSaveEventText;
+        GameplaySaveSystem.OnLoad -= SaveSystem_OnLoad;
     }
 }

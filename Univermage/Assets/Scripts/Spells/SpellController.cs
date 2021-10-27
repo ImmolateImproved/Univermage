@@ -6,6 +6,9 @@ using DG.Tweening;
 public class SpellController : MonoBehaviour
 {
     [SerializeField]
+    private AudioSource audioSource;
+
+    [SerializeField]
     private Spell[] spells;
 
     private SpellView[] spellViews;
@@ -31,6 +34,21 @@ public class SpellController : MonoBehaviour
         }
 
         ResetSpells();
+    }
+
+    private void OnEnable()
+    {
+        SpellView.OnSpellSFX += SpellView_OnSpellSFX;
+    }
+
+    private void OnDisable()
+    {
+        SpellView.OnSpellSFX -= SpellView_OnSpellSFX;
+    }
+
+    private void SpellView_OnSpellSFX(AudioClip audioClip)
+    {
+        audioSource.PlayOneShot(audioClip);
     }
 
     public void OnSpellCast(Spell spell, int actionIndex)
