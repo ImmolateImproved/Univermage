@@ -23,9 +23,9 @@ namespace UnityToolbarExtender.Examples
     }
 
     [InitializeOnLoad]
-    public class SceneSwitchLeftButton
+    public class SaveSystemInitializeButton
     {
-        static SceneSwitchLeftButton()
+        static SaveSystemInitializeButton()
         {
             ToolbarExtender.LeftToolbarGUI.Add(OnToolbarGUI);
         }

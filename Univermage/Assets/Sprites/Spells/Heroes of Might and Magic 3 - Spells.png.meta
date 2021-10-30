@@ -447,6 +447,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -3484,6 +3485,148 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Heroes of Might and Magic 3 - Spells_78: -3220270176690619286
+      Heroes of Might and Magic 3 - Spells_39: -522828752187604462
+      Heroes of Might and Magic 3 - Spells_74: -7589527099378600525
+      Heroes of Might and Magic 3 - Spells_127: -368388843889192218
+      Heroes of Might and Magic 3 - Spells_41: -3778297900408987750
+      Heroes of Might and Magic 3 - Spells_71: -6979707551310661774
+      Heroes of Might and Magic 3 - Spells_7: -6381908046597608023
+      Heroes of Might and Magic 3 - Spells_81: 7418115033969179463
+      Heroes of Might and Magic 3 - Spells_94: -6768863537845374110
+      Heroes of Might and Magic 3 - Spells_25: 7203696932977792311
+      WallBreaker: 7884219976459759183
+      Heroes of Might and Magic 3 - Spells_34: 3460269631612261388
+      Heroes of Might and Magic 3 - Spells_20: 6864628984310829778
+      Heroes of Might and Magic 3 - Spells_54: -4141031720870529914
+      Heroes of Might and Magic 3 - Spells_83: 3131004827770031061
+      Heroes of Might and Magic 3 - Spells_90: -8559071628101260953
+      Heroes of Might and Magic 3 - Spells_112: -1237921672668309501
+      Heroes of Might and Magic 3 - Spells_126: -937928641311597837
+      Heroes of Might and Magic 3 - Spells_19: -6243808489003303121
+      Heroes of Might and Magic 3 - Spells_130: 1454513618137576349
+      Heroes of Might and Magic 3 - Spells_56: -2008832190532257817
+      Heroes of Might and Magic 3 - Spells_67: -2028960123823148231
+      Heroes of Might and Magic 3 - Spells_28: -5145663847746766480
+      Heroes of Might and Magic 3 - Spells_68: -4069558547484143154
+      Heroes of Might and Magic 3 - Spells_88: 3084436924431020212
+      Heroes of Might and Magic 3 - Spells_118: -980301708687518309
+      Heroes of Might and Magic 3 - Spells_17: -8277362776724654292
+      AstralBodyScroll: 8495460213599617485
+      Heroes of Might and Magic 3 - Spells_45: -7058250332947385937
+      Heroes of Might and Magic 3 - Spells_73: -7959909647744007563
+      Heroes of Might and Magic 3 - Spells_105: -2332722306289728749
+      Heroes of Might and Magic 3 - Spells_47: -4133137387650450486
+      Heroes of Might and Magic 3 - Spells_113: -5958885393316139977
+      Heroes of Might and Magic 3 - Spells_55: -87579385837523219
+      Heroes of Might and Magic 3 - Spells_131: 8480627713555432034
+      Heroes of Might and Magic 3 - Spells_5: -3758663755296888993
+      AstralBody: 4577024492430488493
+      Heroes of Might and Magic 3 - Spells_95: -2453209927352898707
+      Heroes of Might and Magic 3 - Spells_26: -4669692821196561571
+      Heroes of Might and Magic 3 - Spells_93: -1702797421830139385
+      FloorBreaker: -2424239378497660176
+      Flight: -254245493081579710
+      Heroes of Might and Magic 3 - Spells_33: -5266252754560470141
+      Heroes of Might and Magic 3 - Spells_13: -7579203963594116329
+      Heroes of Might and Magic 3 - Spells_110: -4903011479886826500
+      Heroes of Might and Magic 3 - Spells_35: 226910055699017942
+      Heroes of Might and Magic 3 - Spells_51: -2489998811078186217
+      Heroes of Might and Magic 3 - Spells_128: -6400497758894062958
+      Heroes of Might and Magic 3 - Spells_96: -132052252892878680
+      Heroes of Might and Magic 3 - Spells_98: 8771374289308830237
+      Heroes of Might and Magic 3 - Spells_22: 435321088186468005
+      Heroes of Might and Magic 3 - Spells_61: -2436654055482644250
+      Heroes of Might and Magic 3 - Spells_23: 3172843933638454503
+      Heroes of Might and Magic 3 - Spells_60: 1671199220616159402
+      Heroes of Might and Magic 3 - Spells_66: -7382854218786264206
+      Heroes of Might and Magic 3 - Spells_91: 7356292149907135798
+      Heroes of Might and Magic 3 - Spells_119: 697360221140606563
+      Heroes of Might and Magic 3 - Spells_52: 2136039766316951506
+      Heroes of Might and Magic 3 - Spells_82: 7730091264899345259
+      Heroes of Might and Magic 3 - Spells_89: -5579571970066104261
+      Heroes of Might and Magic 3 - Spells_29: 1995010000896088069
+      Heroes of Might and Magic 3 - Spells_46: 9158911019449387561
+      Heroes of Might and Magic 3 - Spells_75: 1936546256864809864
+      Heroes of Might and Magic 3 - Spells_120: -1341807593372886298
+      Heroes of Might and Magic 3 - Spells_137: -5247159121758519139
+      Heroes of Might and Magic 3 - Spells_86: 6173147307583003881
+      Heroes of Might and Magic 3 - Spells_125: 6821687136686163515
+      Heroes of Might and Magic 3 - Spells_4: -8886473082097536147
+      Heroes of Might and Magic 3 - Spells_24: -5056281656119612433
+      Heroes of Might and Magic 3 - Spells_36: 321108895602184472
+      Heroes of Might and Magic 3 - Spells_106: 4997150733833937229
+      AstralFormScroll: 3775420171991374857
+      Heroes of Might and Magic 3 - Spells_99: 3574493487918269813
+      Heroes of Might and Magic 3 - Spells_132: -7699939060710769005
+      Heroes of Might and Magic 3 - Spells_139: 3005984359690379056
+      Heroes of Might and Magic 3 - Spells_42: -8363431251843123387
+      Heroes of Might and Magic 3 - Spells_43: 3624372395314743864
+      Heroes of Might and Magic 3 - Spells_31: 8540474691040740954
+      Heroes of Might and Magic 3 - Spells_3: 4948599684833540894
+      Heroes of Might and Magic 3 - Spells_40: -8541457091684615350
+      Heroes of Might and Magic 3 - Spells_122: 7858233411927517898
+      Heroes of Might and Magic 3 - Spells_27: 3372416682558746410
+      Heroes of Might and Magic 3 - Spells_30: -3508588652543231953
+      Heroes of Might and Magic 3 - Spells_138: -3706130486878430703
+      FloorBreakerScroll: 7908442135099426665
+      Heroes of Might and Magic 3 - Spells_44: -9211276133606823563
+      FlightScroll: 5263479382993825553
+      PortalScroll: -438399392780126659
+      Heroes of Might and Magic 3 - Spells_37: -8104585838386999694
+      Heroes of Might and Magic 3 - Spells_59: -8544689128076566430
+      Heroes of Might and Magic 3 - Spells_10: -4510978852851391930
+      Heroes of Might and Magic 3 - Spells_123: 2648862945895490646
+      Heroes of Might and Magic 3 - Spells_53: 4783219510567622734
+      Heroes of Might and Magic 3 - Spells_70: 8544195818502261820
+      Heroes of Might and Magic 3 - Spells_0: -7884012106102413030
+      Heroes of Might and Magic 3 - Spells_129: -4118059102667688684
+      Heroes of Might and Magic 3 - Spells_11: 5609053356332217863
+      Heroes of Might and Magic 3 - Spells_115: -1561305805369390131
+      Heroes of Might and Magic 3 - Spells_38: -5814819853044635670
+      Heroes of Might and Magic 3 - Spells_16: -3619410573261837987
+      Heroes of Might and Magic 3 - Spells_124: 1582695408443448085
+      Heroes of Might and Magic 3 - Spells_100: -9102746311514961257
+      Heroes of Might and Magic 3 - Spells_18: 4427937765908246071
+      Heroes of Might and Magic 3 - Spells_97: 3365908764234702439
+      Heroes of Might and Magic 3 - Spells_103: 4148586136549577550
+      Heroes of Might and Magic 3 - Spells_32: -1116245320533206878
+      Heroes of Might and Magic 3 - Spells_76: -6286390306907224330
+      Heroes of Might and Magic 3 - Spells_111: -3775869662622949963
+      Heroes of Might and Magic 3 - Spells_87: -7602431717802477053
+      Heroes of Might and Magic 3 - Spells_14: -4829722036215987445
+      Heroes of Might and Magic 3 - Spells_49: 1186551679023517654
+      Teleport: 1613942172611932676
+      Heroes of Might and Magic 3 - Spells_57: -1608456782956338816
+      Heroes of Might and Magic 3 - Spells_58: 983679842825752917
+      Heroes of Might and Magic 3 - Spells_69: -5952564142002189443
+      Heroes of Might and Magic 3 - Spells_116: 6608823476673846692
+      Heroes of Might and Magic 3 - Spells_107: -3742187391916955612
+      Heroes of Might and Magic 3 - Spells_85: -4836459479095187227
+      Heroes of Might and Magic 3 - Spells_117: -6451555893510054445
+      Heroes of Might and Magic 3 - Spells_2: -6316029271272126530
+      Heroes of Might and Magic 3 - Spells_101: -3717788948512111460
+      Heroes of Might and Magic 3 - Spells_50: 3418161559916867669
+      Heroes of Might and Magic 3 - Spells_104: 7672793402326323664
+      Heroes of Might and Magic 3 - Spells_133: 5887091295290179344
+      Heroes of Might and Magic 3 - Spells_15: -6551271284853799572
+      Heroes of Might and Magic 3 - Spells_48: 6658723899653801943
+      WallBreakerScroll: 2272532852702018476
+      Heroes of Might and Magic 3 - Spells_12: 2658909752219428221
+      Heroes of Might and Magic 3 - Spells_62: -213158996190011323
+      Heroes of Might and Magic 3 - Spells_102: 8992258455120091311
+      AstralForm: 2081555786631580754
+      Heroes of Might and Magic 3 - Spells_72: 7672960327890222581
+      TeleportScroll: -6483084884356464524
+      Heroes of Might and Magic 3 - Spells_108: -5305137026874649381
+      Heroes of Might and Magic 3 - Spells_1: 961660630279292152
+      Portal: 2787587591067702508
+      Heroes of Might and Magic 3 - Spells_109: -6920093131376062006
+      Heroes of Might and Magic 3 - Spells_121: -3925078683458562392
+      Heroes of Might and Magic 3 - Spells_114: -7043795001508698402
+      Heroes of Might and Magic 3 - Spells_84: -6585905434820790122
+      Heroes of Might and Magic 3 - Spells_140: 2765740481909672494
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
