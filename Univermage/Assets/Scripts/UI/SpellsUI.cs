@@ -11,7 +11,9 @@ public class SpellsUI : MonoBehaviour
     [SerializeField]
     private Transform spellEffectPrefab;
 
-    private Queue<GameObject> spellEffectUIs = new Queue<GameObject>();
+    private Queue<Transform> spellEffectUIs = new Queue<Transform>();
+
+    private PoolerBase<Transform> spellEffectPool;
 
     [SerializeField]
     private Image currentSpell;
@@ -19,6 +21,8 @@ public class SpellsUI : MonoBehaviour
     private void Awake()
     {
         Timing.KillCoroutines(CoroutineTags.UI);
+        spellEffectPool = new PoolerBase<Transform>();
+        spellEffectPool.InitPool(spellEffectPrefab, 3, 10);
     }
 
     public void ResetState()
@@ -27,17 +31,18 @@ public class SpellsUI : MonoBehaviour
         while (spellEffectUIs.Count > 0)
         {
             var spellEffect = spellEffectUIs.Dequeue();
-            Destroy(spellEffect);
+            spellEffectPool.Release(spellEffect);
         }
     }
 
     private void SpellView_OnSpellEffect(Sprite spellIcon, float duration)
     {
-        var spellEffect = Instantiate(spellEffectPrefab, spellEffectHolder);
+        var spellEffect = spellEffectPool.Get();
+        spellEffect.SetParent(spellEffectHolder);
         spellEffect.GetChild(0).GetComponent<Image>().sprite = spellIcon;
 
-        spellEffectUIs.Enqueue(spellEffect.gameObject);
-        Timing.RunCoroutine(Timer(duration, spellEffect), CoroutineTags.UI);
+        spellEffectUIs.Enqueue(spellEffect);
+        Timing.RunCoroutine(Timer(duration, spellEffect.transform), CoroutineTags.UI);
     }
 
     private IEnumerator<float> Timer(float duration, Transform spellEffect)
@@ -55,7 +60,7 @@ public class SpellsUI : MonoBehaviour
         }
 
         spellEffectUIs.Dequeue();
-        Destroy(spellEffect.gameObject);
+        spellEffectPool.Release(spellEffect);
     }
 
     public void OnSetSpell(Spell spell)

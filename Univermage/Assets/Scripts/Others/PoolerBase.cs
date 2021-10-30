@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class PoolerBase<T> where T : MonoBehaviour
+public class PoolerBase<T> where T : Component
 {
     private T _prefab;
     private ObjectPool<T> _pool;

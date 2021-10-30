@@ -40,8 +40,8 @@ public class ResolutionSettings : SettingsSaveable
         selectedResolution = Mathf.Clamp(settingsSaveData.resolutionIndex, 0, resolutions.Length - 1);
         selectedFullScreenMode = Mathf.Clamp(settingsSaveData.fullScreenModeIndex, 0, fullScreenModes.Length - 1);
 
-        resolutionsDropdown.value = selectedResolution;
-        fullScreenModeDropdown.value = selectedFullScreenMode;
+        resolutionsDropdown.SetValueWithoutNotify(selectedResolution);
+        fullScreenModeDropdown.SetValueWithoutNotify(selectedFullScreenMode);
 
         var reso = resolutions[selectedResolution];
         var fullScreen = fullScreenModes[selectedFullScreenMode];
