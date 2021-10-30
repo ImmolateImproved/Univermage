@@ -1,8 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelLoader : Singleton<LevelLoader>
 {
+    private PoolerBase<LevelSelectionButton> levelButtonsPool;
+
     [SerializeField]
     private LevelSelectionButton levelSelectionButtonPrefab;
 
@@ -14,6 +17,8 @@ public class LevelLoader : Singleton<LevelLoader>
 
     [SerializeField]
     private int redundantLevelsCount;
+
+    private List<LevelSelectionButton> levelButtons;
 
     private LevelSaveData levelSaveData;
 
@@ -28,6 +33,20 @@ public class LevelLoader : Singleton<LevelLoader>
             levelSaveData.lastOpenLevel = scene.buildIndex;
             BinarySaver.SaveToFile(levelSaveData, LevelSaveName);
         }
+    }
+
+    private void Start()
+    {
+        if (Initialized)
+            return;
+
+        var levelsCount = SceneManager.sceneCountInBuildSettings - redundantLevelsCount;
+
+        levelButtons = new List<LevelSelectionButton>(levelsCount);
+
+        levelButtonsPool = new PoolerBase<LevelSelectionButton>();
+
+        levelButtonsPool.InitPool(levelSelectionButtonPrefab, levelsCount, levelsCount + 1);
     }
 
     private void OnEnable()
@@ -47,7 +66,7 @@ public class LevelLoader : Singleton<LevelLoader>
         SceneManager.sceneLoaded -= OnLevelLoaded;
     }
 
-    public void InitLevelsPanel()
+    private void InitLevelsPanel()
     {
         LoadButton().Init(1, "Tutorial");
 
@@ -58,27 +77,48 @@ public class LevelLoader : Singleton<LevelLoader>
 
         LevelSelectionButton LoadButton()
         {
-            var levelButton = Instantiate(levelSelectionButtonPrefab);
+            var levelButton = levelButtonsPool.Get();
+
             levelButton.transform.SetParent(levelsPanelContent);
             levelButton.transform.localScale = Vector3.one;
+            levelButtons.Add(levelButton);
 
             return levelButton;
+        }
+    }
+
+    private void ActivateLevelButtons()
+    {
+        for (int i = 0; i < levelButtons.Count; i++)
+        {
+            levelButtonsPool.Get();
         }
     }
 
     public void ShowLevelsPanel()
     {
         levelsPanel.SetActive(true);
-        InitLevelsPanel();
+
+        if (levelButtons.Count == 0)
+        {
+            InitLevelsPanel();
+        }
+        else
+        {
+            ActivateLevelButtons();
+        }
     }
 
     public void HideLevelsPanel()
     {
+        if (!levelsPanel.activeSelf)
+            return;
+
         levelsPanel.SetActive(false);
 
-        foreach (Transform item in levelsPanelContent)
+        foreach (var item in levelButtons)
         {
-            Destroy(item.gameObject);
+            levelButtonsPool.Pool.Release(item);
         }
     }
 }
