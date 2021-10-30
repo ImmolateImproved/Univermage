@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Menu : Singleton<Menu>
@@ -13,19 +14,10 @@ public class Menu : Singleton<Menu>
     private GameObject menu;
 
     [SerializeField]
-    private GameObject levelsPanel;
+    private LevelLoader levelLoader;
 
     [SerializeField]
     private GameObject settingsPanel;
-
-    [SerializeField]
-    private Transform levelsPanelContent;
-
-    [SerializeField]
-    private LevelSelectionButton levelSelectionButtonPrefab;
-
-    [SerializeField]
-    private int redundantLevelsCount;
 
     public override void Awake()
     {
@@ -67,46 +59,28 @@ public class Menu : Singleton<Menu>
 
     private void LevelSelectionButtonOnClick(int levelInex)
     {
-        SceneManager.LoadScene(levelInex);
-    }
+        menu.SetActive(false);
+        levelLoader.HideLevelsPanel();
+        HideSettingsPanel();
 
-    private void InitLevelsPanel()
-    {
-        for (int i = redundantLevelsCount; i < SceneManager.sceneCountInBuildSettings; i++)
-        {
-            var levelButton = Instantiate(levelSelectionButtonPrefab);
-            levelButton.Init(i, (i - redundantLevelsCount + 1).ToString());
-            levelButton.transform.SetParent(levelsPanelContent);
-            levelButton.transform.localScale = Vector3.one;
-        }
+        SceneManager.LoadScene(levelInex);
     }
 
     public void OpenMenu()
     {
         menu.SetActive(!menu.activeSelf);
-        HideLevelsPanel();
+        levelLoader.HideLevelsPanel();
         HideSettingsPanel();
     }
 
     public void StartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(levelLoader.LastOpenLevel);
     }
 
     public void ShowLevelsPanel()
     {
-        levelsPanel.SetActive(true);
-        InitLevelsPanel();
-    }
-
-    public void HideLevelsPanel()
-    {
-        levelsPanel.SetActive(false);
-
-        foreach (Transform item in levelsPanelContent)
-        {
-            Destroy(item.gameObject);
-        }
+        levelLoader.ShowLevelsPanel();
     }
 
     public void ShowSettingsPanel()

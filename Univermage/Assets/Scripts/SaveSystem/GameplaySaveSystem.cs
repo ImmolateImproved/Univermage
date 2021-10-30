@@ -73,6 +73,7 @@ public class GameplaySaveSystem : MonoBehaviour
         OnLoad();
     }
 
+    [ContextMenu("FindSaveables")]
     public void FindSaveables()
     {
         player = FindObjectOfType<PlayerSaveable>(true);

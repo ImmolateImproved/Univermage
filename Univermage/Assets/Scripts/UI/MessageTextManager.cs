@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class MessageTextManager : MonoBehaviour
 {
@@ -24,6 +26,11 @@ public class MessageTextManager : MonoBehaviour
     {
         startPosition = messageTextHolder.anchoredPosition;
         DOTween.KillAll();
+    }
+
+    private void Start()
+    {
+        OnLevelLoaded();
     }
 
     public void ShowDeathText()
@@ -79,6 +86,14 @@ public class MessageTextManager : MonoBehaviour
     private void LivingEntity_OnDeath()
     {
         ShowDeathText();
+    }
+
+    public void OnLevelLoaded()
+    {
+        var activeScene = SceneManager.GetActiveScene().buildIndex;
+
+        var message = activeScene == 1 ? "Tutorial" : $"Level {activeScene - 1}";
+        ShowMessage(message);
     }
 
     private void OnEnable()

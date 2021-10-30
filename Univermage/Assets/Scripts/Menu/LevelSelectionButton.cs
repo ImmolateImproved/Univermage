@@ -15,7 +15,7 @@ public class LevelSelectionButton : MonoBehaviour, IPointerClickHandler
     public void Init(int levelIndex, string levelName)
     {
         this.levelIndex = levelIndex;
-        levelText.text = $"Level {levelName}";
+        levelText.text = $"{levelName}";
     }
 
     public void OnPointerClick(PointerEventData eventData)

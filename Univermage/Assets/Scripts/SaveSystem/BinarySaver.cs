@@ -7,6 +7,8 @@ public static class BinarySaver
 {
     public static void SaveToFile<T>(T saveableData, string saveName)
     {
+        Directory.CreateDirectory(Application.dataPath + "/Saves");
+
         var formatter = new BinaryFormatter();
         var stream = new FileStream(GetPathFromName(saveName), FileMode.Create);
 
@@ -37,6 +39,6 @@ public static class BinarySaver
 
     private static string GetPathFromName(string saveName)
     {
-        return Application.persistentDataPath + $"/{saveName}.save";
+        return Application.dataPath + $"/Saves/{saveName}.save";
     }
 }

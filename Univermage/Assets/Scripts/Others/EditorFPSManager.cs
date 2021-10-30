@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class EditorFPSManager : MonoBehaviour
@@ -7,8 +8,6 @@ public class EditorFPSManager : MonoBehaviour
 
     public void Awake()
     {
-        Application.targetFrameRate = int.MaxValue;
-
 #if UNITY_EDITOR
         Application.targetFrameRate = fps;
 #endif
