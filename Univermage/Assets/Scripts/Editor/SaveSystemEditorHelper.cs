@@ -34,9 +34,13 @@ namespace UnityToolbarExtender.Examples
         {
             GUILayout.FlexibleSpace();
 
-            if (GUILayout.Button(new GUIContent("S", "Initialize save system"), ToolbarStyles.commandButtonStyle))
+            if (GUILayout.Button(new GUIContent("All", "Initialize save system for all scenes"), ToolbarStyles.commandButtonStyle))
             {
                 SaveSystemEditorHelper.InitializeAllScenes();
+            }
+            if (GUILayout.Button(new GUIContent("S1", "Initialize save system for current scene"), ToolbarStyles.commandButtonStyle))
+            {
+                SaveSystemEditorHelper.InitializeCurrentScene();
             }
         }
     }
@@ -63,11 +67,8 @@ namespace UnityToolbarExtender.Examples
             EditorSceneManager.OpenScene(allScenes[currentScene].path);
         }
 
-        private static void OnSceneOpened(UnityEngine.SceneManagement.Scene scene, OpenSceneMode mode)
+        public static void InitializeCurrentScene()
         {
-            if (scene.buildIndex < 2)
-                return;
-
             var saveSystem = GameObject.FindObjectOfType<GameplaySaveSystem>();
 
             if (!saveSystem)
@@ -79,6 +80,14 @@ namespace UnityToolbarExtender.Examples
 
             EditorUtility.SetDirty(saveSystem);
             EditorSceneManager.SaveOpenScenes();
+        }
+
+        private static void OnSceneOpened(UnityEngine.SceneManagement.Scene scene, OpenSceneMode mode)
+        {
+            if (scene.buildIndex < 2)
+                return;
+
+            InitializeCurrentScene();
         }
     }
 }

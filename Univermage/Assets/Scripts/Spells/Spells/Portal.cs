@@ -57,9 +57,9 @@ public class Portal : Spell
     {
         spellController.OnSpellCast(this, 0);
 
-        yield return Timing.WaitUntilDone(Timing.RunCoroutine(CastDelay(), CoroutineTags.GAMEPLAY));
-
         var returnPosition = GetPositon();
+
+        yield return Timing.WaitUntilDone(Timing.RunCoroutine(CastDelay(), CoroutineTags.GAMEPLAY));
 
         yield return Timing.WaitForSeconds(duration);
 
