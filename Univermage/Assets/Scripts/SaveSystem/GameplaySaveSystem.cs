@@ -54,12 +54,15 @@ public class GameplaySaveSystem : MonoBehaviour
         return save;
     }
 
-    public void Load(SaveIdentifier saveIdentifier, SaveData save = null)
+    public bool Load(SaveIdentifier saveIdentifier, SaveData save = null)
     {
         if (save == null)
         {
             save = BinarySaver.LoadFromFile<SaveData>(saveIdentifier);
         }
+
+        if (save == null)
+            return false;
 
         player.Load(save.playerData);
 
@@ -71,6 +74,8 @@ public class GameplaySaveSystem : MonoBehaviour
         }
 
         OnLoad();
+
+        return true;
     }
 
     [ContextMenu("FindSaveables")]

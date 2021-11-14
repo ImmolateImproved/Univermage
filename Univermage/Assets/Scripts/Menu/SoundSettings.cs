@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class SoundSettings : SettingsSaveable
 {
-    [SerializeField]
-    private Slider masterVolumeSlider, musicVolumeSlider, effectsVolumeSlider;
+    public const string masterGroup = "Master";
+    public const string musicGroup = "Music";
+    public const string effectsGroup = "Effects";
 
     [SerializeField]
-    private TextMeshProUGUI masterValueText, musicValueText, effectsValueText;
+    private SoundSettingsSlider[] soundSettingsSliders;
 
     [SerializeField]
     private AudioMixer audioMixer;
@@ -20,77 +21,86 @@ public class SoundSettings : SettingsSaveable
     [SerializeField]
     private float maxSoundVolume;
 
-    //Master
-    private void SetMasterVolumeInMixer(float value)
-    {
-        audioMixer.SetFloat("Master", Mathf.Lerp(minSoundVolume, maxSoundVolume, value));
-    }
-
-    private void SetMasterVolumeText(float value)
-    {
-        masterValueText.text = $"{(int)(value * 100)}%";
-    }
-
-    public void OnMasterVolumeChange(float value)
-    {
-        settingsSaveData.masterVolume = value;
-        SetMasterVolumeText(value);
-        SetMasterVolumeInMixer(value);
-    }
-
-    //Music
-    private void SetMusicVolumeInMixer(float value)
-    {
-        audioMixer.SetFloat("Music", Mathf.Lerp(minSoundVolume, maxSoundVolume, value));
-    }
-
-    private void SetMusicVolumeText(float value)
-    {
-        musicValueText.text = $"{(int)(value * 100)}%";
-    }
-
-    public void OnMusicVolumeChange(float value)
-    {
-        settingsSaveData.musicVolume = value;
-        SetMusicVolumeText(value);
-        SetMusicVolumeInMixer(value);
-    }
-
-    //Effects
-    private void SetEffectsVolumeInMixer(float value)
-    {
-        audioMixer.SetFloat("Effects", Mathf.Lerp(minSoundVolume, maxSoundVolume, value));
-    }
-
-    private void SetEffectsVolumeText(float value)
-    {
-        effectsValueText.text = $"{(int)(value * 100)}%";
-    }
-
-    public void OnEffectsVolumeChange(float value)
-    {
-        settingsSaveData.effectsVolume = value;
-        SetEffectsVolumeText(value);
-        SetEffectsVolumeInMixer(value);
-    }
-
     public override void Load(SettingsSaveData settingsSaveData)
     {
         base.Load(settingsSaveData);
 
         //Master
-        masterVolumeSlider.SetValueWithoutNotify(settingsSaveData.masterVolume);
-        SetMasterVolumeText(settingsSaveData.masterVolume);
-        SetMasterVolumeInMixer(settingsSaveData.masterVolume);
+        foreach (var item in soundSettingsSliders)
+        {
+            item.Init(minSoundVolume, maxSoundVolume, audioMixer, settingsSaveData);
+            item.Load(settingsSaveData);
+        }
+    }
+}
 
-        //Music
-        musicVolumeSlider.SetValueWithoutNotify(settingsSaveData.musicVolume);
-        SetMusicVolumeText(settingsSaveData.musicVolume);
-        SetMusicVolumeInMixer(settingsSaveData.musicVolume);
+[System.Serializable]
+public class SoundSettingsSlider
+{
+    [SerializeField]
+    private Slider volumeSlider;
 
-        //Effects
-        effectsVolumeSlider.SetValueWithoutNotify(settingsSaveData.effectsVolume);
-        SetEffectsVolumeText(settingsSaveData.effectsVolume);
-        SetEffectsVolumeInMixer(settingsSaveData.effectsVolume);
+    [SerializeField]
+    private TextMeshProUGUI volumeText;
+
+    [SerializeField]
+    private string audioMixerGroup;
+
+    private AudioMixer audioMixer;
+
+    private SettingsSaveData settingsSaveData;
+
+    private float minSoundVolume;
+
+    private float maxSoundVolume;
+
+    public void Init(float minSoundVolume, float maxSoundVolume, AudioMixer audioMixer, SettingsSaveData settingsSaveData)
+    {
+        this.minSoundVolume = minSoundVolume;
+        this.maxSoundVolume = maxSoundVolume;
+
+        this.audioMixer = audioMixer;
+        this.settingsSaveData = settingsSaveData;
+
+        volumeSlider.onValueChanged.RemoveAllListeners();
+        volumeSlider.onValueChanged.AddListener(OnVolumeChange);
+    }
+
+    public void Load(SettingsSaveData settingsSaveData)
+    {
+        var volume = audioMixerGroup switch
+        {
+            SoundSettings.masterGroup => settingsSaveData.masterVolume,
+            SoundSettings.musicGroup => settingsSaveData.musicVolume,
+            SoundSettings.effectsGroup => settingsSaveData.effectsVolume,
+            _=> 0
+        };
+
+        volumeSlider.SetValueWithoutNotify(volume);
+        SetVolumeText(volume);
+        SetVolumeInMixer(volume);
+    }
+
+    private void SetVolumeInMixer(float value)
+    {
+        audioMixer.SetFloat(audioMixerGroup, Mathf.Lerp(minSoundVolume, maxSoundVolume, value));
+    }
+
+    private void SetVolumeText(float value)
+    {
+        volumeText.text = $"{(int)(value * 100)}%";
+    }
+
+    private void OnVolumeChange(float value)
+    {
+        switch (audioMixerGroup)
+        {
+            case SoundSettings.masterGroup: { settingsSaveData.masterVolume = value; } break;
+            case SoundSettings.musicGroup: { settingsSaveData.musicVolume = value; } break;
+            case SoundSettings.effectsGroup: { settingsSaveData.effectsVolume = value; } break;
+        }
+
+        SetVolumeText(value);
+        SetVolumeInMixer(value);
     }
 }

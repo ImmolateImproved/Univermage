@@ -8,19 +8,20 @@ public class GameplaySaveManager : Singleton<GameplaySaveManager>
 {
     private GameplaySaveSystem saveSystem;
 
-    [SerializeField]
-    private int savesCount = 5;
-
     private bool canSave;
 
     private CoroutineHandle waitEffectHandle;
 
     private SaveData lastSave;
 
-    public static event Action<string> SaveEvent = delegate { };
+    public static event Action<string> SaveManagerEvent = delegate { };
 
-    private const string saveFailedText = "Невозможно сохраниться сейчас.\n Причина: ";
-    private Dictionary<int, string> saveFailedCauses;
+    private const string saveSuccessText = "Cохранение";
+
+    private const string saveFailedText = "Невозможно сохраниться пока действует заклинание";
+
+    private const string loadSuccess = "Загрузка";
+    private const string loadFailText = "Вы еще не сохранялись на этом уровне";
 
     public override void Awake()
     {
@@ -32,43 +33,22 @@ public class GameplaySaveManager : Singleton<GameplaySaveManager>
     {
         canSave = true;
         lastSave = null;
-
-        saveFailedCauses = new Dictionary<int, string>(5)
-        {
-            [0] = saveFailedText + "Еффект",
-            [1] = saveFailedText + "Недостаточно сохранений"
-        };
     }
 
     public void TrySave()
     {
         if (!canSave)
         {
-            SaveEvent(saveFailedCauses[0]);
+            SaveManagerEvent(saveFailedText);
             return;
         }
 
-        if (savesCount == 0)
-        {
-            SaveEvent(saveFailedCauses[0]);
-            return;
-        }
+        Save();
 
-        QuiqSave();
-
-        savesCount--;
-
-        SaveEvent($"Cохранение\nОсталось сохранений: {savesCount}");
+        SaveManagerEvent(saveSuccessText);
     }
 
-    public void TutorialSave()
-    {
-        QuiqSave();
-
-        SaveEvent($"Cохранение");
-    }
-
-    private void QuiqSave()
+    public void Save()
     {
         var saveIdentifier = new SaveIdentifier(SaveNames.LastSave);
 
@@ -79,13 +59,9 @@ public class GameplaySaveManager : Singleton<GameplaySaveManager>
     {
         var saveIdentifier = new SaveIdentifier(SaveNames.LastSave);
 
-        saveSystem.Load(saveIdentifier, lastSave);
-    }
+        var loadResult = saveSystem.Load(saveIdentifier, lastSave);
 
-    public void AddSaves()
-    {
-        savesCount++;
-        SaveEvent($"Осталось сохранений: {savesCount}");
+        SaveManagerEvent(loadResult ? loadSuccess : loadFailText);
     }
 
     private IEnumerator<float> WaitEndEffect(float effecDuration)

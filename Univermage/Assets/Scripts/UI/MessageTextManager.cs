@@ -65,11 +65,6 @@ public class MessageTextManager : Singleton<MessageTextManager>
         messageTextHolder.gameObject.SetActive(false);
     }
 
-    private void ShowSaveEventText(string eventText)
-    {
-        ShowMessage(eventText);
-    }
-
     private void BuildSequence(float delay)
     {
         sequence.Kill();
@@ -104,7 +99,7 @@ public class MessageTextManager : Singleton<MessageTextManager>
     {
         LivingEntity.OnDeath += LivingEntity_OnDeath;
 
-        GameplaySaveManager.SaveEvent += ShowSaveEventText;
+        GameplaySaveManager.SaveManagerEvent += ShowMessage;
         GameplaySaveSystem.OnLoad += SaveSystem_OnLoad;
     }
 
@@ -113,7 +108,7 @@ public class MessageTextManager : Singleton<MessageTextManager>
         //sequence?.Kill();
         LivingEntity.OnDeath -= LivingEntity_OnDeath;
 
-        GameplaySaveManager.SaveEvent -= ShowSaveEventText;
+        GameplaySaveManager.SaveManagerEvent -= ShowMessage;
         GameplaySaveSystem.OnLoad -= SaveSystem_OnLoad;
     }
 }

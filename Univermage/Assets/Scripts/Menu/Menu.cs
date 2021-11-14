@@ -19,6 +19,9 @@ public class Menu : Singleton<Menu>
     [SerializeField]
     private GameObject settingsPanel;
 
+    [SerializeField]
+    private GameObject controlsPanel;
+
     public override void Awake()
     {
         base.Awake();
@@ -26,6 +29,7 @@ public class Menu : Singleton<Menu>
         if (Initialized)
             return;
 
+        transform.SetParent(null);
         DontDestroyOnLoad(gameObject);
     }
 
@@ -67,9 +71,12 @@ public class Menu : Singleton<Menu>
 
     public void OpenMenu()
     {
-        menu.SetActive(!menu.activeSelf);
+        var menuEnabled = !menu.activeSelf || SceneManager.GetActiveScene().buildIndex == 0;
+
+        menu.SetActive(menuEnabled);
         levelLoader.HideLevelsPanel();
         HideSettingsPanel();
+        HideControlsPanel();
     }
 
     public void StartGame()
@@ -91,6 +98,16 @@ public class Menu : Singleton<Menu>
     {
         settingsPanel.SetActive(false);
         settingsSaveSystem.Save();
+    }
+
+    public void OpenControlsPanel()
+    {
+        controlsPanel.SetActive(true);
+    }
+
+    public void HideControlsPanel()
+    {
+        controlsPanel.SetActive(false);
     }
 
     public void ExitGame()

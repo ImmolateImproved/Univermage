@@ -13,9 +13,6 @@ public class BackgroundMusicManager : Singleton<BackgroundMusicManager>
     [SerializeField]
     private AudioClip[] backgroundMusic;
 
-    [SerializeField]
-    private int menuMusicMaxIndex;
-
     private int currentClipIndex;
 
     private void Start()
@@ -23,16 +20,38 @@ public class BackgroundMusicManager : Singleton<BackgroundMusicManager>
         if (Initialized)
             return;
 
-        Timing.RunCoroutine(MusicRoutine(), MusicRoutineTag);
+        Timing.RunCoroutine(MusicRoutine(false), MusicRoutineTag);
     }
 
-    private IEnumerator<float> MusicRoutine()
+    private void OnEnable()
+    {
+        LevelSelectionButton.OnClick += LevelSelectionButton_OnClick;
+    }
+
+    private void OnDisable()
+    {
+        LevelSelectionButton.OnClick -= LevelSelectionButton_OnClick;
+    }
+
+    private void LevelSelectionButton_OnClick(int obj)
+    {
+        SetNewRandomClip();
+    }
+
+    public void SetNewRandomClip()
+    {
+        Timing.KillCoroutines(MusicRoutineTag);
+        Timing.RunCoroutine(MusicRoutine(true), MusicRoutineTag);
+    }
+
+    private IEnumerator<float> MusicRoutine(bool excludeMenuClip)
     {
         while (true)
         {
-            var maxIndex = menuMusicMaxIndex + 1;
+            var isMenu = SceneManager.GetActiveScene().buildIndex == 0;
 
-            currentClipIndex = Random.Range(0, maxIndex);
+            currentClipIndex = (isMenu && !excludeMenuClip) ? 0 : Random.Range(1, backgroundMusic.Length);
+
             backbroundAudioSource.clip = backgroundMusic[currentClipIndex];
             backbroundAudioSource.Play();
 
@@ -40,28 +59,5 @@ public class BackgroundMusicManager : Singleton<BackgroundMusicManager>
 
             yield return Timing.WaitForSeconds(audioLength);
         }
-    }
-
-    private void SceneManager_sceneLoaded(Scene scene, LoadSceneMode loadMode)
-    {
-        // Timing.RunCoroutine(MusicRoutine(), MusicRoutineTag);
-    }
-
-    private void SceneManager_sceneUnloaded(Scene scene)
-    {
-        // Timing.KillCoroutines(MusicRoutineTag);
-        // backbroundAudioSource.Stop();
-    }
-
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += SceneManager_sceneLoaded;
-        SceneManager.sceneUnloaded += SceneManager_sceneUnloaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= SceneManager_sceneLoaded;
-        SceneManager.sceneUnloaded -= SceneManager_sceneUnloaded;
     }
 }

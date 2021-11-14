@@ -8,11 +8,14 @@ public class SettingsSaveSystem : MonoBehaviour
     [SerializeField]
     private SoundSettings soundSettings;
 
-    private SettingsSaveData settingsSaveData = new SettingsSaveData();
+    [SerializeField]
+    private SettingsSaveData defaultSettings;
+
+    private SettingsSaveData settingsSaveData;
 
     private const string SettingsSaveName = "settings";
 
-    private void Awake()
+    private void Start()
     {
         Load();
     }
@@ -26,18 +29,7 @@ public class SettingsSaveSystem : MonoBehaviour
     {
         settingsSaveData = BinarySaver.LoadFromFile<SettingsSaveData>(SettingsSaveName);
 
-        if (settingsSaveData == null)
-        {
-            settingsSaveData = new SettingsSaveData
-            {
-                fullScreenModeIndex = 0,
-                resolutionIndex = int.MaxValue,
-                masterVolume = 1,
-                musicVolume = 0.8f,
-                effectsVolume = 1
-
-            };
-        }
+        settingsSaveData ??= defaultSettings;
 
         resolutionSettings.Load(settingsSaveData);
         soundSettings.Load(settingsSaveData);
