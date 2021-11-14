@@ -3,8 +3,10 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
+using MEC;
 
-public class MessageTextManager : MonoBehaviour
+public class MessageTextManager : Singleton<MessageTextManager>
 {
     [SerializeField]
     private RectTransform messageTextHolder;
@@ -22,8 +24,10 @@ public class MessageTextManager : MonoBehaviour
 
     private Sequence sequence;
 
-    private void Awake()
+    public override void Awake()
     {
+        base.Awake();
+
         startPosition = messageTextHolder.anchoredPosition;
         DOTween.KillAll();
     }
@@ -107,7 +111,6 @@ public class MessageTextManager : MonoBehaviour
     private void OnDisable()
     {
         //sequence?.Kill();
-
         LivingEntity.OnDeath -= LivingEntity_OnDeath;
 
         GameplaySaveManager.SaveEvent -= ShowSaveEventText;
