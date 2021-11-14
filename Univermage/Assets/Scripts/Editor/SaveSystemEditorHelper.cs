@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using System.Collections.Generic;
+using Cinemachine;
 
 namespace UnityToolbarExtender.Examples
 {
@@ -41,6 +42,24 @@ namespace UnityToolbarExtender.Examples
             if (GUILayout.Button(new GUIContent("S1", "Initialize save system for current scene"), ToolbarStyles.commandButtonStyle))
             {
                 SaveSystemEditorHelper.InitializeCurrentScene();
+            }
+        }
+
+        [InitializeOnLoadMethod]
+        static void Initialize()
+        {
+            UnityEditor.SceneManagement.EditorSceneManager.sceneOpened += OnEditorSceneManagerSceneOpened;
+        }
+
+        static void OnEditorSceneManagerSceneOpened(UnityEngine.SceneManagement.Scene scene, UnityEditor.SceneManagement.OpenSceneMode mode)
+        {
+            var player = GameObject.FindObjectOfType<PlayerCamera>();
+            if (player)
+            {
+                player.Init();
+
+                EditorUtility.SetDirty(player.gameObject);
+                EditorSceneManager.SaveOpenScenes();
             }
         }
     }

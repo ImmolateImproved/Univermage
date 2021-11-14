@@ -27,7 +27,6 @@ public class Menu : Singleton<Menu>
             return;
 
         DontDestroyOnLoad(gameObject);
-        inputManager.Init();
     }
 
     private void OnEnable()

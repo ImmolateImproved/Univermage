@@ -32,7 +32,9 @@ public class SettingsSaveSystem : MonoBehaviour
             {
                 fullScreenModeIndex = 0,
                 resolutionIndex = int.MaxValue,
-                soundVolume = 1
+                masterVolume = 1,
+                musicVolume = 0.8f,
+                effectsVolume = 1
 
             };
         }
@@ -52,5 +54,8 @@ public class SettingsSaveData
 {
     public int resolutionIndex;
     public int fullScreenModeIndex;
-    public float soundVolume;
+
+    public float masterVolume;
+    public float musicVolume;
+    public float effectsVolume;
 }

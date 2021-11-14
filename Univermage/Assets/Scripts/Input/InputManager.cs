@@ -4,11 +4,16 @@ using UnityEngine.InputSystem;
 [CreateAssetMenu(menuName = "ScriptableObjects/InputManager")]
 public class InputManager : ScriptableObject
 {
-    public Controls Controls { get; private set; }
+    private Controls controls;
 
-    public void Init()
+    public Controls Controls
     {
-        Controls ??= new Controls();
+        get
+        {
+            controls ??= new Controls();
+
+            return controls;
+        }
     }
 
     public void PlayerInputEnabled(bool enable)
