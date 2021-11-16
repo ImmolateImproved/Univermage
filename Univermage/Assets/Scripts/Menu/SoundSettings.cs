@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class SoundSettings : SettingsSaveable
+public class SoundSettings : SettingsSaveable<VolumeSettingsSaveData>
 {
     public const string masterGroup = "Master";
     public const string musicGroup = "Music";
@@ -21,7 +21,7 @@ public class SoundSettings : SettingsSaveable
     [SerializeField]
     private float maxSoundVolume;
 
-    public override void Load(SettingsSaveData settingsSaveData)
+    public override void Load(VolumeSettingsSaveData settingsSaveData)
     {
         base.Load(settingsSaveData);
 
@@ -48,25 +48,25 @@ public class SoundSettingsSlider
 
     private AudioMixer audioMixer;
 
-    private SettingsSaveData settingsSaveData;
+    private VolumeSettingsSaveData settingsSaveData;
 
     private float minSoundVolume;
 
     private float maxSoundVolume;
 
-    public void Init(float minSoundVolume, float maxSoundVolume, AudioMixer audioMixer, SettingsSaveData settingsSaveData)
+    public void Init(float minSoundVolume, float maxSoundVolume, AudioMixer audioMixer, VolumeSettingsSaveData volumeSettingsSaveData)
     {
         this.minSoundVolume = minSoundVolume;
         this.maxSoundVolume = maxSoundVolume;
 
         this.audioMixer = audioMixer;
-        this.settingsSaveData = settingsSaveData;
+        this.settingsSaveData = volumeSettingsSaveData;
 
         volumeSlider.onValueChanged.RemoveAllListeners();
         volumeSlider.onValueChanged.AddListener(OnVolumeChange);
     }
 
-    public void Load(SettingsSaveData settingsSaveData)
+    public void Load(VolumeSettingsSaveData settingsSaveData)
     {
         var volume = audioMixerGroup switch
         {

@@ -3,7 +3,7 @@ using System.Linq;
 using TMPro;
 using System;
 
-public class ResolutionSettings : SettingsSaveable
+public class ResolutionSettings : SettingsSaveable<ScreenSettingsSaveData>
 {
     private Resolution[] resolutions;
 
@@ -31,7 +31,7 @@ public class ResolutionSettings : SettingsSaveable
         fullScreenModeDropdown.AddOptions(fullScreenModeStrings);
     }
 
-    public override void Load(SettingsSaveData settingsSaveData)
+    public override void Load(ScreenSettingsSaveData settingsSaveData)
     {
         base.Load(settingsSaveData);
 

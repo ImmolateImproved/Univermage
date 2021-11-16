@@ -9,11 +9,20 @@ public class SettingsSaveSystem : MonoBehaviour
     private SoundSettings soundSettings;
 
     [SerializeField]
-    private SettingsSaveData defaultSettings;
+    private KeyRebinder keyRebinder;
 
-    private SettingsSaveData settingsSaveData;
+    [SerializeField]
+    private ScreenSettingsSaveData defaultScreenSettings;
+    [SerializeField]
+    private VolumeSettingsSaveData defaultVolumeSettings;
 
-    private const string SettingsSaveName = "settings";
+    private ScreenSettingsSaveData screenSettingsSaveData;
+    private VolumeSettingsSaveData volumeSettingsSaveData;
+    private KeyBindigsSaveData keyBindigsSaveData;
+
+    private const string screenSettingsSaveName = "screenSettings";
+    private const string volumeSettingsSaveName = "volumeSettings";
+    private const string keyBindingsSaveName = "keyBindings";
 
     private void Start()
     {
@@ -22,17 +31,24 @@ public class SettingsSaveSystem : MonoBehaviour
 
     public void Save()
     {
-        BinarySaver.SaveToFile(settingsSaveData, SettingsSaveName);
+        BinarySaver.SaveToFile(screenSettingsSaveData, screenSettingsSaveName);
+        BinarySaver.SaveToFile(volumeSettingsSaveData, volumeSettingsSaveName);
+        BinarySaver.SaveToFile(keyBindigsSaveData, keyBindingsSaveName);
     }
 
     public void Load()
     {
-        settingsSaveData = BinarySaver.LoadFromFile<SettingsSaveData>(SettingsSaveName);
+        screenSettingsSaveData = BinarySaver.LoadFromFile<ScreenSettingsSaveData>(screenSettingsSaveName);
+        volumeSettingsSaveData = BinarySaver.LoadFromFile<VolumeSettingsSaveData>(volumeSettingsSaveName);
+        keyBindigsSaveData = BinarySaver.LoadFromFile<KeyBindigsSaveData>(keyBindingsSaveName);
 
-        settingsSaveData ??= defaultSettings;
+        screenSettingsSaveData ??= defaultScreenSettings;
+        volumeSettingsSaveData ??= defaultVolumeSettings;
+        keyBindigsSaveData ??= new KeyBindigsSaveData();
 
-        resolutionSettings.Load(settingsSaveData);
-        soundSettings.Load(settingsSaveData);
+        resolutionSettings.Load(screenSettingsSaveData);
+        soundSettings.Load(volumeSettingsSaveData);
+        keyRebinder.Load(keyBindigsSaveData);
     }
 
     private void OnApplicationQuit()
@@ -42,12 +58,22 @@ public class SettingsSaveSystem : MonoBehaviour
 }
 
 [System.Serializable]
-public class SettingsSaveData
+public class ScreenSettingsSaveData
 {
     public int resolutionIndex;
     public int fullScreenModeIndex;
+}
 
+[System.Serializable]
+public class VolumeSettingsSaveData
+{
     public float masterVolume;
     public float musicVolume;
     public float effectsVolume;
+}
+
+[System.Serializable]
+public class KeyBindigsSaveData
+{
+    public string keyBindings;
 }

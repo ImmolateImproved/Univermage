@@ -22,6 +22,9 @@ public class Menu : Singleton<Menu>
     [SerializeField]
     private GameObject controlsPanel;
 
+    [SerializeField]
+    private KeyRebinder keyRebinder;
+
     public override void Awake()
     {
         base.Awake();
@@ -107,6 +110,8 @@ public class Menu : Singleton<Menu>
 
     public void HideControlsPanel()
     {
+        keyRebinder.CancelRebinding();
+        keyRebinder.SaveKeyBindings();
         controlsPanel.SetActive(false);
     }
 

@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-public abstract class SettingsSaveable : MonoBehaviour
+public abstract class SettingsSaveable<T> : MonoBehaviour
 {
-    protected SettingsSaveData settingsSaveData;
+    protected T settingsSaveData;
 
-    public virtual void Load(SettingsSaveData settingsSaveData)
+    public virtual void Load(T settingsSaveData)
     {
         this.settingsSaveData = settingsSaveData;
     }

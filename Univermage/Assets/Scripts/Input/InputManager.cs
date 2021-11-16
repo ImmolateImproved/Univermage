@@ -1,5 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.InputSystem;
+
+public enum Actions
+{
+    Movement, SpellCast, FreeCameraToggle, RestartLevel, Save, LoadLastSave
+}
 
 [CreateAssetMenu(menuName = "ScriptableObjects/InputManager")]
 public class InputManager : ScriptableObject
