@@ -18,10 +18,10 @@ public class GameplaySaveManager : Singleton<GameplaySaveManager>
 
     private const string saveSuccessText = "Cохранение";
 
-    private const string saveFailedText = "Невозможно сохраниться пока действует заклинание";
+    private const string saveFailedText = "Невозможно cохраниться пока действует заклинание";
 
     private const string loadSuccess = "Загрузка";
-    private const string loadFailText = "Вы еще не сохранялись на этом уровне";
+    private const string loadFailText = "Вы еще не cохранялись на этом уровне";
 
     public override void Awake()
     {

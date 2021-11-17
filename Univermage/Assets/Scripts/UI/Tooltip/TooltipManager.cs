@@ -5,14 +5,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-[System.Serializable]
-public class Tooltip
-{
-    [Multiline]
-    public string text;
-    public UnityEvent tooltipEvent;
-}
-
 public class TooltipManager : MonoBehaviour
 {
     [SerializeField]
@@ -81,7 +73,7 @@ public class TooltipManager : MonoBehaviour
     {
         tooltipUIHolder.SetActive(enableTooltipPanel);
 
-        textMesh.text = tooltip.text;
+        textMesh.text = tooltip.GetText();
         tooltip.tooltipEvent?.Invoke();
     }
 
@@ -95,62 +87,6 @@ public class TooltipManager : MonoBehaviour
     {
         lastCamera.Priority = 0;
         virtualCamera.Priority = 10;
-    }
-
-    public void ShowMovementControls()
-    {
-        var keyBindings = KeyRebinder.keyBindings;
-
-        var sb = new StringBuilder(35);
-
-        sb.Append(keyBindings["up"]);
-        sb.Append(",");
-        sb.Append(keyBindings["down"]);
-        sb.Append(",");
-        sb.Append(keyBindings["left"]);
-        sb.Append(",");
-        sb.Append(keyBindings["right"]);
-        sb.Append(",");
-
-        sb.Append(" - передвижение");
-
-        ShowTooltip(new Tooltip { text = sb.ToString() });
-    }
-
-    public void ShowSaveLoadControls()
-    {
-        var keyBindings = KeyRebinder.keyBindings;
-
-        var sb = new StringBuilder(40);
-
-        sb.Append(keyBindings[Actions.Save.ToString()]);
-        sb.Append(" - cохранить");
-        sb.Append("\n");
-
-        sb.Append(keyBindings[Actions.LoadLastSave.ToString()]);
-        sb.Append(" - загрузить");
-        sb.Append("\n");
-
-        sb.Append(keyBindings[Actions.RestartLevel.ToString()]);
-        sb.Append(" - перезапустить уровень");
-        sb.Append("\n");
-
-        sb.Append(keyBindings[Actions.FreeCameraToggle.ToString()]);
-        sb.Append(" - свободная камера");
-
-        ShowTooltip(new Tooltip { text = sb.ToString() });
-    }
-
-    public void ShowSpellCastControls()
-    {
-        var keyBindings = KeyRebinder.keyBindings;
-
-        var sb = new StringBuilder(30);
-
-        sb.Append(keyBindings[Actions.SpellCast.ToString()]);
-        sb.Append(" - использовать заклинание");
-
-        ShowTooltip(new Tooltip { text = sb.ToString() });
     }
 
     public void ResetVirtualCamera()

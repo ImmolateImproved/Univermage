@@ -1,6 +1,28 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
+[System.Serializable]
+public class Tooltip
+{
+    [Multiline]
+    public string text;
+    public UnityEvent tooltipEvent;
+    public InterpolatedStringParameters interpolatedStringParameters;
+
+    public string GetText()
+    {
+        var resultText = text;
+
+        if (interpolatedStringParameters != null)
+        {
+            var paramenters = interpolatedStringParameters.GetInterpolatedStringParameters();
+            resultText = string.Format(text, paramenters);
+        }
+
+        return resultText;
+    }
+}
+
 public class TooltipTrigger : MonoBehaviour
 {
     [SerializeField]
@@ -24,6 +46,7 @@ public class TooltipTrigger : MonoBehaviour
             return null;
 
         var tooltip = tooltips[currentTooltip];
+
         currentTooltip++;
 
         return tooltip;

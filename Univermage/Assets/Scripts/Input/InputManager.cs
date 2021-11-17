@@ -7,6 +7,11 @@ public enum Actions
     Movement, SpellCast, FreeCameraToggle, RestartLevel, Save, LoadLastSave
 }
 
+public enum KeyBindingsNames
+{
+    up, down, left, right, SpellCast, FreeCameraToggle, RestartLevel, Save, LoadLastSave
+}
+
 [CreateAssetMenu(menuName = "ScriptableObjects/InputManager")]
 public class InputManager : ScriptableObject
 {
