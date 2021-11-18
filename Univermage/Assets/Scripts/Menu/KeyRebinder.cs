@@ -43,7 +43,7 @@ public class KeyRebinder : SettingsSaveable<KeyBindigsSaveData>
 
         keyBindings = new Dictionary<string, string>();
 
-        string[] actions = System.Enum.GetNames(typeof(Actions));
+        string[] actions = inputManager.ActionsStrings;
 
         var bindingIndex = 0;
 

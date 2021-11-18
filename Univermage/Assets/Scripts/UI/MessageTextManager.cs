@@ -17,6 +17,12 @@ public class MessageTextManager : Singleton<MessageTextManager>
     [SerializeField]
     private GameObject deathTextHolder;
 
+    [SerializeField]
+    private TextMeshProUGUI dethScreenKeyBindingsText;
+
+    [SerializeField]
+    private KeysBindingsParameters deathScreenKeyBindigs;
+
     private Vector2 startPosition;
 
     [SerializeField]
@@ -32,13 +38,12 @@ public class MessageTextManager : Singleton<MessageTextManager>
         DOTween.KillAll();
     }
 
-    private void Start()
-    {
-        OnLevelLoaded();
-    }
-
     public void ShowDeathText()
     {
+        var text = string.Format(dethScreenKeyBindingsText.text, deathScreenKeyBindigs.GetInterpolatedStringParameters());
+
+        dethScreenKeyBindingsText.text = text;
+
         deathTextHolder.SetActive(true);
     }
 
@@ -85,14 +90,6 @@ public class MessageTextManager : Singleton<MessageTextManager>
     private void LivingEntity_OnDeath()
     {
         ShowDeathText();
-    }
-
-    public void OnLevelLoaded()
-    {
-        var activeScene = SceneManager.GetActiveScene().buildIndex;
-
-        var message = activeScene == 1 ? "Tutorial" : $"Level {activeScene - 1}";
-        ShowMessage(message);
     }
 
     private void OnEnable()

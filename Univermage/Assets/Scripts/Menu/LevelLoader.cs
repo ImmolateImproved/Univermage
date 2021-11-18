@@ -15,7 +15,7 @@ public class LevelLoader : Singleton<LevelLoader>
     private Transform levelsPanelContent;
 
     [SerializeField]
-    private int redundantLevelsCount;
+    private int levelsToSkip;
 
     private List<LevelSelectionButton> levelButtons;
 
@@ -32,6 +32,19 @@ public class LevelLoader : Singleton<LevelLoader>
             levelSaveData.lastOpenLevel = scene.buildIndex;
             BinarySaver.SaveToFile(levelSaveData, LevelSaveName);
         }
+
+        string message;
+
+        if (scene.buildIndex > levelsToSkip)
+        {
+            message = $"Level {scene.buildIndex - levelsToSkip + 1}";
+        }
+        else
+        {
+            message = $"Tutorial {scene.buildIndex}";
+        }
+
+        MessageTextManager.inst.ShowMessage(message);
     }
 
     private void Start()
@@ -39,7 +52,7 @@ public class LevelLoader : Singleton<LevelLoader>
         if (Initialized)
             return;
 
-        var levelsCount = SceneManager.sceneCountInBuildSettings - redundantLevelsCount;
+        var levelsCount = SceneManager.sceneCountInBuildSettings - levelsToSkip;
 
         levelButtons = new List<LevelSelectionButton>(levelsCount);
     }
@@ -65,9 +78,10 @@ public class LevelLoader : Singleton<LevelLoader>
     {
         LoadButton().Init(1, "Tutorial");
 
-        for (int i = redundantLevelsCount; i < SceneManager.sceneCountInBuildSettings; i++)
+        for (int i = levelsToSkip; i < SceneManager.sceneCountInBuildSettings; i++)
         {
-            LoadButton().Init(i, $"Level {i - redundantLevelsCount + 1}");
+            var levelNameIndex = i - levelsToSkip + 1;
+            LoadButton().Init(i, $"Level {levelNameIndex}");
         }
 
         LevelSelectionButton LoadButton()

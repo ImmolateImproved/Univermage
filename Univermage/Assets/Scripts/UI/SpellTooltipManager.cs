@@ -99,13 +99,20 @@ public class SpellTooltipManager : MonoBehaviour
         currentSpell = spell;
     }
 
+    private void SpellCaster_OnSpellUsed()
+    {
+        currentSpell = null;
+    }
+
     private void OnEnable()
     {
         SpellCaster.OnSetSpell += SpellCaster_OnSetSpell;
+        SpellCaster.OnSpellUsed += SpellCaster_OnSpellUsed;
     }
 
     private void OnDisable()
     {
         SpellCaster.OnSetSpell -= SpellCaster_OnSetSpell;
+        SpellCaster.OnSpellUsed -= SpellCaster_OnSpellUsed;
     }
 }
