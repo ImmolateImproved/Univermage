@@ -1,3 +1,4 @@
+using MEC;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
@@ -6,13 +7,13 @@ public class CharacterMovement : MonoBehaviour
 
     private CharacterDirection characterDirection;
 
+    private VerticalMovement verticalMovement = new VerticalMovement();
+
     [SerializeField]
     private float moveSpeed;
 
     [SerializeField]
     private float gravityScale;
-
-    private VerticalMovement verticalMovement = new VerticalMovement();
 
     public Vector2 Velocity { get; private set; }
 

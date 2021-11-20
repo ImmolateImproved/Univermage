@@ -46,9 +46,9 @@ public class ClosingObstacle : MonoBehaviour, ISaveable
     {
         if (collision.gameObject.layer == PhysicsLayers.Player)
         {
-            //var hit = Physics2D.Linecast(collision.transform.position, positionOnEnter, 1 << gameObject.layer);
+            var hit = Physics2D.Linecast(collision.transform.position, positionOnEnter, 1 << gameObject.layer);
 
-            //if (hit)
+            if (hit)
             {
                 obstacle.isTrigger = false;
                 gameObject.layer = PhysicsLayers.Tilemap;

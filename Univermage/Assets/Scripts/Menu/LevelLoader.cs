@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class LevelLoader : Singleton<LevelLoader>
@@ -17,25 +20,39 @@ public class LevelLoader : Singleton<LevelLoader>
     [SerializeField]
     private int levelsToSkip;
 
+    [SerializeField]
+    private int lastTutorialScene;
+
     private List<LevelSelectionButton> levelButtons;
 
-    private LevelSaveData levelSaveData;
+    private LevelsSaveData lastOpenedLevel;
+    [SerializeField]
+    private FinishedLevels finishedLevels;
 
     private const string LevelSaveName = "Level";
+    private const string FinishedLevelsSaveName = "FinishedLevels";
 
-    public int LastOpenLevel => levelSaveData.lastOpenLevel;
+    public int CurrentLevel => Mathf.Max(SceneManager.GetActiveScene().buildIndex - levelsToSkip + 1, 0);
+
+    public int LastOpenLevel => lastOpenedLevel.lastOpenLevel;
+
+    public int LevelsCount => SceneManager.sceneCountInBuildSettings - levelsToSkip + 1;
 
     private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.buildIndex > levelSaveData.lastOpenLevel)
+        if (scene.buildIndex > lastOpenedLevel.lastOpenLevel)
         {
-            levelSaveData.lastOpenLevel = scene.buildIndex;
-            BinarySaver.SaveToFile(levelSaveData, LevelSaveName);
+            if (scene.buildIndex >= levelsToSkip)
+            {
+                lastOpenedLevel.lastOpenLevel = scene.buildIndex;
+
+                BinarySaver.SaveToFile(lastOpenedLevel, LevelSaveName);
+            }
         }
 
         string message;
 
-        if (scene.buildIndex > levelsToSkip)
+        if (scene.buildIndex >= levelsToSkip)
         {
             message = $"Level {scene.buildIndex - levelsToSkip + 1}";
         }
@@ -62,7 +79,11 @@ public class LevelLoader : Singleton<LevelLoader>
         if (Initialized)
             return;
 
-        levelSaveData = BinarySaver.LoadFromFile<LevelSaveData>(LevelSaveName) ?? new LevelSaveData { lastOpenLevel = 1 };
+        EndLevel.OnLevelFinished += EndLevel_OnLevelFinished;
+
+        lastOpenedLevel = BinarySaver.LoadFromFile<LevelsSaveData>(LevelSaveName) ?? new LevelsSaveData { lastOpenLevel = 1 };
+        finishedLevels = BinarySaver.LoadFromFile<FinishedLevels>(FinishedLevelsSaveName) ?? new FinishedLevels(LevelsCount);
+
         SceneManager.sceneLoaded += OnLevelLoaded;
     }
 
@@ -71,17 +92,42 @@ public class LevelLoader : Singleton<LevelLoader>
         if (Initialized)
             return;
 
+        EndLevel.OnLevelFinished -= EndLevel_OnLevelFinished;
         SceneManager.sceneLoaded -= OnLevelLoaded;
+    }
+
+    private void EndLevel_OnLevelFinished()
+    {
+        var needSave = false;
+
+        if (SceneManager.GetActiveScene().buildIndex == lastTutorialScene)
+        {
+            finishedLevels.value[0] = true;
+            needSave = true;
+            levelButtons[0].SetFinished();
+        }
+
+        if (CurrentLevel > 0)
+        {
+            needSave = true;
+            finishedLevels.value[CurrentLevel] = true;
+            levelButtons[CurrentLevel].SetFinished();
+        }
+
+        if (needSave)
+        {
+            BinarySaver.SaveToFile(finishedLevels, FinishedLevelsSaveName);
+        }
     }
 
     private void InitLevelsPanel()
     {
-        LoadButton().Init(1, "Tutorial");
+        LoadButton().Init(1, "Tutorial", finishedLevels.value[0]);
 
-        for (int i = levelsToSkip; i < SceneManager.sceneCountInBuildSettings; i++)
+        for (int sceneIndex = levelsToSkip; sceneIndex < SceneManager.sceneCountInBuildSettings; sceneIndex++)
         {
-            var levelNameIndex = i - levelsToSkip + 1;
-            LoadButton().Init(i, $"Level {levelNameIndex}");
+            var levelIndex = sceneIndex - levelsToSkip + 1;
+            LoadButton().Init(sceneIndex, $"Level {levelIndex}", finishedLevels.value[levelIndex]);
         }
 
         LevelSelectionButton LoadButton()
@@ -113,7 +159,18 @@ public class LevelLoader : Singleton<LevelLoader>
 }
 
 [System.Serializable]
-public class LevelSaveData
+public class LevelsSaveData
 {
     public int lastOpenLevel;
+}
+
+[System.Serializable]
+public class FinishedLevels
+{
+    public BitArray value;
+
+    public FinishedLevels(int levelsCount)
+    {
+        value = new BitArray(levelsCount, false);
+    }
 }

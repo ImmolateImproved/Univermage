@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,6 +12,8 @@ public class EndLevel : MonoBehaviour, ISaveable
     private Sprite activatedSprite;
 
     private bool loadNextLevel;
+
+    public static event Action OnLevelFinished = delegate { };
 
     private void Awake()
     {
@@ -46,9 +49,8 @@ public class EndLevel : MonoBehaviour, ISaveable
     {
         if (!loadNextLevel) return;
 
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
-        {
-            LevelManager.NextLevel();
-        }
+        OnLevelFinished();
+
+        LevelManager.NextLevel();
     }
 }

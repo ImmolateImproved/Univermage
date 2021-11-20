@@ -3,12 +3,13 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
+public enum AudioMixerGroups
+{
+    Master, Music, Effects, Steps
+}
+
 public class SoundSettings : SettingsSaveable<VolumeSettingsSaveData>
 {
-    public const string masterGroup = "Master";
-    public const string musicGroup = "Music";
-    public const string effectsGroup = "Effects";
-
     [SerializeField]
     private SoundSettingsSlider[] soundSettingsSliders;
 
@@ -44,7 +45,7 @@ public class SoundSettingsSlider
     private TextMeshProUGUI volumeText;
 
     [SerializeField]
-    private string audioMixerGroup;
+    private AudioMixerGroups audioMixerGroup;
 
     private AudioMixer audioMixer;
 
@@ -68,13 +69,7 @@ public class SoundSettingsSlider
 
     public void Load(VolumeSettingsSaveData settingsSaveData)
     {
-        var volume = audioMixerGroup switch
-        {
-            SoundSettings.masterGroup => settingsSaveData.masterVolume,
-            SoundSettings.musicGroup => settingsSaveData.musicVolume,
-            SoundSettings.effectsGroup => settingsSaveData.effectsVolume,
-            _=> 0
-        };
+        var volume = settingsSaveData.volumes[(int)audioMixerGroup];
 
         volumeSlider.SetValueWithoutNotify(volume);
         SetVolumeText(volume);
@@ -83,7 +78,7 @@ public class SoundSettingsSlider
 
     private void SetVolumeInMixer(float value)
     {
-        audioMixer.SetFloat(audioMixerGroup, Mathf.Lerp(minSoundVolume, maxSoundVolume, value));
+        audioMixer.SetFloat(audioMixerGroup.ToString(), Mathf.Lerp(minSoundVolume, maxSoundVolume, value));
     }
 
     private void SetVolumeText(float value)
@@ -93,12 +88,7 @@ public class SoundSettingsSlider
 
     private void OnVolumeChange(float value)
     {
-        switch (audioMixerGroup)
-        {
-            case SoundSettings.masterGroup: { settingsSaveData.masterVolume = value; } break;
-            case SoundSettings.musicGroup: { settingsSaveData.musicVolume = value; } break;
-            case SoundSettings.effectsGroup: { settingsSaveData.effectsVolume = value; } break;
-        }
+        settingsSaveData.volumes[(int)audioMixerGroup] = value;
 
         SetVolumeText(value);
         SetVolumeInMixer(value);

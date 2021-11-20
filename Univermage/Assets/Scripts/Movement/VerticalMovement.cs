@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class VerticalMovement
 {
     private HashSet<object> verticalMovementTriggers = new HashSet<object>();
 
-    public bool IsVerticalMovement => verticalMovementTriggers.Count > 0;
+    public virtual bool IsVerticalMovement => verticalMovementTriggers.Count > 0;
 
     public void SetVerticalMovement(object trigger, bool onOf)
     {

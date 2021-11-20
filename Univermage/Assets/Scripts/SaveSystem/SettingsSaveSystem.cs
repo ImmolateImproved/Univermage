@@ -67,9 +67,7 @@ public class ScreenSettingsSaveData
 [System.Serializable]
 public class VolumeSettingsSaveData
 {
-    public float masterVolume;
-    public float musicVolume;
-    public float effectsVolume;
+    public float[] volumes;
 }
 
 [System.Serializable]

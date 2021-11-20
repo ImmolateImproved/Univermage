@@ -100,16 +100,25 @@ public class Menu : Singleton<Menu>
     public void HideSettingsPanel()
     {
         settingsPanel.SetActive(false);
+        HideControlsPanel();
         settingsSaveSystem.Save();
     }
 
     public void OpenControlsPanel()
     {
-        controlsPanel.SetActive(true);
+        var controlsPanelIsOpen = controlsPanel.activeSelf;
+
+        HideControlsPanel();
+
+        if (!controlsPanelIsOpen)
+            controlsPanel.SetActive(true);
     }
 
     public void HideControlsPanel()
     {
+        if (!controlsPanel.activeSelf)
+            return;
+
         keyRebinder.CancelRebinding();
         keyRebinder.SaveKeyBindings();
         controlsPanel.SetActive(false);
