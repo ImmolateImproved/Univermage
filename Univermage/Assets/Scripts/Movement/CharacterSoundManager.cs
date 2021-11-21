@@ -14,7 +14,7 @@ public class CharacterSoundManager : MonoBehaviour
     private AudioClip[] footstepSFX;
 
     [SerializeField]
-    private AudioClip landedClip;
+    private AudioClip[] landedClips;
 
     [SerializeField]
     [Range(0, 1)]
@@ -34,7 +34,9 @@ public class CharacterSoundManager : MonoBehaviour
 
         if (groundChecker.IsLandedLastFrame)
         {
-            audioSource.PlayOneShot(landedClip, landedVolumeScale);
+            var randomIndex = Random.Range(0, landedClips.Length);
+
+            audioSource.PlayOneShot(landedClips[randomIndex], landedVolumeScale);
         }
 
         if (moveNext)

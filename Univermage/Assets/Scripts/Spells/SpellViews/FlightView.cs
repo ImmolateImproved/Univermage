@@ -23,13 +23,23 @@ public class FlightView : SpellView
         Second();
     }
 
+    protected override void PlaySpellSFX(int index = 0)
+    {
+        if (audioSource)
+            audioSource.Play();
+    }
+
     private void First()
     {
+        PlaySpellSFX();
         anim.SetBool(animationHash, true);
     }
 
     private void Second()
     {
+        if (audioSource)
+            audioSource.Stop();
+
         anim.SetBool(animationHash, false);
     }
 }

@@ -20,9 +20,10 @@ public class PortalView : SpellView
 
         portals = new Queue<GameObject>();
 
-        actions = new Action[2];
+        actions = new Action[3];
         actions[0] = First;
         actions[1] = Second;
+        actions[2] = Third;
     }
 
     public override void ResetSpellView()
@@ -35,6 +36,11 @@ public class PortalView : SpellView
         portals.Clear();
     }
 
+    protected virtual void PlaySecondSFX()
+    {
+        PlaySpellSFX();
+    }
+
     protected virtual void First()
     {
         var portal = Instantiate(prefab);
@@ -45,6 +51,11 @@ public class PortalView : SpellView
     }
 
     private void Second()
+    {
+        PlaySecondSFX();
+    }
+
+    private void Third()
     {
         var obj = portals.Dequeue();
         Destroy(obj);

@@ -40,6 +40,9 @@ public class LevelLoader : Singleton<LevelLoader>
 
     private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
     {
+        if (scene.name == "TestLevel")
+            return;
+
         if (scene.buildIndex > lastOpenedLevel.lastOpenLevel)
         {
             if (scene.buildIndex >= levelsToSkip)

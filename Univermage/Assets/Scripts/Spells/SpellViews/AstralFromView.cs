@@ -27,6 +27,12 @@ public class AstralFromView : SpellView
         Second();
     }
 
+    protected override void PlaySpellSFX(int index = 0)
+    {
+        if (audioSource)
+            audioSource.Play();
+    }
+
     private void First()
     {
         sr.color = astralColor;
@@ -36,5 +42,8 @@ public class AstralFromView : SpellView
     private void Second()
     {
         sr.color = defaultColor;
+
+        if (audioSource)
+            audioSource.Stop();
     }
 }

@@ -31,7 +31,12 @@ public class TeleportView : PortalView
     {
         base.First();
         anim.SetTrigger(animationHash);
-        PlaySpellSFX();
+        PlaySpellSFX(0);
+    }
+
+    protected override void PlaySecondSFX()
+    {
+        PlaySpellSFX(1);
     }
 
     private void OnEnable()

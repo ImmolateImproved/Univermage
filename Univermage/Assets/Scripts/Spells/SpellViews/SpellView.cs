@@ -6,10 +6,11 @@ public abstract class SpellView : MonoBehaviour
     [field: SerializeField]
     public Spell Spell { get; private set; }
 
-    [field: SerializeField]
-    public AudioClip SpellSFX { get; private set; }
+    [SerializeField]
+    protected AudioClip[] spellSFX;
 
-    public static event Action<AudioClip> OnSpellSFX = delegate { };
+    [SerializeField]
+    protected AudioSource audioSource;
 
     protected Action[] actions;
 
@@ -28,8 +29,11 @@ public abstract class SpellView : MonoBehaviour
         actions[actionIndex].Invoke();
     }
 
-    protected void PlaySpellSFX()
+    protected virtual void PlaySpellSFX(int index = 0)
     {
-        OnSpellSFX(SpellSFX);
+        if (spellSFX != null && spellSFX.Length > 0 && audioSource != null)
+        {
+            audioSource.PlayOneShot(spellSFX[index]);
+        }
     }
 }

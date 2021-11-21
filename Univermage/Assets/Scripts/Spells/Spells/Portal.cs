@@ -69,11 +69,12 @@ public class Portal : Spell
 
         var distance = Vector2.Distance(myTrasform.position, returnPosition);
 
+        spellController.OnSpellCast(this, 1);
+
         myTrasform.DOMove(returnPosition, distance / returnSpeed).SetEase(movementEase).OnComplete(() =>
         {
-            spellController.OnSpellCast(this, 1);
-            movement.enabled = true;
-            collider.enabled = true;
+            spellController.OnSpellCast(this, 2);
+            ResetSpell();
         });
     }
 }
