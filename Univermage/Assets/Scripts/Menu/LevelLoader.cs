@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -40,9 +41,6 @@ public class LevelLoader : Singleton<LevelLoader>
 
     private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "TestLevel")
-            return;
-
         if (scene.buildIndex > lastOpenedLevel.lastOpenLevel)
         {
             if (scene.buildIndex >= levelsToSkip)
@@ -107,14 +105,12 @@ public class LevelLoader : Singleton<LevelLoader>
         {
             finishedLevels.value[0] = true;
             needSave = true;
-            levelButtons[0].SetFinished();
         }
 
         if (CurrentLevel > 0)
         {
             needSave = true;
             finishedLevels.value[CurrentLevel] = true;
-            levelButtons[CurrentLevel].SetFinished();
         }
 
         if (needSave)
@@ -130,7 +126,8 @@ public class LevelLoader : Singleton<LevelLoader>
         for (int sceneIndex = levelsToSkip; sceneIndex < SceneManager.sceneCountInBuildSettings; sceneIndex++)
         {
             var levelIndex = sceneIndex - levelsToSkip + 1;
-            LoadButton().Init(sceneIndex, $"Level {levelIndex}", finishedLevels.value[levelIndex]);
+            var isFinished = finishedLevels.value[levelIndex];
+            LoadButton().Init(sceneIndex, $"Level {levelIndex}", isFinished);
         }
 
         LevelSelectionButton LoadButton()
@@ -152,6 +149,12 @@ public class LevelLoader : Singleton<LevelLoader>
         if (levelButtons.Count == 0)
         {
             InitLevelsPanel();
+        }
+
+        for (int i = 0; i < levelButtons.Count; i++)
+        {
+            if (finishedLevels.value[i])
+                levelButtons[i].SetFinished();
         }
     }
 

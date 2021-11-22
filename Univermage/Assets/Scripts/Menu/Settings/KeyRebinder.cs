@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -82,7 +83,12 @@ public class KeyRebinder : SettingsSaveable<KeyBindigsSaveData>
 
     private void RebindKeyButton_OnClick(RebindKeyButton rebindKeyButton)
     {
-        ResesRebindingUI();
+        Rebind(rebindKeyButton);
+    }
+
+    private void Rebind(RebindKeyButton rebindKeyButton)
+    {
+        ResetRebindingUI();
 
         CancelRebinding();
 
@@ -135,6 +141,8 @@ public class KeyRebinder : SettingsSaveable<KeyBindigsSaveData>
 
         action.Enable();
         StopRebinding(action);
+
+        Rebind(NextButton());
     }
 
     private void RebindingCanceled(InputActionRebindingExtensions.RebindingOperation operation)
@@ -149,7 +157,7 @@ public class KeyRebinder : SettingsSaveable<KeyBindigsSaveData>
 
         rebindingOperation.Dispose();
         rebindingOperation = null;
-        ResesRebindingUI();
+        ResetRebindingUI();
     }
 
     private string ToHumanReadableString(InputAction inputAction, int bindingIndex = 0)
@@ -157,7 +165,16 @@ public class KeyRebinder : SettingsSaveable<KeyBindigsSaveData>
         return InputControlPath.ToHumanReadableString(inputAction.bindings[bindingIndex].effectivePath, InputControlPath.HumanReadableStringOptions.OmitDevice);
     }
 
-    private void ResesRebindingUI()
+    private RebindKeyButton NextButton()
+    {
+
+        var currentRebindButtonIndex = Array.IndexOf(rebindKeyButtons, currentRebindingButton);
+        var nextButtonIndex = (currentRebindButtonIndex + 1) % rebindKeyButtons.Length;
+
+        return rebindKeyButtons[nextButtonIndex];
+    }
+
+    private void ResetRebindingUI()
     {
         if (currentRebindingButton == null)
             return;
