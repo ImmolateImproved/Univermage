@@ -19,7 +19,7 @@ public class LevelLoader : Singleton<LevelLoader>
     private Transform levelsPanelContent;
 
     [SerializeField]
-    private int levelsToSkip;
+    private int scenesToSkip;
 
     [SerializeField]
     private int lastTutorialScene;
@@ -33,17 +33,17 @@ public class LevelLoader : Singleton<LevelLoader>
     private const string LevelSaveName = "Level";
     private const string FinishedLevelsSaveName = "FinishedLevels";
 
-    public int CurrentLevel => Mathf.Max(SceneManager.GetActiveScene().buildIndex - levelsToSkip + 1, 0);
+    public int CurrentLevel => Mathf.Max(SceneManager.GetActiveScene().buildIndex - scenesToSkip + 1, 0);
 
     public int LastOpenLevel => lastOpenedLevel.lastOpenLevel;
 
-    public int LevelsCount => SceneManager.sceneCountInBuildSettings - levelsToSkip + 1;
+    public int LevelsCount => SceneManager.sceneCountInBuildSettings - scenesToSkip + 1;
 
     private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.buildIndex > lastOpenedLevel.lastOpenLevel)
         {
-            if (scene.buildIndex >= levelsToSkip)
+            if (scene.buildIndex >= scenesToSkip)
             {
                 lastOpenedLevel.lastOpenLevel = scene.buildIndex;
 
@@ -53,9 +53,9 @@ public class LevelLoader : Singleton<LevelLoader>
 
         string message;
 
-        if (scene.buildIndex >= levelsToSkip)
+        if (scene.buildIndex >= scenesToSkip)
         {
-            message = $"Level {scene.buildIndex - levelsToSkip + 1}";
+            message = $"Level {CurrentLevel}";
         }
         else
         {
@@ -70,9 +70,7 @@ public class LevelLoader : Singleton<LevelLoader>
         if (Initialized)
             return;
 
-        var levelsCount = SceneManager.sceneCountInBuildSettings - levelsToSkip;
-
-        levelButtons = new List<LevelSelectionButton>(levelsCount);
+        levelButtons = new List<LevelSelectionButton>(LevelsCount);
     }
 
     private void OnEnable()
@@ -80,10 +78,9 @@ public class LevelLoader : Singleton<LevelLoader>
         if (Initialized)
             return;
 
-        EndLevel.OnLevelFinished += EndLevel_OnLevelFinished;
+        LoadLevelsData();
 
-        lastOpenedLevel = BinarySaver.LoadFromFile<LevelsSaveData>(LevelSaveName) ?? new LevelsSaveData { lastOpenLevel = 1 };
-        finishedLevels = BinarySaver.LoadFromFile<FinishedLevels>(FinishedLevelsSaveName) ?? new FinishedLevels(LevelsCount);
+        EndLevel.OnLevelFinished += EndLevel_OnLevelFinished;
 
         SceneManager.sceneLoaded += OnLevelLoaded;
     }
@@ -119,13 +116,33 @@ public class LevelLoader : Singleton<LevelLoader>
         }
     }
 
+    private void LoadLevelsData()
+    {
+        lastOpenedLevel = BinarySaver.LoadFromFile<LevelsSaveData>(LevelSaveName) ?? new LevelsSaveData { lastOpenLevel = 1 };
+        finishedLevels = BinarySaver.LoadFromFile<FinishedLevels>(FinishedLevelsSaveName) ?? new FinishedLevels(LevelsCount);
+
+        if (finishedLevels.Length != LevelsCount)
+        {
+            var levels = new FinishedLevels(LevelsCount);
+
+            var count = Mathf.Min(levels.Length, finishedLevels.Length);
+
+            for (int i = 0; i < count; i++)
+            {
+                levels.value[i] = finishedLevels.value[i];
+            }
+
+            finishedLevels = levels;
+        }
+    }
+
     private void InitLevelsPanel()
     {
         LoadButton().Init(1, "Tutorial", finishedLevels.value[0]);
 
-        for (int sceneIndex = levelsToSkip; sceneIndex < SceneManager.sceneCountInBuildSettings; sceneIndex++)
+        for (int sceneIndex = scenesToSkip; sceneIndex < SceneManager.sceneCountInBuildSettings; sceneIndex++)
         {
-            var levelIndex = sceneIndex - levelsToSkip + 1;
+            var levelIndex = sceneIndex - scenesToSkip + 1;
             var isFinished = finishedLevels.value[levelIndex];
             LoadButton().Init(sceneIndex, $"Level {levelIndex}", isFinished);
         }
@@ -174,6 +191,8 @@ public class LevelsSaveData
 public class FinishedLevels
 {
     public BitArray value;
+
+    public int Length => value.Length;
 
     public FinishedLevels(int levelsCount)
     {
