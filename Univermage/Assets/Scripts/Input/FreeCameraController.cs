@@ -34,13 +34,11 @@ public class FreeCameraController : MonoBehaviour
         {
             freeCamera.transform.position = playerVCam.transform.position;
             inputManager.FreeCameraInputStateEnabled(false);
-            inputManager.Controls.FreeCamera.Enable();
             freeCamera.Priority = 15;
         }
         else
         {
             inputManager.FreeCameraInputStateEnabled(true);
-            inputManager.Controls.FreeCamera.Disable();
             freeCamera.Priority = 0;
         }
     }
