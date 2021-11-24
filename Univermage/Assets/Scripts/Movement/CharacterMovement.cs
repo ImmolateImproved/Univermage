@@ -1,7 +1,7 @@
 using MEC;
 using UnityEngine;
 
-public class CharacterMovement : MonoBehaviour
+public class CharacterMovement : MonoBehaviour, IMovementInputReceiver
 {
     private Rigidbody2D rb;
 
@@ -39,11 +39,11 @@ public class CharacterMovement : MonoBehaviour
         characterDirection.Flip((int)Velocity.x);
     }
 
-    public void SetMoveDirection(Vector2 inputDirection)
+    public void SetInputVector(Vector2 inputDirection)
     {
         Velocity = verticalMovement
-            ? inputDirection.normalized * moveSpeed
-            : new Vector2(inputDirection.x * moveSpeed, -gravityScale);
+         ? inputDirection.normalized * moveSpeed
+         : new Vector2(inputDirection.x * moveSpeed, -gravityScale);
     }
 
     public void SetPosition(Vector2 position)

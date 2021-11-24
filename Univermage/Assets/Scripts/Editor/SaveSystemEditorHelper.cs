@@ -44,24 +44,6 @@ namespace UnityToolbarExtender.Examples
                 SaveSystemEditorHelper.InitializeCurrentScene();
             }
         }
-
-        [InitializeOnLoadMethod]
-        static void Initialize()
-        {
-            UnityEditor.SceneManagement.EditorSceneManager.sceneOpened += OnEditorSceneManagerSceneOpened;
-        }
-
-        static void OnEditorSceneManagerSceneOpened(UnityEngine.SceneManagement.Scene scene, UnityEditor.SceneManagement.OpenSceneMode mode)
-        {
-            var player = GameObject.FindObjectOfType<PlayerCamera>();
-            if (player)
-            {
-                player.Init();
-
-                EditorUtility.SetDirty(player.gameObject);
-                EditorSceneManager.SaveOpenScenes();
-            }
-        }
     }
 
     static class SaveSystemEditorHelper

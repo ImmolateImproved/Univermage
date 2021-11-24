@@ -5,65 +5,43 @@ using UnityEngine.InputSystem;
 public class FreeCameraController : MonoBehaviour
 {
     [SerializeField]
-    public InputManager inputManager;
-
-
-    [SerializeField]
-    private CinemachineVirtualCamera freeCamera;
+    private InputManager inputManager;
 
     [SerializeField]
     private CinemachineVirtualCamera playerVCam;
 
     [SerializeField]
-    private FreeCameraMovement freeCameraMovement;
+    public CinemachineVirtualCamera freeCamera;
 
-    private InputAction movementAction;
+    [SerializeField]
+    private MovementInputHandler movementInputHandler;
 
     private bool activated;
 
-    private void Start()
+    private void Awake()
     {
-        movementAction = inputManager.Controls.FreeCamera.Movement;
+        playerVCam.transform.SetParent(null);
+        freeCamera.transform.SetParent(null);
     }
 
-    private void Update()
-    {
-        MovementInput();
-    }
-
-    private void OnEnable()
-    {
-        inputManager.Controls.Player.FreeCameraToggle.performed += FreeCamera_performed;
-    }
-
-    private void OnDisable()
-    {
-        inputManager.Controls.Player.FreeCameraToggle.performed -= FreeCamera_performed;
-    }
-
-    private void FreeCamera_performed(InputAction.CallbackContext obj)
+    public void ToggleFreeCameraState()
     {
         activated = !activated;
+
+        movementInputHandler.FreeCameraSetActive(activated);
 
         if (activated)
         {
             freeCamera.transform.position = playerVCam.transform.position;
-            inputManager.GameplayInputEnabled(false);
+            inputManager.FreeCameraInputStateEnabled(false);
             inputManager.Controls.FreeCamera.Enable();
             freeCamera.Priority = 15;
         }
         else
         {
-            inputManager.GameplayInputEnabled(true);
+            inputManager.FreeCameraInputStateEnabled(true);
             inputManager.Controls.FreeCamera.Disable();
             freeCamera.Priority = 0;
         }
-    }
-
-    private void MovementInput()
-    {
-        var direction = movementAction.ReadValue<Vector2>();
-
-        freeCameraMovement.SetMoveDirection(direction);
     }
 }

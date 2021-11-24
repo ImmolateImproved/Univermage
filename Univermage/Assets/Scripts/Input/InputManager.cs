@@ -115,6 +115,18 @@ public class InputManager : ScriptableObject
         }
     }
 
+    public void FreeCameraInputStateEnabled(bool enable)
+    {
+        if (enable)
+        {
+            Controls.Player.SpellCast.Enable();
+        }
+        else
+        {
+            Controls.Player.SpellCast.Disable();
+        }
+    }
+
     public void SaveInputEnabled(bool enable)
     {
         if (enable)

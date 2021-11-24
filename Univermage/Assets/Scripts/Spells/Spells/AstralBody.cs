@@ -19,6 +19,6 @@ public class AstralBody : SpawnerSpell
         var myDirection = spellController.GetComponent<CharacterDirection>();
         movement.transform.localScale = myDirection.transform.localScale;
 
-        movement.SetMoveDirection(myDirection.Direction);
+        movement.SetInputVector(myDirection.Direction);
     }
 }

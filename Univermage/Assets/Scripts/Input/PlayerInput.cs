@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,14 +10,16 @@ public class PlayerInput : MonoBehaviour
     private Controls controls;
     private InputAction movementAction;
 
-    private CharacterMovement movement;
+    private MovementInputHandler movement;
+    private FreeCameraController freeCameraController;
     private SpellCaster spellCaster;
     private GameplaySaveManager saveManager;
 
     private void Awake()
     {
-        movement = GetComponent<CharacterMovement>();
+        movement = GetComponent<MovementInputHandler>();
         spellCaster = GetComponent<SpellCaster>();
+        freeCameraController = GetComponent<FreeCameraController>();
     }
 
     private void Start()
@@ -34,7 +37,9 @@ public class PlayerInput : MonoBehaviour
         controls = inputManager.Controls;
 
         movementAction = controls.Player.Movement;
+
         controls.Player.SpellCast.performed += SpellCast_performed;
+        inputManager.Controls.Player.FreeCameraToggle.performed += FreeCamera_performed;
         controls.Player.Save.performed += Save_performed;
         controls.Player.LoadLastSave.performed += LoadLastSave_performed;
         controls.Player.RestartLevel.performed += RestartLevel_performed;
@@ -49,6 +54,7 @@ public class PlayerInput : MonoBehaviour
 
         controls.Player.SpellCast.performed -= SpellCast_performed;
         controls.Player.Save.performed -= Save_performed;
+        inputManager.Controls.Player.FreeCameraToggle.performed -= FreeCamera_performed;
         controls.Player.LoadLastSave.performed -= LoadLastSave_performed;
         controls.Player.RestartLevel.performed -= RestartLevel_performed;
 
@@ -65,6 +71,11 @@ public class PlayerInput : MonoBehaviour
         saveManager.TrySave();
     }
 
+    private void FreeCamera_performed(InputAction.CallbackContext obj)
+    {
+        freeCameraController.ToggleFreeCameraState();
+    }
+
     private void LoadLastSave_performed(InputAction.CallbackContext value)
     {
         saveManager.LoadLastSave();
@@ -79,6 +90,6 @@ public class PlayerInput : MonoBehaviour
     {
         var direction = movementAction.ReadValue<Vector2>();
 
-        movement.SetMoveDirection(direction);
+        movement.SetInputVector(direction);
     }
 }
