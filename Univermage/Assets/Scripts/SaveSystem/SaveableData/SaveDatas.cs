@@ -20,7 +20,7 @@ public class SaveData
 
 public static class SaveNames
 {
-    public const string LastSave = "LevelStart";
+    public const string LastSave = "Level";
 }
 
 public struct SaveIdentifier
@@ -34,6 +34,6 @@ public struct SaveIdentifier
 
     public static implicit operator string(SaveIdentifier saveIdentifier)
     {
-        return saveIdentifier.saveName + SceneManager.GetActiveScene().buildIndex;
+        return saveIdentifier.saveName + SceneManager.GetActiveScene().name;
     }
 }
