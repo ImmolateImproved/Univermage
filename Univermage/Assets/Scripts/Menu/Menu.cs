@@ -22,6 +22,9 @@ public class Menu : Singleton<Menu>
     private GameObject controlsPanel;
 
     [SerializeField]
+    private GameObject saveTutorialPanel;
+
+    [SerializeField]
     private KeyRebinder keyRebinder;
 
     public override void Awake()
@@ -59,7 +62,7 @@ public class Menu : Singleton<Menu>
 
     private void OpenMenuPerformed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        OpenMenu();
+        ToggleMenuState();
     }
 
     private void LevelSelectionButtonOnClick(int levelInex)
@@ -71,7 +74,7 @@ public class Menu : Singleton<Menu>
         SceneManager.LoadScene(levelInex);
     }
 
-    public void OpenMenu()
+    private void ToggleMenuState()
     {
         var menuEnabled = !menu.activeSelf || SceneManager.GetActiveScene().buildIndex == 0;
 
@@ -79,11 +82,19 @@ public class Menu : Singleton<Menu>
         levelLoader.HideLevelsPanel();
         HideSettingsPanel();
         HideControlsPanel();
+        saveTutorialPanel.SetActive(false);
     }
 
     public void StartGame()
     {
-        SceneManager.LoadScene(levelLoader.LastOpenLevel);
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            SceneManager.LoadScene(levelLoader.LastOpenLevel);
+        }
+        else
+        { 
+            ToggleMenuState();
+        }
     }
 
     public void ShowLevelsPanel()

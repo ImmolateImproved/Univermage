@@ -48,7 +48,7 @@ public class TooltipManager : MonoBehaviour
         inputManager.Controls.Tutorial.Disable();
 
         inputManager.Controls.Tutorial.NextTooltip.performed -= NextTooltip;
-
+        
         GameplaySaveSystem.OnLoad -= SaveSystem_OnLoad;
     }
 

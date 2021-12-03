@@ -16,9 +16,6 @@ public class LevelLoader : Singleton<LevelLoader>
     private Transform levelsPanelContent;
 
     [SerializeField]
-    private int scenesToSkip;
-
-    [SerializeField]
     private int lastTutorialScene;
 
     private List<LevelSelectionButton> levelButtons;
@@ -30,17 +27,17 @@ public class LevelLoader : Singleton<LevelLoader>
     private const string LevelSaveName = "Level";
     private const string FinishedLevelsSaveName = "FinishedLevels";
 
-    public int CurrentLevel => Mathf.Max(SceneManager.GetActiveScene().buildIndex - scenesToSkip + 1, 0);
+    public int CurrentLevel => Mathf.Max(SceneManager.GetActiveScene().buildIndex - lastTutorialScene, 0);
 
     public int LastOpenLevel => lastOpenedLevel.lastOpenLevel;
 
-    public int LevelsCount => SceneManager.sceneCountInBuildSettings - scenesToSkip + 1;
+    public int LevelsCount => SceneManager.sceneCountInBuildSettings - lastTutorialScene;
 
     private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.buildIndex > lastOpenedLevel.lastOpenLevel)
         {
-            if (scene.buildIndex >= scenesToSkip)
+            if (scene.buildIndex > lastTutorialScene)
             {
                 lastOpenedLevel.lastOpenLevel = scene.buildIndex;
 
@@ -50,7 +47,7 @@ public class LevelLoader : Singleton<LevelLoader>
 
         string message;
 
-        if (scene.buildIndex >= scenesToSkip)
+        if (scene.buildIndex > lastTutorialScene)
         {
             message = $"Level {CurrentLevel}";
         }
@@ -137,9 +134,9 @@ public class LevelLoader : Singleton<LevelLoader>
     {
         LoadButton().Init(1, "Tutorial", finishedLevels.value[0]);
 
-        for (int sceneIndex = scenesToSkip; sceneIndex < SceneManager.sceneCountInBuildSettings; sceneIndex++)
+        for (int sceneIndex = lastTutorialScene + 1; sceneIndex < SceneManager.sceneCountInBuildSettings; sceneIndex++)
         {
-            var levelIndex = sceneIndex - scenesToSkip + 1;
+            var levelIndex = sceneIndex - lastTutorialScene;
             var isFinished = finishedLevels.value[levelIndex];
             LoadButton().Init(sceneIndex, $"Level {levelIndex}", isFinished);
         }

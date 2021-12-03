@@ -15,6 +15,11 @@ public class BackgroundMusicManager : Singleton<BackgroundMusicManager>
 
     private int currentClipIndex;
 
+    private bool IsMenuScene
+    {
+        get => SceneManager.GetActiveScene().buildIndex == 0;
+    }
+
     private void Start()
     {
         if (Initialized)
@@ -35,11 +40,17 @@ public class BackgroundMusicManager : Singleton<BackgroundMusicManager>
 
     private void LevelSelectionButton_OnClick(int obj)
     {
+        if (!IsMenuScene)
+            return;
+
         SetNewRandomClip();
     }
 
     public void SetNewRandomClip()
     {
+        if (!IsMenuScene)
+            return;
+
         Timing.KillCoroutines(MusicRoutineTag);
         Timing.RunCoroutine(MusicRoutine(true), MusicRoutineTag);
     }
