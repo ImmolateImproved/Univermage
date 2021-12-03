@@ -30,6 +30,9 @@ public class CharacterSoundManager : MonoBehaviour
 
     private void Update()
     {
+        if (characterMovement.VerticalMovementState)
+            return;
+
         var moveNext = groundChecker.IsGrounded && Mathf.Abs(characterMovement.Velocity.x) > 0 && timer <= 0;
 
         if (groundChecker.IsLandedLastFrame)

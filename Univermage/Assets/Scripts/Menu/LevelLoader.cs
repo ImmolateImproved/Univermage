@@ -16,28 +16,28 @@ public class LevelLoader : Singleton<LevelLoader>
     private Transform levelsPanelContent;
 
     [SerializeField]
-    private int lastTutorialScene;
+    private int lastTutorialSceneIndex;
 
     private List<LevelSelectionButton> levelButtons;
 
     private LevelsSaveData lastOpenedLevel;
-    [SerializeField]
+
     private FinishedLevels finishedLevels;
 
     private const string LevelSaveName = "Level";
     private const string FinishedLevelsSaveName = "FinishedLevels";
 
-    public int CurrentLevel => Mathf.Max(SceneManager.GetActiveScene().buildIndex - lastTutorialScene, 0);
+    public int CurrentLevel => Mathf.Max(SceneManager.GetActiveScene().buildIndex - lastTutorialSceneIndex, 0);
 
     public int LastOpenLevel => lastOpenedLevel.lastOpenLevel;
 
-    public int LevelsCount => SceneManager.sceneCountInBuildSettings - lastTutorialScene;
+    public int LevelsCount => SceneManager.sceneCountInBuildSettings - lastTutorialSceneIndex;
 
     private void OnLevelLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.buildIndex > lastOpenedLevel.lastOpenLevel)
         {
-            if (scene.buildIndex > lastTutorialScene)
+            if (scene.buildIndex > lastTutorialSceneIndex)
             {
                 lastOpenedLevel.lastOpenLevel = scene.buildIndex;
 
@@ -47,7 +47,7 @@ public class LevelLoader : Singleton<LevelLoader>
 
         string message;
 
-        if (scene.buildIndex > lastTutorialScene)
+        if (scene.buildIndex > lastTutorialSceneIndex)
         {
             message = $"Level {CurrentLevel}";
         }
@@ -92,7 +92,7 @@ public class LevelLoader : Singleton<LevelLoader>
     {
         var needSave = false;
 
-        if (SceneManager.GetActiveScene().buildIndex == lastTutorialScene)
+        if (SceneManager.GetActiveScene().buildIndex == lastTutorialSceneIndex)
         {
             finishedLevels.value[0] = true;
             needSave = true;
@@ -134,9 +134,9 @@ public class LevelLoader : Singleton<LevelLoader>
     {
         LoadButton().Init(1, "Tutorial", finishedLevels.value[0]);
 
-        for (int sceneIndex = lastTutorialScene + 1; sceneIndex < SceneManager.sceneCountInBuildSettings; sceneIndex++)
+        for (int sceneIndex = lastTutorialSceneIndex + 1; sceneIndex < SceneManager.sceneCountInBuildSettings; sceneIndex++)
         {
-            var levelIndex = sceneIndex - lastTutorialScene;
+            var levelIndex = sceneIndex - lastTutorialSceneIndex;
             var isFinished = finishedLevels.value[levelIndex];
             LoadButton().Init(sceneIndex, $"Level {levelIndex}", isFinished);
         }

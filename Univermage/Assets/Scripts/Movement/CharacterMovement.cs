@@ -19,6 +19,8 @@ public class CharacterMovement : MonoBehaviour, IMovementInputReceiver
 
     public Vector2 GetPosition { get => rb.position; }
 
+    public bool VerticalMovementState { get => verticalMovement; }
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
